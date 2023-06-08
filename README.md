@@ -3,23 +3,23 @@
 
 ## Comments
 
->    `/*   ::: HEADINGS :::   */`
+    `/*   ::: HEADINGS :::   */`
 
 ---
 
->    ```
->    /*
->        explanations
->    /*
->    ```
+    ```
+    /*
+        explanations
+    /*
+    ```
 
 
->    `// functions`
-
----
-
->    `// loops`
+    `// functions`
 
 ---
 
->    `// condition structures`
+    `// loops`
+
+---
+
+    `// condition structures`
