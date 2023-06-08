@@ -1,6 +1,50 @@
-@import "./abstract";
-@import "./pages";
-@import "./vendor";
-@import "./components";
-@import "./base";
-@import "./layouts";
+/*   ::: ABSTRACT ::: */
+@import "./abstract/variables";
+@import "./abstract/minins";
+@import "./abstract/placeholders";
+
+
+
+/*   ::: BASE ::: */
+@import "./base/reset";
+@import "./base/typography";
+
+
+
+/*   ::: COMPONENTS ::: */
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/icons";
+@import "./components/images";
+
+
+
+/*   ::: LAYOUTS ::: */
+@import "./layouts/textContainer";
+@import "./layouts/cardContent";
+@import "./layouts/sections";
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+
+
+
+/*   ::: PAGES ::: */
+@import "./pages/a-la-francaise";
+@import "./pages/la-note-enchantee";
+@import "./pages/la-palette-du_gout";
+@import "./pages/le-delice-des-sens";
+
+
+
+/*   ::: VENDORS ::: */
+@import "./vendor/moz";
+@import "./vendor/ms";
+@import "./vendor/o";
+@import "./vendor/webkit";
+
+
+
+/*   ::: VENDORS ::: */
+@import "./animations/pseudo-elements";
+@import "./animations/key_frames";
