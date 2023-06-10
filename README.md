@@ -3,7 +3,7 @@
 
 ## Comments
 
-    `/*   ::: HEADINGS :::   */`
+    `/*📍   ::: HEADINGS :::   */`
 
 ---
 
@@ -14,12 +14,12 @@
     ```
 
 
-    `// functions`
+    `// ⚙️ functions`
 
 ---
 
-    `// loops`
+    `// 🔁 loops`
 
 ---
 
-    `// condition structures`
+    `// ⚖️ condition structures`
