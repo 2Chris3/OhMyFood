@@ -1,19 +1,34 @@
-/*   ::: COLOR :::   */
+//   ::: COLOR :::   //
 
 //basic colors
-$basicColor: (
-    grey: gray);
+$basicColor: (grey: #EAEAEA);
 
 //light color variants
-$lightColor: (
-    grey: darkGray,
-    green: darkGreen,
-    purple: darkPurple);
+$lightColor: (grey: #F7F7F7,
+    green: #99E2D0,
+    purple: #ff79DA);
 
 //dark color variants
-$darkColor: (
-    grey: darkGray,
-    green: darkGreen,
-    purple: darkPurple);
+$darkColor: (grey: #353535,
+    green: #008766,
+    purple: #9356DC);
+
+//gradient turn
+$dontTurn: 0deg;
+$turnRight: 90deg;
+$turnLeft: -90deg;
+$turnUpside: 180deg;
 
 
+
+//   ::: SHADOW BLUR :::   //
+
+$cardBlur: 15px;
+$btnBlur: 10px;
+
+
+
+//   ::: DIMENTIONS :::   //
+
+$fullWidth: 100%;
+$fullHeight: 100%;

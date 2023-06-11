@@ -1,0 +1,44 @@
+
+//   ::: CARDS & BUTTONS :::   //
+
+@mixin square ($size, $radius) {
+    width: $size;
+    height: $size;
+    border-radius: $radius;
+}
+
+@mixin rectangle ($witdh, $height, $radius) {
+    width: $witdh;
+    height: $height;
+    border-radius: $radius;
+}
+
+
+
+//   ::: BLUR :::   //
+
+@mixin shadow ($blur) {
+    box-shadow: 0 4px $blur black;
+}
+
+
+
+//   ::: BUTTONS :::   //
+
+@mixin btn {
+    color: white;
+    height: 50px;
+}
+
+
+
+//   ::: COLORS :::   //
+
+//pick a variable already built for modifying degrees direction
+@mixin purpleGradient($degrees) {
+    background-color: linear-gradient($degrees, map-get($lightColor, $purple), map-get($darkColor, $purple));
+}
+
+@mixin grayBackground {
+    background-color: map-get($map: $lightColor, $key: $grey);
+}

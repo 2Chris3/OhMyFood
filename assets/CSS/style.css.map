@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../Sass/base/_reset.scss"],"names":[],"mappings":"AAAA,IACI,iBAGJ,gBACI,SACA,UAGJ,EACI,sBAGJ,+BACI,aAGJ,MACI,gBAGJ,EACI","file":"style.css"}

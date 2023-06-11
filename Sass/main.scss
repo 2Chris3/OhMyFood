@@ -1,17 +1,17 @@
-/*   ::: ABSTRACT ::: */
+//   ::: ABSTRACT ::: //
 @import "./tools/variables";
-@import "./tools/minins";
+@import "./tools/mixins";
 @import "./tools/placeholders";
 
 
 
-/*   ::: BASE ::: */
+//   ::: BASE ::: //
 @import "./base/reset";
 @import "./base/typography";
 
 
 
-/*   ::: COMPONENTS ::: */
+//   ::: COMPONENTS ::: //
 @import "./components/images";
 @import "./components/icons";
 @import "./components/buttons";
@@ -19,7 +19,7 @@
 
 
 
-/*   ::: LAYOUTS ::: */
+//   ::: LAYOUTS ::: //
 @import "./layouts/textContainer";
 @import "./layouts/cardContent";
 @import "./layouts/sections";
@@ -29,7 +29,7 @@
 
 
 
-/*   ::: PAGES ::: */
+//   ::: PAGES ::: //
 @import "./pages/a-la-francaise";
 @import "./pages/la-note-enchantee";
 @import "./pages/la-palette-du_gout";
@@ -37,7 +37,7 @@
 
 
 
-/*   ::: VENDORS ::: */
+//   ::: VENDORS ::: //
 @import "./vendor/moz";
 @import "./vendor/ms";
 @import "./vendor/o";
@@ -45,6 +45,6 @@
 
 
 
-/*   ::: VENDORS ::: */
+//   ::: VENDORS ::: //
 @import "./animations/pseudo-elements";
 @import "./animations/key_frames";
