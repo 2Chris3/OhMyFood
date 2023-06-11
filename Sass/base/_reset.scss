@@ -13,6 +13,7 @@ html, body, ul, ol {
 
 header, nav, ul, main, section, div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 ul, ol {
