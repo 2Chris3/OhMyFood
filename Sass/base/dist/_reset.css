@@ -1,0 +1,20 @@
+img {
+  object-fit: cover;
+}
+
+html, body, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header, nav, ul, main, section, div, article, figure, footer {
+  display: flex;
+}
+
+ul, ol {
+  list-style: none;
+}
