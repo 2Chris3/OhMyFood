@@ -26,8 +26,6 @@
   font-size: 18px;
   font-weight: 300;
 }
-.banner .heading heading__btn {
-  color: white;
-  height: 50px;
+.banner .heading__btn {
   background-color: purple;
 }

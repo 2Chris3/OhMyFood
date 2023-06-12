@@ -41,9 +41,8 @@
             }
         };
 
-        heading__btn {
-            @extend ext,%exploration !optional;
-            @include mix.btn;
+        &__btn {
+            
             background-color: purple;
         };
     };
