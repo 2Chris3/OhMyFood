@@ -1,29 +1,29 @@
 
 .banner {
-    @include rectangle($fullWidth, 63px, 0);
-}
+    @include rectangle(0, 63px, 0);
 
-.heading {
-    @include rectangle($fullWidth, 287.5px, 0);
+    .heading {
+        @include rectangle(0, 287.5px, 0);
 
-    &__title {
-        font: {
-            size: 24px;
-            weight: 700;
-            justify-content: center;
+        &__title {
+            font: {
+                size: 24px;
+                weight: 700;
+                justify-content: center;
+            }
+        }
+
+        &__subtitle {
+            font: {
+                size: 18px;
+                weight: 300;
+            }
+        }
+
+        &__btn {
+            @extend .btn, %exploration;
+            @include btn;
+            background-color: map-get($lightColor, gray);
         }
     }
-
-    &__subtitle {
-        font: {
-            size: 18px;
-            weight: 300;
-    }
-
-    &__btn {
-        @extend .btn, %exploration;
-        @include btn;
-        background-color: map-get($map: $lightColor, $key: $grey);
-    }
-}
 }

@@ -1,4 +1,9 @@
-.location__text {
+.explanations__cardsGroup__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.restaurants__title {
   font-size: 16px;
   font-weight: 500;
 }
