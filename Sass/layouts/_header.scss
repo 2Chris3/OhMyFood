@@ -4,6 +4,8 @@
 @use '../tools/placeholders' as ext;
 @use '../components/buttons' as btn;
 
+
+
 .banner {
     width: 100%;
 
@@ -12,7 +14,7 @@
     }; 
 
     .location {
-        
+
         &__icon {
             color: red;
         };
@@ -41,8 +43,8 @@
             }
         };
 
-        button .heading__btn {  
-            background-color: purple;
+        .heading__btn {  
+            @include mix.btn
         };
     };
 };

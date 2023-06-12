@@ -1,24 +1,36 @@
-//   ::: COLOR :::   //
 
-//basic colors
-$basicColor: (grey: #EAEAEA);
+//   ::: COLORS :::   //
 
-//light color variants
-$lightColor: (
-    grey: #F7F7F7,
-    green: #99E2D0,
-    purple: #ff79DA);
+//grey variants
+$gray: (
+    basic: #EAEAEA,
+    light: #F7F7F7,
+    dark: #353535
+);
 
-//dark color variants
-$darkColor: (grey: #353535,
-    green: #008766,
-    purple: #9356DC);
+//green variants
+$green: (
+    light: #99E2D0,
+    dark: #008766
+);
 
-//gradient turn
-$dontTurn: 0deg;
-$turnRight: 90deg;
-$turnLeft: -90deg;
-$turnUpside: 180deg;
+//purple variants
+$purple: (
+    light: #ff79DA,
+    dark: #9356DC
+);
+
+
+
+//   ::: GRADIENTS :::   //
+
+//turn parameters
+$rotate: (
+    noRotation: 0deg,
+    right: 90deg,
+    left: -90deg,
+    Upside: 180deg
+);
 
 
 
@@ -29,13 +41,45 @@ $btnBlur: 10px;
 
 
 
-//   ::: DIMENTIONS :::   //
+//   ::: PROPORTIONAL DIMENTIONS :::   //
 
-$fullWidth: 100%;
-$fullHeight: 100%;
-
-$o: (
-    a: 1,
-    b: 2,
-    c: 3
+$full: (
+    width: 100%,
+    height: 100%
 );
+
+$mid: (
+    height: 50%,
+    width: 50%
+);
+
+
+
+//   ::: BUTTON DIMENTIONS :::   //
+
+//basic buttons
+$btnBasicHeight: 50px;
+$btnBasicWidth: 186px;
+
+//big buttons
+$wideBtn: 218px;
+
+
+
+//   ::: CARDS :::   //
+
+//card heights
+$highCards: 340px;
+$mediumCards: 72px;
+$lowCards: 69px;
+
+//gradient to move in a new comment section-------
+
+@mixin purpleGradient($degrees) {
+    background-color: linear-gradient($degrees, map-get($lightColor, $purple), map-get($darkColor, $purple));
+};
+
+@mixin grayBackground {
+    background-color: map-get($map: $lightColor, $key: $grey);
+};
+

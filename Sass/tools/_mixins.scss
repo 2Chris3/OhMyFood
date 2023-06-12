@@ -1,5 +1,56 @@
 
-//   ::: CARDS & BUTTONS :::   //
+//   ::: BLUR :::   //
+
+@mixin shadow ($blur) {
+    box-shadow: 0 4px $blur black;
+};
+
+
+
+//   ::: BACKGROUND COLORS :::   //
+
+// single colors
+@mixin grayBackground {
+    background-color: map-get($grey, light);
+};
+
+
+
+//   ::: FONTS :::   //
+
+@mixin font ($size, $weight, $family) {
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $family;
+    }
+}
+
+
+
+//   ::: PROPORTIONAL DIMENTIONS :::   //
+
+@mixin fit {
+    flex: 1 1 1em;
+}
+
+
+
+//   ::: LAYOUTS :::   //
+
+@mixin centredBox {
+    display: flex;
+}
+
+@mixin inheritBox {
+    
+}
+
+
+
+//   ::: CONTAINERS :::   //
+
+//buttons, cards, sections, divs, articles etc
 
 @mixin square ($size, $radius) {
     width: $size;
@@ -15,30 +66,18 @@
 
 
 
-//   ::: BLUR :::   //
-
-@mixin shadow ($blur) {
-    box-shadow: 0 4px $blur black;
-};
-
-
-
 //   ::: BUTTONS :::   //
 
-@mixin btn {
+
+//basic button
+@mixin btn($colorRotation) {
+    height: $btnBasicHeight;
+    width: $btnBasicWidth;
     color: white;
-    height: 50px;
-};
+    background-color: linear-gradient($colorRotation, ($purple, light), map-get($purple, dark));
+}
 
 
+//   ::: CARDS :::   //
 
-//   ::: COLORS :::   //
 
-//pick a variable already built for modifying degrees direction
-@mixin purpleGradient($degrees) {
-    background-color: linear-gradient($degrees, map-get($lightColor, $purple), map-get($darkColor, $purple));
-};
-
-@mixin grayBackground {
-    background-color: map-get($map: $lightColor, $key: $grey);
-};
