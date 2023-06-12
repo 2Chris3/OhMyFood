@@ -4,7 +4,8 @@
 $basicColor: (grey: #EAEAEA);
 
 //light color variants
-$lightColor: (grey: #F7F7F7,
+$lightColor: (
+    grey: #F7F7F7,
     green: #99E2D0,
     purple: #ff79DA);
 
@@ -32,3 +33,9 @@ $btnBlur: 10px;
 
 $fullWidth: 100%;
 $fullHeight: 100%;
+
+$o: (
+    a: 1,
+    b: 2,
+    c: 3
+);

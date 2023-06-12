@@ -1,9 +1,30 @@
 
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+@use '../tools/placeholders' as ext;
+@use '../components/buttons' as btn;
+
 .banner {
-    @include rectangle(0, 63px, 0);
+    width: 100%;
+
+    figure {
+        @include mix.rectangle(100%, 63px, 0);
+    }; 
+
+    .location {
+        
+        &__icon {
+            color: red;
+        };
+
+        &__text {
+            color: red;
+        };
+    };
+
 
     .heading {
-        @include rectangle(0, 287.5px, 0);
+        @include mix.rectangle(0, 287.5px, 0);
 
         &__title {
             font: {
@@ -11,19 +32,19 @@
                 weight: 700;
                 justify-content: center;
             }
-        }
+        };
 
         &__subtitle {
             font: {
                 size: 18px;
                 weight: 300;
             }
-        }
+        };
 
-        &__btn {
-            @extend .btn, %exploration;
-            @include btn;
-            background-color: map-get($lightColor, gray);
-        }
-    }
-}
+        heading__btn {
+            @extend ext,%exploration !optional;
+            @include mix.btn;
+            background-color: purple;
+        };
+    };
+};
