@@ -11,7 +11,11 @@
 
 // single colors
 @mixin grayBackground {
-    background-color: map-get($gray, light);
+    background-color: map-get($grey, light);
+}
+
+@mixin purpleGradientBg($degrees) {
+    background-color: linear-gradient($degrees, map-get($purple, light), map-get($purple, dark));
 }
 
 
@@ -30,8 +34,12 @@
 
 //   ::: PROPORTIONAL DIMENTIONS :::   //
 
+@mixin fitItems($proportion) {
+    flex: 1 1 $proportion;
+}
+
 @mixin fit {
-    flex: 1 1 1em;
+    width: $full;
 }
 
 

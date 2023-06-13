@@ -49,8 +49,18 @@ $full: (
 );
 
 $mid: (
-    height: 50%,
-    width: 50%
+    height: 47%,
+    width: 47%
+);
+
+$aThird: (
+    width: 28%,
+    height: 28%
+);
+
+$aQuarter: (
+    width: 21%,
+    height: 21%
 );
 
 
@@ -73,13 +83,5 @@ $highCards: 340px;
 $mediumCards: 72px;
 $lowCards: 69px;
 
-//gradient to move in a new comment section-------
 
-@mixin purpleGradient($degrees) {
-    background-color: linear-gradient($degrees, map-get($lightColor, $purple), map-get($darkColor, $purple));
-};
-
-@mixin grayBackground {
-    background-color: map-get($map: $lightColor, $key: $grey);
-};
 
