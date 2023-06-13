@@ -1,8 +1,8 @@
 
-@use '../tools/mixins' as mix;
+/*@use '../tools/mixins' as mix;
 @use '../tools/variables' as var;
 @use '../tools/placeholders' as ext;
-@use '../components/buttons' as btn;
+@use '../components/buttons' as btn;*/
 
 
 
@@ -10,7 +10,7 @@
     width: 100%;
 
     figure {
-        @include mix.rectangle(100%, 63px, 0);
+        @include rectangle(100%, 63px, 0);
     }; 
 
     .location {
@@ -26,7 +26,7 @@
 
 
     .heading {
-        @include mix.rectangle(0, 287.5px, 0);
+        @include rectangle(0, 287.5px, 0);
 
         &__title {
             font: {
@@ -44,7 +44,8 @@
         };
 
         .heading__btn {  
-            @include mix.btn
-        };
-    };
-};
+            @extend .btn;
+        }
+        
+    }
+}

@@ -11,9 +11,10 @@ html, body, ul, ol {
     box-sizing: border-box;
 }
 
-header, nav, ul, main, section, div {
+header, ul, li, main, section, div {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 ul, ol {

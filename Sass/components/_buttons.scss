@@ -1,15 +1,6 @@
-@use '../tools/mixins' as mix;
-@use '../tools/variables' as var;
+
+//   ::: BASIC BUTTON :::   //   
 
 .btn {
-    @include mix.btn(map-get($rotate, noRotation));
-}
-
-.wideBtn {
-    @extend .btn;
-    @include mix.wideBtn;
-}
-
-.heading__btn{
-    @extend .wideBtn;
+    @include btn(map-get($rotate, noRotation));
 }
