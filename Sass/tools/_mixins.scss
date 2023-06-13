@@ -11,7 +11,7 @@
 
 // single colors
 @mixin grayBackground {
-    background-color: map-get($grey, light);
+    background-color: map-get($gray, light);
 };
 
 
@@ -69,12 +69,13 @@
 //   ::: BUTTONS :::   //
 
 
+
 //basic button
 @mixin btn($colorRotation) {
     height: $btnBasicHeight;
     width: $btnBasicWidth;
     color: white;
-    background-color: linear-gradient($colorRotation, ($purple, light), map-get($purple, dark));
+    background-color: linear-gradient($colorRotation, map-get($purple, light), map-get($purple, dark));
 }
 
 
