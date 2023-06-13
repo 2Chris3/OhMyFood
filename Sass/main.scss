@@ -1,13 +1,13 @@
+//   ::: BASE ::: //
+@import "./base/typography";
+@import "./base/reset";
+
+
+
 //   ::: ABSTRACT ::: //
 @import "./tools/variables";
 @import "./tools/mixins";
 @import "./tools/placeholders";
-
-
-
-//   ::: BASE ::: //
-@import "./base/reset";
-@import "./base/typography";
 
 
 
@@ -20,21 +20,19 @@
 
 
 //   ::: LAYOUTS ::: //
-@import "./layouts/textContainer";
-@import "./layouts/cardContent";
-@import "./layouts/sections";
 @import "./layouts/header";
 @import "./layouts/main";
-@import "./layouts/footer";
+@import "./layouts/sections";
 @import "./layouts/boxes";
+@import "./layouts/cardContent";
+@import "./layouts/textContainer";
+@import "./layouts/footer";
 
 
 
 //   ::: PAGES ::: //
-@import "./pages/a-la-francaise";
-@import "./pages/la-note-enchantee";
-@import "./pages/la-palette-du_gout";
-@import "./pages/le-delice-des-sens";
+@import "./pages/restaurants";
+@import "./pages/home";
 
 
 
@@ -46,6 +44,6 @@
 
 
 
-//   ::: VENDORS ::: //
+//   ::: ANIMATIONS ::: //
 @import "./animations/pseudo-elements";
 @import "./animations/key_frames";

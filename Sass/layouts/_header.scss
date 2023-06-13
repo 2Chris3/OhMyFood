@@ -10,8 +10,8 @@
     width: 100%;
 
     figure {
-        @include rectangle(100%, 63px, 0);
-    }; 
+        color: red;
+    };
 
     .location {
 
@@ -21,12 +21,12 @@
 
         &__text {
             color: red;
-        };
-    };
+        }
+    }
 
 
     .heading {
-        @include rectangle(0, 287.5px, 0);
+        @include rectangle(0px, 287.5px, 0px);
 
         &__title {
             font: {
@@ -34,17 +34,18 @@
                 weight: 700;
                 justify-content: center;
             }
-        };
+        }
 
         &__subtitle {
             font: {
                 size: 18px;
                 weight: 300;
             }
-        };
+        }
 
-        .heading__btn {  
-            @extend .btn;
+        &__btn {  
+            @extend .btn !optional;
+            @extend %wide--btn;
         }
         
     }

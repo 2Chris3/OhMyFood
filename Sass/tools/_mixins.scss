@@ -66,8 +66,8 @@
     border-radius: $radius;
 }
 
-@mixin rectangle ($witdh, $height, $radius) {
-    width: $witdh;
+@mixin rectangle ($width, $height, $radius) {
+    width: $width;
     height: $height;
     border-radius: $radius;
 }
