@@ -1,3 +1,8 @@
+//@use './tools/variables' as var;
+//@media screen and (max-width: var.$mobileMaxWidth) {
+
+
+
 //   ::: BASE ::: //
 @import "./base/typography";
 @import "./base/reset";
@@ -7,7 +12,6 @@
 //   ::: ABSTRACT ::: //
 @import "./tools/variables";
 @import "./tools/mixins";
-@import "./tools/placeholders";
 
 
 
@@ -47,3 +51,5 @@
 //   ::: ANIMATIONS ::: //
 @import "./animations/pseudo-elements";
 @import "./animations/key_frames";
+
+//}

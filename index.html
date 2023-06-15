@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Oh My Food</title>
 </head>
 
 <body>
     <header class="banner">
-        <figure>
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="">
+        <figure class="logo">
+            <img src="./assets/images/logo/ohmyfood@2x.svg" alt="">
         </figure>
 
-        <section class="location">
+        <div class="location">
             <i class="location__icon"></i>
-            <address class="location__text">Paris, Belleville</adress>
-        </section>
+            <form class="location__searchBar">
+                <input id="search__location" type="search">Paris, Belleville</input>
+            </form>
+        </div>
 
         <section class="heading">
             <h1 class="heading__title">Réservez le menu qui
@@ -59,15 +61,15 @@
 
             <div class="restaurants__cardsGroup">
                 <article class="card">
-                    <a href="restaurants/a-la-francaise.html" class="card__link">
+                    <a href="./restaurants/a-la-francaise.html" class="card__link">
                         <p class="new"></p>
-                        <figure>
-                            <img src="assets/images/restaurants/a-la-francaise.jpg" class="logo" alt="">
+                        <figure class="cover">
+                            <img src="./assets/images/restaurants/a-la-francaise.jpg"  alt="">
                         </figure>
                         <div class="card__content">
                             <div class="card__text">
                                 <h3 class="card__title">La palette du goût</h3>
-                                <adress class="card__subtitle">Ménilmontant</adress>
+                                <address class="card__subtitle">Ménilmontant</address>
                             </div>
                             <i></i>
                         </div>
@@ -75,15 +77,15 @@
                 </article>
 
                 <article class="card">
-                    <a href="restaurants/la-note-enchantee.html" class="card__link">
+                    <a href="./restaurants/la-note-enchantee.html" class="card__link">
                         <p class="new"></p>
-                        <figure>
-                            <img src="assets/images/restaurants/la-note-enchantee.jpg" alt="" class="cover">
+                        <figure class="cover">
+                            <img src="./assets/images/restaurants/la-note-enchantee.jpg" alt="" >
                         </figure>
                         <div class="card__content">
                             <div class="card__text">
                                 <h3 class="card__title">La note enchantée</h3>
-                                <adress class="card__subtitle">Charonne</adress>
+                                <address class="card__subtitle">Charonne</address>
                             </div>
                             <i></i>
                         </div>
@@ -91,15 +93,15 @@
                 </article>
 
                 <article class="card">
-                    <a href="restaurants/la-palette-du-gout.html" class="card__link">
+                    <a href="./restaurants/la-palette-du-gout.html" class="card__link">
                         <p class="new"></p>
-                        <figure>
-                            <img src="assets/images/restaurants/la-palette-du_gout.jpg" alt="" class="cover">
+                        <figure class="cover">
+                            <img src="./assets/images/restaurants/la-palette-du_gout.jpg" alt="" >
                         </figure>
                         <div class="card__content">
                             <div class="card__text">
                                 <h3 class="card__title">À la française</h3>
-                                <adress class="card__subtitle">Cité Rouge</adress>
+                                <address class="card__subtitle">Cité Rouge</address>
                             </div>
                             <i></i>
                         </div>
@@ -107,16 +109,16 @@
                 </article>
 
                 <article class="card">
-                    <a href="restaurants/le-delice-des-sens.html" class="card__link">
+                    <a href="./restaurants/le-delice-des-sens.html" class="card__link">
                         <p class="new"></p>
-                        <figure>
-                            <img src="assets/images/restaurants/le-delice-des-sens.jpg"
-                                alt="" class="cover">
+                        <figure class="cover">
+                            <img src="./assets/images/restaurants/le-delice-des-sens.jpg"
+                                alt="" >
                         </figure>
                         <div class="card__content">
                             <div class="card__text">
                                 <h3 class="card__title">Le délice des sens</h3>
-                                <adress class="card__subtitle">Folie-Méricourt</adress>
+                                <address class="card__subtitle">Folie-Méricourt</address>
                             </div>
                             <i></i>
                         </div>
@@ -129,8 +131,8 @@
 
 
     <footer>
-        <figure>
-            <img src="/assets/images/logo/ohmyfood@2x.svg" class="cover" alt="">
+        <figure class="logo">
+            <img src="./assets/images/logo/ohmyfood@2x.svg" alt="">
         </figure>
 
         <ul class="list">
@@ -147,7 +149,7 @@
             <li class="list__tem">Mentions légales</li>
 
             <li class="list__tem">
-                <a class="list__tem--link" href="#"></a>
+                <a class="list__tem--link" href="mailto:"></a>
             </li>
         </ul>
     </footer>

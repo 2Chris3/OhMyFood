@@ -1,3 +1,7 @@
 .btn {
-  @inc;
+  height: 50px;
+  width: 186px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #ff79DA, #9356DC);
 }

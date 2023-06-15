@@ -1,6 +1,15 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
 
 //   ::: BASIC BUTTON :::   //   
 
 .btn {
-    @include btn(map-get($rotate, noRotation));
+    @include mix.btn;
+    @include mix.purpleBackground-gradient(var.$dontRotate);
+}
+
+//using a %placeholder because of BEM. Allows to avoid unsemantic classes
+%btn--wide {
+    @extend .btn;
+    @include mix.wideBtn;
 }

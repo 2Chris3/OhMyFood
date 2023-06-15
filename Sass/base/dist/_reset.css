@@ -1,5 +1,6 @@
 img {
   object-fit: cover;
+  width: 100%;
 }
 
 html, body, ul, ol {
@@ -9,18 +10,9 @@ html, body, ul, ol {
 
 * {
   box-sizing: border-box;
-}
-
-header, ul, li, main, section, div {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  font-style: normal;
 }
 
 ul, ol {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
 }

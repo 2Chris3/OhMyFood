@@ -1,3 +1,4 @@
+@use './variables' as var;
 
 //   ::: BLUR :::   //
 
@@ -6,16 +7,9 @@
 }
 
 
-
-//   ::: BACKGROUND COLORS :::   //
-
-// single colors
-@mixin grayBackground {
-    background-color: map-get($grey, light);
-}
-
-@mixin purpleGradientBg($degrees) {
-    background-color: linear-gradient($degrees, map-get($purple, light), map-get($purple, dark));
+//   ::: BORDERS :::   //
+@mixin noBorders {
+    border: none;
 }
 
 
@@ -32,59 +26,90 @@
 
 
 
+//   ::: COLORS :::   //
+
+//gray backgrounds
+@mixin basicGrayBackground {
+    background-color: var.$grey;
+}
+@mixin lightGrayBackground {
+    background-color: var.$lightGray;
+}
+@mixin darkGrayBackground {
+    background-color: var.$darkGray;
+}
+
+//purple backgrounds
+@mixin purpleBackground {
+    background-color: var.$darkPurple;
+}
+@mixin purpleBackground-gradient($degrees) {
+    background: linear-gradient($degrees, var.$lightPurple, var.$darkPurple); 
+}
+
+
+
 //   ::: PROPORTIONAL DIMENTIONS :::   //
 
-@mixin fitItems($proportion) {
-    flex: 1 1 $proportion;
+@mixin fitItems($percentage) {
+    flex: 1 1 $percentage;
 }
 
-@mixin fit {
-    width: $full;
-}
-
-
-
-//   ::: LAYOUTS :::   //
-
-@mixin centredBox {
-    display: flex;
-}
-
-@mixin inheritBox {
-    display: inherit;
+@mixin fullWidth {
+    width: 100%;
 }
 
 
 
 //   ::: CONTAINERS :::   //
 
-//buttons, cards, sections, divs, articles etc
-
+//container shapes
 @mixin square ($size, $radius) {
     width: $size;
     height: $size;
     border-radius: $radius;
 }
-
 @mixin rectangle ($width, $height, $radius) {
     width: $width;
     height: $height;
     border-radius: $radius;
 }
 
+//container features
+@mixin centredBox($direction) {
+    display: flex;
+    flex-flow: wrap $direction;
+    justify-content: center;
+}
+@mixin inheritBox {
+    display: inherit;
+    flex-flow: inherit;
+    justify-content: inherit;
+}
+
 
 
 //   ::: BUTTONS :::   //
 
-@mixin btn($colorRotation) {
-    height: $btnBasicHeight;
-    width: $btnBasicWidth;
+@mixin btn {
+    height: var.$btnHeight; 
+    width: var.$btnWidth; 
     color: white;
-    background-color: linear-gradient($colorRotation, map-get($purple, light), map-get($purple, dark));
+    border-radius: var.$btnRadius;
+//    background: linear-gradient(var.$lightPurple, var.$darkPurple);
 }
 
+@mixin wideBtn {
+    width: var.$bigBtnWidth;
+} 
 
 
 //   ::: CARDS :::   //
 
 
+//   ::: LINKS :::   //
+
+@mixin linkReset {
+    text-decoration: none;
+    color: black;
+}

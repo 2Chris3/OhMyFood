@@ -1,38 +1,43 @@
 
-/*@use '../tools/mixins' as mix;
 @use '../tools/variables' as var;
-@use '../tools/placeholders' as ext;
-@use '../components/buttons' as btn;*/
+@use '../tools/mixins' as mix;
+@use '../components/buttons' as btn;
 
 
 
 .banner {
-    width: 100%;
+    @include mix.fullWidth;
 
-    figure {
-        color: red;
-    };
+    .logo {
+        @include mix.fullWidth;
+        @include mix.centredBox(column);
+
+        img {
+            @include mix.fullWidth;
+        }
+    }
 
     .location {
+        @include mix.centredBox(row);
 
         &__icon {
-            color: red;
-        };
+//            @extend i,%icon !optional;
+            padding: 17px;
+        }
 
-        &__text {
-            color: red;
+        &__searchBar {
+            @include mix.noBorders;
         }
     }
 
 
     .heading {
-        @include rectangle(0px, 287.5px, 0px);
+        @include mix.rectangle(100%, 287.5px, 0px);
 
         &__title {
             font: {
                 size: 24px;
                 weight: 700;
-                justify-content: center;
             }
         }
 
@@ -44,9 +49,7 @@
         }
 
         &__btn {  
-            @extend .btn !optional;
-            @extend %wide--btn;
+            @extend btn,%btn--wide !optional;
         }
-        
     }
 }

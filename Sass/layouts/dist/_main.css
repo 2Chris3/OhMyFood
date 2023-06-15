@@ -1,3 +1,9 @@
-.main__content {
-  @incl;
+/*.main__img {
+    @include rectangle(100%, 275px, 0);
 }
+
+.main__content {
+    @include grayBackground;
+    border-radius: 40px 40px 0 0;
+    flex-direction: column;
+}*/
