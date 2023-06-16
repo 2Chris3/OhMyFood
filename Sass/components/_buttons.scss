@@ -7,5 +7,5 @@
     @include mix.btn;
     @include mix.noBorders;
     @include mix.rounded(var.$btnRadius);
-    @include mix.purpleBackground-gradient(var.$dontRotate);
+    @include mix.purpleBackground-gradient(0deg);
 }

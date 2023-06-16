@@ -62,7 +62,7 @@
         }
 
         &__btn {
-            @include mix.btn;
+            @extend btn,.btn !optional;
             @include mix.wideBtn;
         }
     }

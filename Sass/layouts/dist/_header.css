@@ -1,4 +1,4 @@
-.btn {
+.btn, .banner .heading__btn {
   height: 50px;
   width: 186px;
   color: white;
@@ -52,10 +52,5 @@
   font-weight: 300;
 }
 .banner .heading__btn {
-  height: 50px;
-  width: 186px;
-  color: white;
-  border-radius: 25px;
-  box-shadow: 0 4px 10px grey;
   width: 218px;
 }
