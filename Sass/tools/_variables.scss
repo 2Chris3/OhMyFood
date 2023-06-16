@@ -40,10 +40,17 @@ $rotateUpside: 180deg;
 
 
 
-//   ::: SHADOW BLUR :::   //
+//   ::: SHADOW :::   //
 
-$cardBlur: 15px;
-$btnBlur: 10px;
+//blur
+$cardShadowBlur: 15px;
+$btnShadowBlur: 10px;
+
+//color
+$transparentGrey: rgba(0, 0, 0, 0.25);
+$veryTransparentGrey: rgba(0, 0, 0, 0.15);
+$extremelyTransparentGrey: rgba(0, 0, 0, 0.1);
+
 
 
 

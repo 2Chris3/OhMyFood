@@ -10,9 +10,8 @@
 
     .logo {
         @include mix.whiteBackground;
-        width: 100%;
+        @include mix.rectangle(100%, 63px);
         margin: 0;
-        height: 63px;
         
         img {
             object-fit: cover;
@@ -34,9 +33,7 @@
         }
 
         &__searchBar {
-            @include mix.noBorders;
-            display: flex;
-            justify-content: center;
+            @include mix.centredBox(row);
 
             #location__searchBar {
                 @include mix.fullWidth;

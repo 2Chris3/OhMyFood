@@ -3,18 +3,23 @@ img {
   width: 100%;
 }
 
-html, body, ul, ol {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
-  font-style: normal;
+button, input {
+  border: none;
 }
 
 ul, ol {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /*%icon {
@@ -28,10 +33,9 @@ ul, ol {
   width: 186px;
   color: white;
   border-radius: 25px;
-  box-shadow: 0 4px 10px grey;
-  border: none;
   border-radius: 25px;
   background: linear-gradient(0deg, #9356DC, #ff79DA);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .btn, .banner .heading__btn {
@@ -39,10 +43,9 @@ ul, ol {
   width: 186px;
   color: white;
   border-radius: 25px;
-  box-shadow: 0 4px 10px grey;
-  border: none;
   border-radius: 25px;
   background: linear-gradient(0deg, #9356DC, #ff79DA);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .banner {
@@ -51,8 +54,8 @@ ul, ol {
 .banner .logo {
   background-color: white;
   width: 100%;
-  margin: 0;
   height: 63px;
+  margin: 0;
 }
 .banner .logo img {
   object-fit: cover;
@@ -70,9 +73,10 @@ ul, ol {
   padding: 17px;
 }
 .banner .location__searchBar {
-  border: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
 }
 .banner .location__searchBar #location__searchBar {
   width: 100%;

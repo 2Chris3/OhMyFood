@@ -10,9 +10,19 @@
 
 
 
-//   ::: BORDERS :::   //
+//   ::: WITHOUT :::   //
+
+//without borders
 @mixin noBorders {
     border: none;
+}
+//without paddings
+@mixin noPaddings {
+    padding: none;
+}
+//without margins
+@mixin noMargins {
+    margin: none;
 }
 
 
@@ -56,6 +66,24 @@
 
 
 
+//   ::: SHADOWS :::   //
+
+//button shadows
+@mixin btnShadow {
+    box-shadow: 0 4px var.$btnShadowBlur var.$transparentGrey;
+}
+
+//card shadows
+@mixin explanationCardsShadow {
+    box-shadow: 0 4px var.$cardShadowBlur var.$veryTransparentGrey;
+}
+@mixin cardsShadows {
+    box-shadow: 0 4px var.$cardShadowBlur var.$extremelyTransparentGrey;
+}
+
+
+
+
 //   ::: PROPORTIONAL DIMENTIONS :::   //
 
 @mixin fitItems($percentage) {
@@ -85,24 +113,24 @@
     height: $height;
 }
 
-//container features
-@mixin centredBox {
+//container types
+@mixin basicBox($direction: row, $wrap:nowrap, $justify-content:start) {
     display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-items: center;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+}
+@mixin centredBox($direction) {
+    display: flex;
+    flex-direction: $direction;
     justify-content: center;
     align-content: center;
-    align-self: center;
 }
 @mixin inheritBox {
-    display: flex;
-    flex-direction: column;
-    justify-self: inherit;
-    justify-items: inherit;
+    display: inherit;
+    flex-direction: inherit;
     justify-content: inherit;
     align-content: inherit;
-    align-self: inherit;
 }
 
 
@@ -114,7 +142,6 @@
     width: var.$btnWidth; 
     color: white;
     border-radius: var.$btnRadius;
-    box-shadow: 0 4px var.$btnBlur grey;
 //    background: linear-gradient(var.$lightPurple, var.$darkPurple);
 }
 
