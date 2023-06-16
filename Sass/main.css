@@ -50,12 +50,13 @@ ul, ol {
   width: 100%;
 }
 .banner .logo {
+  display: flex;
   background-color: white;
+  width: 100%;
   height: 63px;
 }
 .banner .logo img {
-  width: 100%;
-  height: 100%;
+  flex-basis: 162px;
 }
 .banner .location {
   width: 100%;
@@ -66,14 +67,12 @@ ul, ol {
   padding: 17px;
 }
 .banner .location__searchBar {
-  width: 100%;
-  height: 100%;
+  border: none;
   display: flex;
   justify-content: center;
 }
 .banner .location__searchBar #location__searchBar {
   width: 100%;
-  border: none;
 }
 .banner .heading {
   width: 100%;

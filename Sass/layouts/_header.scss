@@ -9,12 +9,17 @@
     @include mix.fullWidth;
 
     .logo {
-        
         @include mix.whiteBackground;
+        width: 100%;
+        margin: 0;
         height: 63px;
-
+        
         img {
-            @include mix.square(100%);
+            object-fit: cover;
+            position: relative;
+            left: 105px;
+            top: 22px;
+            width: 162px;
         }
     }
 
@@ -29,14 +34,13 @@
         }
 
         &__searchBar {
-            @include mix.fullWidth;
-            @include mix.fullHeight;
+            @include mix.noBorders;
             display: flex;
             justify-content: center;
 
             #location__searchBar {
                 @include mix.fullWidth;
-                @include mix.noBorders;
+                
             }
         }
     }
