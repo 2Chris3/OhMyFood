@@ -3,5 +3,8 @@
   width: 186px;
   color: white;
   border-radius: 25px;
-  background: linear-gradient(0deg, #ff79DA, #9356DC);
+  box-shadow: 0 4px 10px grey;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9356DC, #ff79DA);
 }

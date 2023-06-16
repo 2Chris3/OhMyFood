@@ -5,11 +5,7 @@
 
 .btn {
     @include mix.btn;
+    @include mix.noBorders;
+    @include mix.rounded(var.$btnRadius);
     @include mix.purpleBackground-gradient(var.$dontRotate);
-}
-
-//using a %placeholder because of BEM. Allows to avoid unsemantic classes
-%btn--wide {
-    @extend .btn;
-    @include mix.wideBtn;
 }

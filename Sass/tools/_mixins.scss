@@ -1,10 +1,13 @@
 @use './variables' as var;
 
-//   ::: BLUR :::   //
 
-@mixin shadow ($blur) {
-    box-shadow: 0 4px $blur black;
+
+//   ::: RADIUS :::   //
+
+@mixin rounded($radius) {
+    border-radius: $radius;
 }
+
 
 
 //   ::: BORDERS :::   //
@@ -28,6 +31,10 @@
 
 //   ::: COLORS :::   //
 
+@mixin whiteBackground {
+    background-color: white;
+}
+
 //gray backgrounds
 @mixin basicGrayBackground {
     background-color: var.$grey;
@@ -44,7 +51,7 @@
     background-color: var.$darkPurple;
 }
 @mixin purpleBackground-gradient($degrees) {
-    background: linear-gradient($degrees, var.$lightPurple, var.$darkPurple); 
+    background: linear-gradient($degrees, var.$darkPurple, var.$lightPurple); 
 }
 
 
@@ -59,32 +66,43 @@
     width: 100%;
 }
 
+@mixin fullHeight {
+    height: 100%;
+}
+
+
 
 
 //   ::: CONTAINERS :::   //
 
 //container shapes
-@mixin square ($size, $radius) {
+@mixin square ($size) {
     width: $size;
     height: $size;
-    border-radius: $radius;
 }
-@mixin rectangle ($width, $height, $radius) {
+@mixin rectangle ($width, $height) {
     width: $width;
     height: $height;
-    border-radius: $radius;
 }
 
 //container features
-@mixin centredBox($direction) {
+@mixin centredBox {
     display: flex;
-    flex-flow: wrap $direction;
+    flex-direction: column;
+    justify-self: center;
+    justify-items: center;
     justify-content: center;
+    align-content: center;
+    align-self: center;
 }
 @mixin inheritBox {
-    display: inherit;
-    flex-flow: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-self: inherit;
+    justify-items: inherit;
     justify-content: inherit;
+    align-content: inherit;
+    align-self: inherit;
 }
 
 
@@ -96,11 +114,12 @@
     width: var.$btnWidth; 
     color: white;
     border-radius: var.$btnRadius;
+    box-shadow: 0 4px var.$btnBlur grey;
 //    background: linear-gradient(var.$lightPurple, var.$darkPurple);
 }
 
 @mixin wideBtn {
-    width: var.$bigBtnWidth;
+    width: 218px;
 } 
 
 
