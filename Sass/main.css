@@ -79,11 +79,15 @@ ul, ol {
   background-color: #F7F7F7;
   height: 287px;
 }
-.banner .heading__title {
+
+.banner .heading__text {
+  width: 315px;
+}
+.banner .heading__text--title {
   font-size: 24px;
   font-weight: 700;
 }
-.banner .heading__subtitle {
+.banner .heading__text--subtitle {
   font-size: 18px;
   font-weight: 300;
 }

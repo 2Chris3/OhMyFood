@@ -1,32 +1,78 @@
-.explanations {
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+@use '../components/cards' as card;
 
-    &__cardsGroup {
-    @extend %medium-card !optional;
+
+.explanations {
+    padding: 20px 22px;
+    margin-bottom: 12px;
 
     &__title {
-        font: {
-            size: 24px;
-            weight: 700;
+        @include mix.font(24px, 700);
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(row, wrap, space-between);
+        column-gap: 18px;
+        width: 100%;
+        //desktop properties
+        max-width: 323px;
+        
+        .card {
+            @include mix.rectangle(100%, 30px);
+            @include mix.basicGrayBackground;
+            @include mix.rounded(var.$explanationCardsRadius);
+            @include mix.explanationCardsShadow;
         }
     }
 }
-}
+
+
 
 .restaurants {
+    @include mix.basicBox(column, nowrap, start);
+    padding: 54px 17.5px;
+    margin-bottom: 12px;
 
     &__title {
-        font: {
-            size: 16px;
-            weight: 500;
-        }
+        @include mix.font(24px, 700);
     }
 
     &__cardsGroup {
-        @extend %high-card !optional;
+        @include mix.basicBox(row, wrap, space-between);
+        column-gap: 18px;
+
+        .card {
+            @include mix.rectangle(100%, 251px);
+            @include mix.basicBox(column, nowrap, start);
+            @include mix.rounded(var.$menuCardsRadius);
+            //desktop properties
+            max-width: 490px;
+
+            &__link {
+                @include mix.square(100%);
+
+                .new {
+                    @include mix.newLabelLayout;
+                    @include mix.lightGreenBackground;
+                    @include mix.rounded(var.$newLabelRadius);
+                    @include mix.greenText;
+                    @include mix.font(14px, 500);
+                    padding: 6.5px 9.3px;
+                    width:fit-content;
+                }
+
+                figure {
+                    @include mix.square(100%);
+
+                    img {
+                        @include mix.square(100%);
+                    }
+                }
+            }
+        }
     }
-
 }
-
-.entrees__cards {
+/*.entrees__cards {
     @extend %low-card !optional;
-}
+}*/

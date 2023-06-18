@@ -1,4 +1,4 @@
-img {
+figure, img {
     object-fit: cover;
     width: 100%;
 }
@@ -19,5 +19,6 @@ ul, ol {
 
 a {
     text-decoration: none;
+    text-indent: 0;
     color: black;
 }

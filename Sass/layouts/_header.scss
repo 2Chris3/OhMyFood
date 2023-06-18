@@ -9,62 +9,77 @@
     @include mix.fullWidth;
 
     .logo {
+        @include mix.fullWidth;
         @include mix.whiteBackground;
-        @include mix.rectangle(100%, 63px);
+        height: 63px;
         margin: 0;
         
         img {
+            @include mix.logoLayout;
             object-fit: cover;
-            position: relative;
-            left: 105px;
-            top: 22px;
             width: 162px;
         }
     }
 
+
     .location {
-        @include mix.fullWidth;
+        @include mix.basicBox(row, wrap, center);
+        @include mix.rectangle(100%, 50px);
         @include mix.basicGrayBackground;
-        height: var.$btnHeight;
+        gap: 0;
+        box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
 
         &__icon {
-//            @extend i,%icon !optional;
-            padding: 17px;
+            @include mix.grayIcon;
+            @include mix.iconPadding;
         }
 
         &__searchBar {
-            @include mix.centredBox(row);
-
-            #location__searchBar {
-                @include mix.fullWidth;
-                
-            }
+            @include mix.rectangle(120px, 25px);
+            @include mix.basicGrayBackground;
+            @include mix.noPadding;
+            @include mix.font(16px, 500);
+//            width: 150px; ne s'applique pas
+            position: relative;
+            top: 15.5px;
+            
         }
     }
 
 
     .heading {
-        @include mix.fullWidth;
+        @include mix.basicBox(column, nowrap, start);
         @include mix.lightGrayBackground;
-        height: 287px;
+        align-items: center;
+        padding: 27px 30px;
+        //line-height: 28px;
 
-        &__title {
-            font: {
-                size: 24px;
-                weight: 700;
+//        height: 287px;
+
+        &__text {
+            width: 100%;
+            margin-bottom: 27px;
+            //line-height: 21px;
+
+            
+            &--title {
+                @include mix.centredBox;
+                @include mix.centredText;
+                @include mix.font(24px, 700);
+                padding: 0 30px;
             }
-        }
 
-        &__subtitle {
-            font: {
-                size: 18px;
-                weight: 300;
+            &--subtitle {
+                @include mix.centredBox;
+                @include mix.centredText;
+                @include mix.font(18px, 300);
             }
         }
 
         &__btn {
             @extend btn,.btn !optional;
             @include mix.wideBtn;
+            margin-bottom: 30px;
         }
     }
 }
