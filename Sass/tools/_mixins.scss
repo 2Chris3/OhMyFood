@@ -10,7 +10,7 @@
 
 
 
-//   ::: WITHOUT :::   //
+//   ::: FRAMES :::   //
 
 //without borders
 @mixin noBorders {
@@ -31,6 +31,10 @@
     margin: 0;
 }
 
+@mixin frames($vertical-padding, $horizontal-padding, $vertical-margin, $horizontal-margin) {
+    padding: $vertical-padding $horizantal-padding;
+    margin: $horizantal-margin $horizantal-margin;
+}
 
 
 //   ::: TEXT :::   //
@@ -225,6 +229,18 @@
     position: relative;
     left: 257px;
     top: 53px;
+}
+
+//circle layout
+@mixin circleLayout {
+    position: relative;
+    right: 13.5px;
+    top: calc(var.$explanationCardsHeight / 2 - var.$circleSize / 2);
+}
+
+//icon layout
+@mixin iconLayout {
+    padding: 0 27px 0 33.5px;
 }
 
 

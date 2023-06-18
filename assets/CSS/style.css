@@ -55,6 +55,7 @@ a {
   width: 100vw;
 }
 .banner .logo {
+  width: 100vw;
   background-color: white;
   height: 63px;
   margin: 0;
@@ -113,7 +114,7 @@ a {
   font-size: 24px;
   font-weight: 700;
   font-family: Roboto;
-  padding: 0 30px;
+  padding: 5px 30px;
 }
 .banner .heading__text--subtitle {
   display: flex;
@@ -142,7 +143,7 @@ a {
   padding: 20px 22px;
   margin-bottom: 12px;
 }
-.explanations__title {
+v .explanations__title {
   font-size: 24px;
   font-weight: 700;
   font-family: Roboto;
@@ -152,16 +153,52 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  column-gap: 18px;
   width: 100%;
+  margin-top: 25px;
+  align-items: start;
+  gap: 25px;
   max-width: 323px;
 }
 .explanations__cardsGroup .card {
   width: 100%;
-  height: 30px;
-  background-color: #EAEAEA;
+  height: 72px;
   border-radius: 20px;
+  background-color: #F7F7F7;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: 12px;
+}
+.explanations__cardsGroup .card__number {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  right: 13.5px;
+  top: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto;
+  text-align: center;
+  text-justify: center;
+}
+.explanations__cardsGroup .card__content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+}
+.explanations__cardsGroup .card__content .fa-mobile-screen-button {
+  padding: 0 27px 0 33.5px;
+}
+.explanations__cardsGroup .card__content .fa-list {
+  padding: 0 27px 0 33.5px;
+}
+.explanations__cardsGroup .card__content .fa-store {
+  padding: 0 27px 0 33.5px;
+  color: #9356DC;
 }
 
 .restaurants {
@@ -186,7 +223,7 @@ a {
 }
 .restaurants__cardsGroup .card {
   width: 100%;
-  height: 251px;
+  height: 340px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;

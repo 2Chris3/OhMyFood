@@ -6,23 +6,58 @@
 .explanations {
     padding: 20px 22px;
     margin-bottom: 12px;
-
+v
     &__title {
         @include mix.font(24px, 700);
     }
 
     &__cardsGroup {
         @include mix.basicBox(row, wrap, space-between);
-        column-gap: 18px;
         width: 100%;
+        margin-top: 25px;
+        align-items: start;
+        gap: 25px;
         //desktop properties
         max-width: 323px;
         
         .card {
-            @include mix.rectangle(100%, 30px);
-            @include mix.basicGrayBackground;
+            @include mix.rectangle(100%, var.$explanationCardsHeight);
             @include mix.rounded(var.$explanationCardsRadius);
+            @include mix.lightGrayBackground;
             @include mix.explanationCardsShadow;
+            text-align: center;
+            margin-left: 12px;
+
+            &__number {
+                @include mix.square(var.$circleSize);
+                @include mix.rounded(var.$circleRadius);
+                @include mix.purpleBackground;
+                @include mix.whiteText;
+                @include mix.circleLayout;
+                @include mix.font(18px, 500);
+                text: {
+                    align: center;
+                    justify: center;
+                }
+            }
+
+            &__content {
+                @include mix.basicBox(row, nowrap, start);
+                position: relative;
+                .fa-mobile-screen-button {
+                @include mix.iconLayout;
+                }
+
+                .fa-list {
+                @include mix.iconLayout;
+                }
+
+                .fa-store {
+                @include mix.iconLayout;
+                    color: var.$darkPurple;
+                }
+            }
+
         }
     }
 }
@@ -43,7 +78,7 @@
         column-gap: 18px;
 
         .card {
-            @include mix.rectangle(100%, 251px);
+            @include mix.rectangle(100%, var.$restaurantCardsHeight);
             @include mix.basicBox(column, nowrap, start);
             @include mix.rounded(var.$menuCardsRadius);
             //desktop properties
