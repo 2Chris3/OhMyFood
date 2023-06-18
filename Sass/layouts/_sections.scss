@@ -4,8 +4,8 @@
 
 
 .explanations {
-    padding: 20px 22px;
-    margin-bottom: 12px;
+    padding: 28px 22px;
+    margin-bottom: 40px;
 v
     &__title {
         @include mix.font(24px, 700);
@@ -65,7 +65,7 @@ v
 
 
 .restaurants {
-    @include mix.basicBox(column, nowrap, start);
+    @include mix.basicGrayBackground;
     padding: 54px 17.5px;
     margin-bottom: 12px;
 
@@ -74,18 +74,21 @@ v
     }
 
     &__cardsGroup {
-        @include mix.basicBox(row, wrap, space-between);
-        column-gap: 18px;
+        @include mix.basicBox(row, wrap, start);
+        gap: 57px;
 
         .card {
-            @include mix.rectangle(100%, var.$restaurantCardsHeight);
+            @include mix.rectangle(100%, 251px);
             @include mix.basicBox(column, nowrap, start);
             @include mix.rounded(var.$menuCardsRadius);
+            margin-bottom: 50px;
+            border-radius: 25px;
             //desktop properties
             max-width: 490px;
 
             &__link {
                 @include mix.square(100%);
+                @include mix.rounded(var.$menuCardsRadius);
 
                 .new {
                     @include mix.newLabelLayout;
@@ -101,9 +104,24 @@ v
                     @include mix.square(100%);
 
                     img {
+                        object-fit: fill;
                         @include mix.square(100%);
                     }
                 }
+            }
+
+            &__content {
+                @include mix.rectangle(100%, 77px);
+                @include mix.basicBox(row, nowrap, space-between);
+                @include mix.whiteBackground;
+                padding: 16px 0 12px 19px;
+
+            }
+
+            .fa-heart {
+                padding: 25px;
+                font-size: 1.2em;
+                color: linear-gradient(var.$lightPurple, var.$darkPurple);
             }
         }
     }
