@@ -1,0 +1,92 @@
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+html, body, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-style: normal;
+  flex-direction: column;
+}
+
+html, body, header, ul, main, section, div, figure, article, a {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, address {
+  text-decoration: none;
+}
+
+.btn, .banner .heading__btn {
+  height: 50px;
+  width: 186px;
+  color: white;
+  background: linear-gradient(0deg, #ff79DA, #9356DC);
+}
+
+.banner .heading__btn {
+  width: 218px;
+}
+
+.btn, .banner .heading__btn {
+  height: 50px;
+  width: 186px;
+  color: white;
+  background: linear-gradient(0deg, #ff79DA, #9356DC);
+}
+
+.banner .heading__btn {
+  width: 218px;
+}
+
+.banner {
+  width: 100%;
+}
+.banner .location__icon {
+  color: pink;
+}
+.banner .location__text {
+  color: pink;
+}
+.banner .heading {
+  width: 0px;
+  height: 287.5px;
+  border-radius: 0px;
+}
+.banner .heading__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.banner .heading__subtitle {
+  font-size: 18px;
+  font-weight: 300;
+}
+/*.main__img {
+    @include rectangle(100%, 275px, 0);
+}
+
+.main__content {
+    @include grayBackground;
+    border-radius: 40px 40px 0 0;
+    flex-direction: column;
+}*/
+.explanations__cardsGroup__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.restaurants__title {
+  font-size: 16px;
+  font-weight: 500;
+}

@@ -1,0 +1,24 @@
+figure, img {
+    object-fit: cover;
+    width: 100%;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, input {
+    border: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-indent: 0;
+    color: black;
+}

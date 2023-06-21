@@ -1,0 +1,85 @@
+
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+@use '../components/buttons' as btn;
+
+
+
+.banner {
+    @include mix.fullWidth;
+
+    .logo {
+        @include mix.fullWidth;
+        @include mix.whiteBackground;
+        height: 63px;
+        margin: 0;
+        
+        img {
+            @include mix.logoLayout;
+            object-fit: cover;
+            width: 162px;
+        }
+    }
+
+
+    .location {
+        @include mix.basicBox(row, wrap, center);
+        @include mix.rectangle(100%, 50px);
+        @include mix.basicGrayBackground;
+        gap: 0;
+        box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
+
+        &__icon {
+            @include mix.grayIcon;
+            @include mix.iconPadding;
+        }
+
+        &__searchBar {
+            @include mix.rectangle(120px, 25px);
+            @include mix.basicGrayBackground;
+            @include mix.noPadding;
+            @include mix.font(16px, 500);
+//            width: 150px; ne s'applique pas
+            position: relative;
+            top: 15.5px;
+            
+        }
+    }
+
+
+    .heading {
+        @include mix.basicBox(column, nowrap, start);
+        @include mix.lightGrayBackground;
+        align-items: center;
+        padding: 27px 30px;
+        //line-height: 28px;
+
+//        height: 287px;
+
+        &__text {
+            width: 100%;
+            margin-bottom: 27px;
+            //line-height: 21px;
+
+            
+            &--title {
+                @include mix.centredBox;
+                @include mix.centredText;
+                @include mix.font(24px, 700);
+                padding: 5px 30px;
+            }
+
+            &--subtitle {
+                @include mix.centredBox;
+                @include mix.centredText;
+                @include mix.font(18px, 300);
+            }
+        }
+
+        &__btn {
+            @extend btn,.btn !optional;
+            @include mix.wideBtn;
+            margin-bottom: 30px;
+        }
+    }
+}

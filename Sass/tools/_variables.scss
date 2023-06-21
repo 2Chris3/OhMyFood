@@ -1,0 +1,105 @@
+
+//   ::: BREAKPOINTS :::   //
+
+//mobile
+$mobileMinWidth: 320px;
+$mobileMaxWidth: 765px;
+
+$tabletMinWidth: 766;
+$tabletMinWidth: 1200px;
+
+$desktopMinWidth:1201px;
+$desktopMinWidth: 1440px;
+
+$largeDesktopWidth: 1401px;
+
+//   ::: COLORS :::   //
+
+//grey variants
+$grey: #EAEAEA;
+$lightGray: #F7F7F7;
+$darkGray: #353535;
+
+//green variants
+$lightGreen: #99E2D0;
+$darkGreen: #008766;
+
+//purple variants
+$lightPurple: #ff79DA;
+$darkPurple: #9356DC;
+
+
+
+//   ::: GRADIENTS :::   //
+
+//turn parameters
+$dontRotate: 0deg;
+$rotateRight: 90deg;
+$rotateLeft: -90deg;
+$rotateUpside: 180deg;
+
+
+
+//   ::: SHADOW :::   //
+
+//blur
+$cardShadowBlur: 15px;
+$btnShadowBlur: 10px;
+
+//color
+$transparentGrey: rgba(0, 0, 0, 0.25);
+$veryTransparentGrey: rgba(0, 0, 0, 0.15);
+$extremelyTransparentGrey: rgba(0, 0, 0, 0.1);
+
+
+
+
+//   ::: ROUNDED :::   //
+
+$btnRadius: 25px;
+$explanationCardsRadius: 20px;
+$restaurantCardsRadius: 20px;
+$menuCardsRadius: 15px;
+$newLabelRadius: 2px;
+
+
+
+//   ::: PROPORTIONAL DIMENSIONS :::   //
+
+//for flex basis
+$per2: 47%;
+$per3: 28%;
+$per4: 21%;
+
+
+
+//   ::: DIMENSIONS :::   //
+
+//basic buttons
+$btnHeight: 50px;
+$btnWidth: 186px;
+
+//big buttons
+$bigBtnWidth: 218px;
+
+
+
+//   :::  DIMENSIONS :::   //
+
+//card heights
+$restaurantCardsHeight: 340px;
+$explanationCardsHeight: 72px;
+$menuCardsHeight: 69px;
+
+//card widths
+$restaurantCardsWidth: 250px;
+$explanationCardsWidth: 322px;
+$menuCardsWidth: 399px;
+
+
+
+//   ::: CIRCLES :::   //
+
+//size
+$circleSize: 24px;
+$circleRadius: calc($circleSize / 2);

@@ -1,0 +1,258 @@
+@use './variables' as var;
+
+
+
+//   ::: RADIUS :::   //
+
+@mixin rounded($radius) {
+    border-radius: $radius;
+}
+
+
+
+//   ::: FRAMES :::   //
+
+//without borders
+@mixin noBorders {
+    border: 0;
+}
+//without paddings
+@mixin noPadding {
+    padding: 0;
+}
+//without margins
+@mixin noMargin {
+    margin: 0;
+}
+//without margin and padding
+@mixin noFrames {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin frames($vertical-padding, $horizontal-padding, $vertical-margin, $horizontal-margin) {
+    padding: $vertical-padding $horizantal-padding;
+    margin: $horizantal-margin $horizantal-margin;
+}
+
+
+//   ::: TEXT :::   //
+
+//font
+@mixin font ($size, $weight, $family: Roboto) {
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $family;
+    }
+}
+
+//text colors
+@mixin whiteText {
+    color: white;
+}
+@mixin greenText {
+    color: var.$darkGreen;
+}
+
+
+//text alignment
+@mixin centredText {
+    text-align: center;
+}
+
+
+
+//   ::: BACKGROUNDS :::   //
+
+//inherit background
+@mixin inheritBackground {
+    background-color: inherit;
+}
+
+//white background
+@mixin whiteBackground {
+    background-color: white;
+}
+
+//green backgrounds
+@mixin lightGreenBackground {
+    background-color: var.$lightGreen;
+}
+
+//gray backgrounds
+@mixin basicGrayBackground {
+    background-color: var.$grey;
+}
+@mixin lightGrayBackground {
+    background-color: var.$lightGray;
+}
+@mixin darkGrayBackground {
+    background-color: var.$darkGray;
+}
+
+//purple backgrounds
+@mixin purpleBackground {
+    background-color: var.$darkPurple;
+}
+@mixin purpleBackground-gradient($degrees) {
+    background: linear-gradient($degrees, var.$darkPurple, var.$lightPurple); 
+}
+
+
+
+//   ::: SHADOWS :::   //
+
+//button shadows
+@mixin btnShadow {
+    box-shadow: 0 4px var.$btnShadowBlur var.$transparentGrey;
+}
+
+//card shadows
+@mixin explanationCardsShadow {
+    box-shadow: 0 4px var.$cardShadowBlur var.$veryTransparentGrey;
+}
+@mixin cardsShadows {
+    box-shadow: 0 4px var.$cardShadowBlur var.$extremelyTransparentGrey;
+}
+
+
+
+
+//   ::: PROPORTIONAL DIMENSIONS :::   //
+
+@mixin fitItems($percentage) {
+    flex: 1 1 $percentage;
+}
+
+@mixin fullWidth {
+    width: 100vw;
+}
+
+@mixin fullHeight {
+    height: 100vh;
+}
+
+
+
+
+//   ::: CONTAINERS :::   //
+
+//containers shapes
+@mixin square ($size) {
+    width: $size;
+    height: $size;
+}
+@mixin rectangle ($width, $height) {
+    width: $width;
+    height: $height;
+}
+//containers maximum sizes
+@mixin maxSquare ($size) {
+    max-width: $size;
+    max-height: $size;
+}
+@mixin maxRectangle ($width, $height) {
+    max-width: $width;
+    max-height: $height;
+}
+//containers maximum sizes
+@mixin minSquare ($size) {
+    min-width: $size;
+    min-height: $size;
+}
+@mixin minRectangle ($width, $height) {
+    min-width: $width;
+    min-height: $height;
+}
+
+//container types
+@mixin basicBox($direction: row, $wrap:nowrap, $justify-content:start) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+}
+@mixin centredBox($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+}
+@mixin inheritBox {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    align-content: inherit;
+}
+
+
+
+//   ::: BUTTONS :::   //
+
+//button types
+@mixin btn {
+    height: var.$btnHeight;
+    width: var.$btnWidth; 
+    color: white;
+    border-radius: var.$btnRadius;
+//    background: linear-gradient(var.$lightPurple, var.$darkPurple);
+}
+@mixin wideBtn {
+    width: 218px;
+} 
+
+
+//   ::: CARDS :::   //
+
+
+//   ::: LINKS :::   //
+
+@mixin linkReset {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+//   ::: LAYOUTS :::   //
+
+//logo layout
+@mixin logoLayout {
+    position: relative;
+    left: calc(50vw - 162px / 2);
+    top: calc((63px - 28px) / 2);
+}
+
+//label layout 
+@mixin newLabelLayout {
+    position: relative;
+    left: 257px;
+    top: 53px;
+}
+
+//circle layout
+@mixin circleLayout {
+    position: relative;
+    right: 13.5px;
+    top: calc(var.$explanationCardsHeight / 2 - var.$circleSize / 2);
+}
+
+//icon layout
+@mixin iconLayout {
+    padding: 0 27px 0 33.5px;
+}
+
+
+
+//   ::: ICONS :::   //
+
+//location icon color
+@mixin grayIcon {
+    color: var.$darkGray;
+}
+
+//icon paddings
+@mixin iconPadding {
+    padding: 17px;
+}

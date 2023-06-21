@@ -1,1 +1,55 @@
+//@use './tools/variables' as var;
+//@media screen and (max-width: var.$mobileMaxWidth) {
 
+
+
+//   ::: BASE ::: //
+@import "./base/typography";
+@import "./base/reset";
+
+
+
+//   ::: ABSTRACT ::: //
+@import "./tools/variables";
+@import "./tools/mixins";
+
+
+
+//   ::: COMPONENTS ::: //
+@import "./components/images";
+@import "./components/icons";
+@import "./components/buttons";
+@import "./components/cards";
+
+
+
+//   ::: LAYOUTS ::: //
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/sections";
+@import "./layouts/boxes";
+@import "./layouts/cardContent";
+@import "./layouts/textContainer";
+@import "./layouts/footer";
+
+
+
+//   ::: PAGES ::: //
+@import "./pages/restaurants";
+@import "./pages/home";
+
+
+
+//   ::: VENDORS ::: //
+@import "./vendor/moz";
+@import "./vendor/ms";
+@import "./vendor/o";
+@import "./vendor/webkit";
+
+
+
+//   ::: ANIMATIONS ::: //
+@import "./animations/pseudo-elements";
+@import "./animations/key_frames";
+
+//}

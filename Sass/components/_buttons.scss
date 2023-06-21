@@ -1,0 +1,12 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+
+//   ::: BASIC BUTTON :::   //   
+
+.btn {
+    @include mix.btn;
+    @include mix.rounded(var.$btnRadius);
+    @include mix.purpleBackground-gradient(0deg);
+    @include mix.btnShadow;
+    @include mix.whiteText;
+}

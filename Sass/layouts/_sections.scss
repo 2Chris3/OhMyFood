@@ -1,0 +1,131 @@
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+@use '../components/cards' as card;
+
+
+.explanations {
+    padding: 28px 22px;
+    margin-bottom: 40px;
+v
+    &__title {
+        @include mix.font(24px, 700);
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(row, wrap, space-between);
+        width: 100%;
+        margin-top: 25px;
+        align-items: start;
+        gap: 25px;
+        //desktop properties
+        max-width: 323px;
+        
+        .card {
+            @include mix.rectangle(100%, var.$explanationCardsHeight);
+            @include mix.rounded(var.$explanationCardsRadius);
+            @include mix.lightGrayBackground;
+            @include mix.explanationCardsShadow;
+            text-align: center;
+            margin-left: 12px;
+
+            &__number {
+                @include mix.square(var.$circleSize);
+                @include mix.rounded(var.$circleRadius);
+                @include mix.purpleBackground;
+                @include mix.whiteText;
+                @include mix.circleLayout;
+                @include mix.font(18px, 500);
+                text: {
+                    align: center;
+                    justify: center;
+                }
+            }
+
+            &__content {
+                @include mix.basicBox(row, nowrap, start);
+                position: relative;
+                .fa-mobile-screen-button {
+                @include mix.iconLayout;
+                }
+
+                .fa-list {
+                @include mix.iconLayout;
+                }
+
+                .fa-store {
+                @include mix.iconLayout;
+                    color: var.$darkPurple;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.restaurants {
+    @include mix.basicGrayBackground;
+    padding: 54px 17.5px;
+    margin-bottom: 12px;
+
+    &__title {
+        @include mix.font(24px, 700);
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(row, wrap, start);
+        gap: 57px;
+
+        .card {
+            @include mix.rectangle(100%, 251px);
+            @include mix.basicBox(column, nowrap, start);
+            @include mix.rounded(var.$menuCardsRadius);
+            margin-bottom: 50px;
+            border-radius: 25px;
+            //desktop properties
+            max-width: 490px;
+
+            &__link {
+                @include mix.square(100%);
+                @include mix.rounded(var.$menuCardsRadius);
+
+                .new {
+                    @include mix.newLabelLayout;
+                    @include mix.lightGreenBackground;
+                    @include mix.rounded(var.$newLabelRadius);
+                    @include mix.greenText;
+                    @include mix.font(14px, 500);
+                    padding: 6.5px 9.3px;
+                    width:fit-content;
+                }
+
+                figure {
+                    @include mix.square(100%);
+
+                    img {
+                        object-fit: fill;
+                        @include mix.square(100%);
+                    }
+                }
+            }
+
+            &__content {
+                @include mix.rectangle(100%, 77px);
+                @include mix.basicBox(row, nowrap, space-between);
+                @include mix.whiteBackground;
+                padding: 16px 0 12px 19px;
+
+            }
+
+            .fa-heart {
+                padding: 25px;
+                font-size: 1.2em;
+                color: linear-gradient(var.$lightPurple, var.$darkPurple);
+            }
+        }
+    }
+}
+/*.entrees__cards {
+    @extend %low-card !optional;
+}*/
