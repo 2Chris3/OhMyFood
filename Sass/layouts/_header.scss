@@ -11,7 +11,7 @@
     .logo {
         @include mix.fullWidth;
         @include mix.whiteBackground;
-        height: 63px;
+        @include mix.logoContainerHeight;
         margin: 0;
         
         img {
@@ -30,8 +30,8 @@
         box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
 
         &__icon {
-            @include mix.grayIcon;
             @include mix.iconPadding;
+            @include mix.darkGrayText;
         }
 
         &__searchBar {
@@ -73,6 +73,7 @@
                 @include mix.centredBox;
                 @include mix.centredText;
                 @include mix.font(18px, 300);
+                @include mix.darkGrayText;
             }
         }
 

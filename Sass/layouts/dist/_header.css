@@ -37,8 +37,8 @@
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .banner .location__icon {
-  color: #353535;
   padding: 17px;
+  color: #353535;
 }
 .banner .location__searchBar {
   width: 120px;
@@ -56,7 +56,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: start;
-  background-color: #F7F7F7;
+  background-color: #F6F6F6;
   align-items: center;
   padding: 27px 30px;
 }
@@ -82,6 +82,7 @@
   font-size: 18px;
   font-weight: 300;
   font-family: Roboto;
+  color: #353535;
 }
 .banner .heading__btn {
   width: 218px;

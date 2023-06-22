@@ -5,7 +5,7 @@
 $mobileMinWidth: 320px;
 $mobileMaxWidth: 765px;
 
-$tabletMinWidth: 766;
+$tabletMinWidth: 766px;
 $tabletMinWidth: 1200px;
 
 $desktopMinWidth:1201px;
@@ -16,8 +16,9 @@ $largeDesktopWidth: 1401px;
 //   ::: COLORS :::   //
 
 //grey variants
-$grey: #EAEAEA;
-$lightGray: #F7F7F7;
+$ultralightGray: #F6F6F6;
+$lightGray: #EAEAEA;
+$grey: #7E7E7E;
 $darkGray: #353535;
 
 //green variants
@@ -49,7 +50,7 @@ $btnShadowBlur: 10px;
 //color
 $transparentGrey: rgba(0, 0, 0, 0.25);
 $veryTransparentGrey: rgba(0, 0, 0, 0.15);
-$extremelyTransparentGrey: rgba(0, 0, 0, 0.1);
+$extremelyTransparentGrey: rgba(0, 0, 0, 0.10);
 
 
 
@@ -60,7 +61,7 @@ $btnRadius: 25px;
 $explanationCardsRadius: 20px;
 $restaurantCardsRadius: 20px;
 $menuCardsRadius: 15px;
-$newLabelRadius: 2px;
+$popUpRadius: 2px;
 
 
 
@@ -96,6 +97,13 @@ $restaurantCardsWidth: 250px;
 $explanationCardsWidth: 322px;
 $menuCardsWidth: 399px;
 
+//img
+$imageHeight: 174px;
+
+//logo
+$logoContainerHeight: 63px;
+$logoHeight: calc($logoContainerHeight / 2 - 5px);
+$logoWidth: 162px;
 
 
 //   ::: CIRCLES :::   //

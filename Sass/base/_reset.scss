@@ -1,6 +1,9 @@
-figure, img {
-    object-fit: cover;
+html, body, article, figure, img {
     width: 100%;
+}
+
+img {
+    object-fit: cover;
 }
 
 * {
@@ -21,4 +24,16 @@ a {
     text-decoration: none;
     text-indent: 0;
     color: black;
+}
+
+address {
+    font-style: normal;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 5px;
 }

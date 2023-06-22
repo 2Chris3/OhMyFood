@@ -8,6 +8,13 @@
     border-radius: $radius;
 }
 
+@mixin topRounded($radius: 15px) {
+    border-radius: 15px 15px 0 0;
+}
+
+@mixin bottomRounded($radius: 15px) {
+    border-radius: 0 0 15px 15px;
+}
 
 
 //   ::: FRAMES :::   //
@@ -56,6 +63,10 @@
     color: var.$darkGreen;
 }
 
+@mixin darkGrayText {
+    color: var.$darkGray;
+}
+
 
 //text alignment
 @mixin centredText {
@@ -83,10 +94,10 @@
 
 //gray backgrounds
 @mixin basicGrayBackground {
-    background-color: var.$grey;
+    background-color: var.$lightGray;
 }
 @mixin lightGrayBackground {
-    background-color: var.$lightGray;
+    background-color: var.$ultralightGray;
 }
 @mixin darkGrayBackground {
     background-color: var.$darkGray;
@@ -106,17 +117,16 @@
 
 //button shadows
 @mixin btnShadow {
-    box-shadow: 0 4px var.$btnShadowBlur var.$transparentGrey;
+    box-shadow: 0 4px var.$btnShadowBlur 0 var.$transparentGrey;
 }
 
 //card shadows
 @mixin explanationCardsShadow {
-    box-shadow: 0 4px var.$cardShadowBlur var.$veryTransparentGrey;
+    box-shadow: 0 4px var.$cardShadowBlur 0 var.$veryTransparentGrey;
 }
 @mixin cardsShadows {
-    box-shadow: 0 4px var.$cardShadowBlur var.$extremelyTransparentGrey;
+    box-shadow: 0 4px var.$cardShadowBlur 0 var.$extremelyTransparentGrey;
 }
-
 
 
 
@@ -131,7 +141,7 @@
 }
 
 @mixin fullHeight {
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -203,32 +213,21 @@
 } 
 
 
-//   ::: CARDS :::   //
-
-
-//   ::: LINKS :::   //
-
-@mixin linkReset {
-    text-decoration: none;
-    color: black;
-}
-
-
 
 //   ::: LAYOUTS :::   //
 
 //logo layout
 @mixin logoLayout {
     position: relative;
-    left: calc(50vw - 162px / 2);
-    top: calc((63px - 28px) / 2);
+    left: calc(50vw - var.$logoWidth / 2);
+    top: calc((var.$logoContainerHeight - var.$logoHeight) / 2);
 }
 
-//label layout 
-@mixin newLabelLayout {
-    position: relative;
-    left: 257px;
-    top: 53px;
+//pop-up layout 
+@mixin popUpLayout {
+    position: absolute;
+    top: 5%;
+    right: 3.7%;
 }
 
 //circle layout
@@ -240,19 +239,27 @@
 
 //icon layout
 @mixin iconLayout {
-    padding: 0 27px 0 33.5px;
+    padding: 0 27px;
 }
 
 
 
 //   ::: ICONS :::   //
 
-//location icon color
-@mixin grayIcon {
-    color: var.$darkGray;
+//icons color
+@mixin iconColor {
+    color: var.$grey;
 }
 
 //icon paddings
 @mixin iconPadding {
     padding: 17px;
+}
+
+
+
+//   ::: LOGO :::   //
+
+@mixin logoContainerHeight {
+    height: var.$logoContainerHeight;
 }
