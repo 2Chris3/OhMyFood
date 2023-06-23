@@ -409,6 +409,15 @@ footer .list__item--link {
   font-family: Roboto;
 }
 
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mainContent__btn {
+  margin-bottom: 40;
+}
+
 .fa-heart:active, .fa-heart:hover {
   color: transparent;
   background-clip: text;

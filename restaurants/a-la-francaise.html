@@ -2,19 +2,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="../assets/CSS/style.css">
     <title>Oh My Food</title>
 </head>
 
 <body>
     <header class="banner">
-        <figure>
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="">
+        <i class="back"></i>
+        <figure class="logo">
+            <img src="../assets/images/logo/ohmyfood@2x.svg" class="cover" alt="">
         </figure>
     </header>
 
     <main class="mainContainer">
-        <figure><img src="/assets/images/restaurants/a-la-francaise.jpg" alt="" class="main__img cover"></figure>
+        <figure class="logo">
+            <img src="/assets/images/restaurants/a-la-francaise.jpg" alt="" class="main__img cover"></figure>
         <div class="main__content">
             <div class="heading">
                 <h1 class="heading__title"></h1>
@@ -116,26 +118,30 @@
                     </article>
                 </div>
             </section>
-            <button class="order btn"></button>
+            <button class="btn mainContainer__btn">Commander</button>
         </div>
     </main>
 
     <footer>
-        <figure>
-            <img src="/assets/images/logo/ohmyfood@2x.svg" alt="">
+        <figure class="logo">
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh My Food">
         </figure>
+
         <ul class="list">
-            <li class="list__items">
-                <i class="list__items--icon"></i>
-                <span class="list__items--text">Proposer un restaurant</span>
+            <li class="list__item">
+                <i class="fa-solid fa-utensils list__item--icon"></i>
+                <span class="list__item--text">Proposer un restaurant</span>
             </li>
-            <li class="list__items">
-                <i class="list__items--icon"></i>
-                <span class="list__items--text">Devenir partenaire</span>
+
+            <li class="list__item">
+                <i class="fa-solid fa-handshake-angle list__item--icon"></i>
+                <span class="list__item--text space">Devenir partenaire</span>
             </li>
-            <li>Mentions légales</li>
-            <li class="list__items">
-                <a href="#" class="list__items--links"></a>
+
+            <li class="list__item">Mentions légales</li>
+
+            <li class="list__item">
+                <a class="list__item--link" href="mailto:">Contact</a>
             </li>
         </ul>
     </footer>

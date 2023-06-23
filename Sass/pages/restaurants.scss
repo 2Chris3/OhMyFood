@@ -1,0 +1,18 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+
+
+
+
+.mainContent {
+    @include mix.centredBox;
+
+    &__btn {
+        margin-bottom: 40;//enlever
+    }
+}
+
+
+
+
+

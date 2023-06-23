@@ -55,12 +55,6 @@ h3 {
   color: white;
 }
 
-@media only screen and (min-width: 960px) {
-  body {
-    padding: 100%;
-  }
-}
-
 .btn, .banner .heading__btn {
   height: 50px;
   width: 186px;
@@ -73,12 +67,12 @@ h3 {
 }
 
 .banner {
-  width: 100vw;
+  width: 100%;
 }
 .banner .logo {
-  width: 100vw;
-  background-color: white;
   height: 63px;
+  background-color: white;
+  width: 100%;
   margin: 0;
 }
 .banner .logo img {
@@ -101,9 +95,10 @@ h3 {
 .banner .location__icon {
   padding: 17px;
   color: #353535;
+  padding-left: 40px;
 }
 .banner .location__searchBar {
-  width: 120px;
+  width: 160px;
   height: 25px;
   background-color: #EAEAEA;
   padding: 0;
@@ -166,17 +161,23 @@ h3 {
   font-weight: 700;
   font-family: Roboto;
 }
+@media only screen and (min-width: 1400px) {
+  .explanations__title {
+    padding-left: 11vw;
+  }
+}
 .explanations__cardsGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   gap: 25px;
   padding-bottom: 40px;
 }
 @media only screen and (min-width: 960px) {
   .explanations__cardsGroup {
+    justify-content: center;
     gap: 35px;
   }
 }
@@ -232,29 +233,35 @@ h3 {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 54px 17.5px;
+  padding: 28px 22px;
+}
+@media only screen and (min-width: 960px) {
+  .restaurants {
+    margin: 0;
+  }
 }
 .restaurants__title {
   font-size: 24px;
   font-weight: 700;
   font-family: Roboto;
 }
+@media only screen and (min-width: 1400px) {
+  .restaurants__title {
+    padding-left: 11vw;
+  }
+}
 .restaurants__cardsGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   row-gap: 18px;
-  padding-bottom: 12px;
+  column-gap: 50px;
 }
 @media only screen and (min-width: 960px) {
   .restaurants__cardsGroup {
     row-gap: 50px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .restaurants__cardsGroup {
-    column-gap: 100px;
+    column-gap: 5%;
   }
 }
 .restaurants__cardsGroup .card {
@@ -264,7 +271,7 @@ h3 {
   justify-content: start;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  flex: 1 1 55%;
+  flex: 1 1 47%;
   position: relative;
   min-width: 285px;
 }
@@ -328,12 +335,12 @@ h3 {
 }
 
 footer {
-  width: 100vw;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: start;
   background-color: #353535;
+  width: 100%;
   padding: 22px 25px;
 }
 @media only screen and (min-width: 960px) {
@@ -400,6 +407,10 @@ footer .list__item--link {
   font-size: 16px;
   font-weight: 300;
   font-family: Roboto;
+}
+
+.banner .back {
+  color: black;
 }
 
 .fa-heart:active, .fa-heart:hover {
