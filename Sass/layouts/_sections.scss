@@ -7,17 +7,24 @@
     @include mix.whiteBackground;
     padding: 28px 22px;
     flex-wrap: wrap;
-
+    //desktop
+    
     &__title {
         @include mix.font(24px, 700);
+        //desktop
+        @media only screen and (min-width: 1400px) {
+            padding-left: 11vw;
+        }
     }
 
     &__cardsGroup {
-        @include mix.basicBox(row, wrap, space-around);
+        @include mix.basicBox(row, wrap, center);
         width: 100%;
         gap: 25px;
         padding-bottom: 40px;
+        //desktop
         @media only screen and (min-width: 960px) {
+            justify-content: center;
             gap: 35px;
         }
         
@@ -30,6 +37,7 @@
             min-width: 264px;
             text-align: center;
             margin-left: 12px;
+            //desktop
             @media only screen and (min-width: 960px) {
                 max-width: 322px;
             }
@@ -73,31 +81,39 @@
 
 .restaurants {
     @include mix.lightGrayBackground;
-    padding: 54px 17.5px;
+    padding: 28px 22px;
+    //desktop
+    @media only screen and (min-width: 960px) {
+        margin: 0;
+    }
 
     &__title {
         @include mix.font(24px, 700);
+        //desktop
+        @media only screen and (min-width: 1400px) {
+            padding-left: 11vw;
+        }
     }
 
     &__cardsGroup {
-        @include mix.basicBox(row, wrap, space-evenly);
+        @include mix.basicBox(row, wrap, center);
         row-gap: 18px;
-        padding-bottom: 12px;
+        column-gap: 50px;
+        //desktop
         @media only screen and (min-width: 960px) {
             row-gap: 50px;
+            column-gap: 5%;
         }
-        @media only screen and (min-width: 1400px) {
-            column-gap: 100px;
-        }
+        
 
         .card {
             @include mix.basicBox(column, nowrap, start);
             @include mix.rounded(15px);
             @include mix.cardsShadows;
-            flex: 1 1 55%;
+            flex: 1 1 47%;
             position: relative;
             min-width: 285px;
-            //desktop properties
+            //desktop
             @media only screen and (min-width: 960px) {
                 max-width: 490px;
             }

@@ -8,17 +8,23 @@
   font-weight: 700;
   font-family: Roboto;
 }
+@media only screen and (min-width: 1400px) {
+  .explanations__title {
+    padding-left: 11vw;
+  }
+}
 .explanations__cardsGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   gap: 25px;
   padding-bottom: 40px;
 }
 @media only screen and (min-width: 960px) {
   .explanations__cardsGroup {
+    justify-content: center;
     gap: 35px;
   }
 }
@@ -74,29 +80,35 @@
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 54px 17.5px;
+  padding: 28px 22px;
+}
+@media only screen and (min-width: 960px) {
+  .restaurants {
+    margin: 0;
+  }
 }
 .restaurants__title {
   font-size: 24px;
   font-weight: 700;
   font-family: Roboto;
 }
+@media only screen and (min-width: 1400px) {
+  .restaurants__title {
+    padding-left: 11vw;
+  }
+}
 .restaurants__cardsGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   row-gap: 18px;
-  padding-bottom: 12px;
+  column-gap: 50px;
 }
 @media only screen and (min-width: 960px) {
   .restaurants__cardsGroup {
     row-gap: 50px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .restaurants__cardsGroup {
-    column-gap: 100px;
+    column-gap: 5%;
   }
 }
 .restaurants__cardsGroup .card {
@@ -106,7 +118,7 @@
   justify-content: start;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  flex: 1 1 55%;
+  flex: 1 1 47%;
   position: relative;
   min-width: 285px;
 }
