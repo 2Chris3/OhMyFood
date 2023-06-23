@@ -10,12 +10,12 @@
 }
 
 .banner {
-  width: 100vw;
+  width: 100%;
 }
 .banner .logo {
-  width: 100vw;
-  background-color: white;
   height: 63px;
+  background-color: white;
+  width: 100%;
   margin: 0;
 }
 .banner .logo img {
@@ -72,6 +72,11 @@
   font-weight: 700;
   font-family: Roboto;
   padding: 5px 30px;
+}
+@media only screen and (min-width: 960px) {
+  .banner .heading__text--title {
+    font-size: 40px;
+  }
 }
 .banner .heading__text--subtitle {
   display: flex;

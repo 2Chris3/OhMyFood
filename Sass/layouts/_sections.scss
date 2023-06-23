@@ -17,16 +17,22 @@
         width: 100%;
         gap: 25px;
         padding-bottom: 40px;
+        @media only screen and (min-width: 960px) {
+            gap: 35px;
+        }
         
         .card {
             @include mix.rounded(var.$explanationCardsRadius);
             @include mix.lightGrayBackground;
             @include mix.explanationCardsShadow;
             height: var.$explanationCardsHeight;
-            flex: 1 0 min-content;
+            flex: 1 0 20%;
+            min-width: 264px;
             text-align: center;
-            //max-width: 322px;
             margin-left: 12px;
+            @media only screen and (min-width: 960px) {
+                max-width: 322px;
+            }
 
             &__number {
                 @include mix.square(var.$circleSize);
@@ -44,10 +50,20 @@
                 align-content: center;
                 
 
-            &__icon {
-                @include mix.iconLayout;
-                @include mix.iconColor;
-            }
+                .fa-mobile-screen-button {
+                    @include mix.iconLayout;
+                    @include mix.iconColor;
+                }
+
+                .fa-list {
+                    @include mix.iconLayout;
+                    @include mix.iconColor;
+                }
+
+                .fa-store {
+                    @include mix.iconLayout;
+                    @include mix.iconColor;
+                }
             }
         }
     }
@@ -64,17 +80,27 @@
     }
 
     &__cardsGroup {
-        @include mix.basicBox(row, wrap, space-between);
-        gap: 18px;
+        @include mix.basicBox(row, wrap, space-evenly);
+        row-gap: 18px;
         padding-bottom: 12px;
+        @media only screen and (min-width: 960px) {
+            row-gap: 50px;
+        }
+        @media only screen and (min-width: 1400px) {
+            column-gap: 100px;
+        }
 
         .card {
             @include mix.basicBox(column, nowrap, start);
             @include mix.rounded(15px);
             @include mix.cardsShadows;
+            flex: 1 1 55%;
             position: relative;
+            min-width: 285px;
             //desktop properties
-            //max-width: 490px;
+            @media only screen and (min-width: 960px) {
+                max-width: 490px;
+            }
 
             &__link {
                 @include mix.rounded(15px);
@@ -105,6 +131,19 @@
                 @include mix.whiteBackground;
                 @include mix.bottomRounded;
                 padding: 16px 12px;
+                
+            }
+
+            &__text {
+                padding-right: 50px;
+
+                &--title {
+                    @include mix.font(18px, 700);
+                }
+
+                &--subtitle {
+                    @include mix.font(17px, 300);
+                }
             }
 
             &__icon {

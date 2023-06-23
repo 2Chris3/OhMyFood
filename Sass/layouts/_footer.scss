@@ -4,15 +4,27 @@
 
 
 footer {
-    @include mix.fullWidth;
     @include mix.basicBox(column, nowrap, start);
     @include mix.darkGrayBackground;
+    width: 100%;
     padding: 22px 25px;
+    //desktop
+    @media only screen and (min-width: 960px) {
+        @include mix.basicBox(row-reverse, nowrap, end);
+        height: 114px;
+        align-items: end;
+    }
 
     .logo {
         @include mix.fullWidth;
         height: 18px;
         margin-bottom: 16px;
+        //desktop
+        @media only screen and (min-width: 960px) {
+            width: 100px;
+            margin-left: 70px;
+            margin-bottom: 0;
+        }
 
         img {
             width: 100px;
@@ -22,6 +34,11 @@ footer {
 
     .list {
         @include mix.inheritBox;
+        //desktop
+        @media only screen and (min-width: 960px) {
+            @include mix.basicBox(row, nowrap, start);
+            gap: 12px;
+        }
 
         &__item {
             @include mix.whiteText;
@@ -33,7 +50,11 @@ footer {
 
             &--text {
                 @include mix.font(16px, 500);
-                padding-left: 11px;
+                padding-left: 0 7px 0 11px;
+            }
+
+            .space {
+                margin-right: 20px;
             }
             
             &--link {
