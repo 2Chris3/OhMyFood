@@ -44,20 +44,10 @@
                 align-content: center;
                 
 
-                .fa-mobile-screen-button {
-                    @include mix.iconLayout;
-                    @include mix.iconColor;
-                }
-
-                .fa-list {
-                    @include mix.iconLayout;
-                    @include mix.iconColor;
-                }
-
-                .fa-store {
-                    @include mix.iconLayout;
-                    @include mix.iconColor;
-                }
+            &__icon {
+                @include mix.iconLayout;
+                @include mix.iconColor;
+            }
             }
         }
     }

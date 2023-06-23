@@ -48,15 +48,7 @@
   justify-content: start;
   align-content: center;
 }
-.explanations__cardsGroup .card__content .fa-mobile-screen-button {
-  padding: 0 27px;
-  color: #7E7E7E;
-}
-.explanations__cardsGroup .card__content .fa-list {
-  padding: 0 27px;
-  color: #7E7E7E;
-}
-.explanations__cardsGroup .card__content .fa-store {
+.explanations__cardsGroup .card__content__icon {
   padding: 0 27px;
   color: #7E7E7E;
 }
