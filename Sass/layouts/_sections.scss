@@ -121,10 +121,6 @@
                 @include mix.whiteText;
                 padding: 5px 12px;
                 font-size:x-large;
-                /* hover
-                background-clip: text;
-                background-image: linear-gradient(var.$lightPurple, var.$darkPurple);
-                */
                 -webkit-text-stroke: 1px black;
             }
         }

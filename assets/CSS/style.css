@@ -79,7 +79,6 @@ h3 {
   position: relative;
   left: calc(50vw - 81px);
   top: 18.25px;
-  object-fit: cover;
   width: 162px;
 }
 .banner .location {
@@ -282,11 +281,64 @@ h3 {
   color: white;
   padding: 5px 12px;
   font-size: x-large;
-  /* hover
-  background-clip: text;
-  background-image: linear-gradient(var.$lightPurple, var.$darkPurple);
-  */
   -webkit-text-stroke: 1px black;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  background-color: #353535;
+  padding: 22px 25px;
+}
+footer .logo {
+  width: 100vw;
+  height: 18px;
+  margin-bottom: 16px;
+}
+footer .logo img {
+  width: 100px;
+  filter: invert(100%);
+}
+footer .list {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-content: inherit;
+}
+footer .list__item {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto;
+}
+footer .list__item .fa-handshake-angle {
+  font-size: 0.8em;
+}
+footer .list__item--text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto;
+  padding-left: 11px;
+}
+footer .list__item--link {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto;
+}
+
+.fa-heart:active, .fa-heart:hover {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(#ff79DA, #9356DC);
+  -webkit-text-stroke: transparent;
+}
+
+.explanations .card__icon:active, .explanations .card__icon:hover {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+@use '../tools/variables' as var;
+
+
+
+.fa-heart{
+    &:active,
+    &:hover {
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(var.$lightPurple, var.$darkPurple);
+        -webkit-text-stroke: transparent;
+    }
+}
+
+.explanations {
+    .card__icon {
+        &:active,
+        &:hover {
+            color: var.$darkPurple;
+        }
+    }
+}

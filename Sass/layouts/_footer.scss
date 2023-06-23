@@ -1,0 +1,45 @@
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+
+
+
+footer {
+    @include mix.fullWidth;
+    @include mix.basicBox(column, nowrap, start);
+    @include mix.darkGrayBackground;
+    padding: 22px 25px;
+
+    .logo {
+        @include mix.fullWidth;
+        height: 18px;
+        margin-bottom: 16px;
+
+        img {
+            width: 100px;
+            filter: invert(100%);
+        }
+    }
+
+    .list {
+        @include mix.inheritBox;
+
+        &__item {
+            @include mix.whiteText;
+            @include mix.font(16px, 300);
+
+            .fa-handshake-angle {
+                font-size: 0.8em;
+            }
+
+            &--text {
+                @include mix.font(16px, 500);
+                padding-left: 11px;
+            }
+            
+            &--link {
+                @include mix.whiteText;
+                @include mix.font(16px, 300);
+            }
+        }
+    }
+}

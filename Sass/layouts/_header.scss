@@ -16,7 +16,6 @@
         
         img {
             @include mix.logoLayout;
-            object-fit: cover;
             width: 162px;
         }
     }

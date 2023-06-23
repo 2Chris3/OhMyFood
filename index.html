@@ -32,7 +32,7 @@
                     vous convient</h1>
                 <p class="heading__text--subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
             </div>
-            <button class="heading__btn">Explorer nos restaurants</button>
+            <button onclick="window.location.href='#restaurant__cards';" class="heading__btn">Explorer nos restaurants</button>
         </section>
     </header>
 
@@ -68,7 +68,7 @@
                 </article>
             </div>
         </section>
-        <section class="restaurants">
+        <section class="restaurants" id="restaurant__cards">
             <h2 class="restaurants__title">Restaurants</h2>
 
             <div class="restaurants__cardsGroup">
@@ -146,23 +146,22 @@
         </figure>
 
         <ul class="list">
-            <li class="list__tem">
-                <i class="list__tem--icon"></i>
-                <span class="list__tem--text">Proposer un restaurant</span>
+            <li class="list__item">
+                <i class="fa-solid fa-utensils list__item--icon"></i>
+                <span class="list__item--text">Proposer un restaurant</span>
             </li>
 
-            <li class="list__tem">
-                <i class="list__tem--icon"></i>
-                <span class="list__tem--text">Devenir partenaire</span>
+            <li class="list__item">
+                <i class="fa-solid fa-handshake-angle list__item--icon"></i>
+                <span class="list__item--text">Devenir partenaire</span>
             </li>
 
-            <li class="list__tem">Mentions légales</li>
+            <li class="list__item">Mentions légales</li>
 
-            <li class="list__tem">
-                <a class="list__tem--link" href="mailto:"></a>
+            <li class="list__item">
+                <a class="list__item--link" href="mailto:">Contact</a>
             </li>
         </ul>
     </footer>
 </body>
-<script src="https://kit.fontawesome.com/03052f89bf.js" crossorigin="anonymous"></script>
 </html>

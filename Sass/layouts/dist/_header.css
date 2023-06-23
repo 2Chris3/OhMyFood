@@ -5,7 +5,7 @@
   border-radius: 25px;
   border-radius: 25px;
   background: linear-gradient(0deg, #9356DC, #ff79DA);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   color: white;
 }
 
@@ -20,9 +20,8 @@
 }
 .banner .logo img {
   position: relative;
-  left: calc(50vw - 162px / 2);
-  top: calc((63px - 28px) / 2);
-  object-fit: cover;
+  left: calc(50vw - var.$logoWidth / 2);
+  top: calc((var.$logoContainerHeight - var.$logoHeight) / 2);
   width: 162px;
 }
 .banner .location {
