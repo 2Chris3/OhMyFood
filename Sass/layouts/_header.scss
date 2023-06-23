@@ -31,10 +31,11 @@
         &__icon {
             @include mix.iconPadding;
             @include mix.darkGrayText;
+            padding-left: 40px;
         }
 
         &__searchBar {
-            @include mix.rectangle(120px, 25px);
+            @include mix.rectangle(160px, 25px);
             @include mix.basicGrayBackground;
             @include mix.noPadding;
             @include mix.font(16px, 500);

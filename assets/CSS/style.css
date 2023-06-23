@@ -95,9 +95,10 @@ h3 {
 .banner .location__icon {
   padding: 17px;
   color: #353535;
+  padding-left: 40px;
 }
 .banner .location__searchBar {
-  width: 120px;
+  width: 160px;
   height: 25px;
   background-color: #EAEAEA;
   padding: 0;
