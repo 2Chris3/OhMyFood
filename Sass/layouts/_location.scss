@@ -4,7 +4,7 @@
 
 
 .location {
-    @include mix.basicBox(row, wrap, center);
+    @include mix.centredBox;
     @include mix.rectangle(100%, 50px);
     @include mix.basicGrayBackground;
     @include mix.locationSectionShadow;
@@ -17,7 +17,7 @@
     &__icon {
         @include mix.darkGrayText;
         height: 25px;
-        padding: 4px 17px 0 0px;
+        padding: 4px 17px 0 17px;
         
     }
 

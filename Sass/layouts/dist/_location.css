@@ -1,6 +1,5 @@
 .location {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   width: 100%;
@@ -15,7 +14,7 @@
 .location__icon {
   color: #353535;
   height: 25px;
-  padding: 4px 17px 0 0px;
+  padding: 4px 17px 0 17px;
 }
 .location__searchBar {
   width: 140px;
