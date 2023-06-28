@@ -3,18 +3,18 @@
 
 
 .fa-heart{
-    &:active,
+    &:focus,
     &:hover {
         color: transparent;
         background-clip: text;
         background-image: linear-gradient(var.$lightPurple, var.$darkPurple);
-        -webkit-text-stroke: transparent;
+        text-shadow: none;
     }
 }
 
 .explanations {
     .card__icon {
-        &:active,
+        &:focus,
         &:hover {
             color: var.$darkPurple;
         }

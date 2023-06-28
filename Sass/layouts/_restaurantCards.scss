@@ -1,0 +1,99 @@
+
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+
+
+
+.restaurants {
+    @include mix.lightGrayBackground;
+    padding: 60px 18px;
+    //desktop --------------
+    @media only screen and (min-width: 1025px) {
+        margin: 0;
+    }
+
+    &__title {
+        @include mix.font(24px, 700);
+        //desktop --------------
+        @media only screen and (min-width: 1400px) {
+            padding-left: 11vw;
+        }
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(row, wrap, center);
+        row-gap: 18px;
+        column-gap: 50px;
+        //desktop --------------
+        @media only screen and (min-width: 1025px) {
+            row-gap: 50px;
+            column-gap: 5%;
+        }
+        
+
+        .card {
+            @include mix.basicBox(column, nowrap, start);
+            @include mix.rounded(15px);
+            @include mix.cardsShadows;
+            flex: 1 1 47%;
+            position: relative;
+
+            &__link {
+                @include mix.rounded(15px);
+            }
+
+            .popUp {
+                @include mix.popUpLayout;
+                @include mix.rounded(var.$popUpRadius);
+                @include mix.lightGreenBackground;
+                @include mix.greenText;
+                @include mix.font(14px, 500);
+                padding: 6.5px 9.3px;
+            }
+
+            figure {
+                @include mix.topRounded;
+                height: 174px;
+            }
+
+            img {
+                @include mix.square(100%);
+                @include mix.topRounded;
+            }
+
+            &__content {
+                @include mix.rectangle(100%, 77px);
+                @include mix.basicBox(row, nowrap, space-between);
+                @include mix.whiteBackground;
+                @include mix.bottomRounded;
+                padding: 16px 12px;
+                
+            }
+
+            &__text {
+                padding-right: 50px;
+
+                &--title {
+                    @include mix.font(18px, 700);
+                }
+
+                &--subtitle {
+                    @include mix.font(17px, 300);
+                }
+            }
+
+            &__icon {
+                @include mix.whiteText;
+                padding: 5px 12px;
+                font-size: 30px;
+                // car -webkit-text-stroke ne fonctionne pas avec IE 
+                text-shadow:
+                    -1px 0px black,  
+                    0px -1px 0 black,
+                    0px 1px 0 black,
+                    1px 0px 0 black;
+            }
+        }
+    }
+}
+

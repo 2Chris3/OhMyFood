@@ -6,43 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css" crossorigin="anonymous">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Oh My Food</title>
 </head>
 
 <body>
     <header class="banner">
-        <figure class="logo">
-            <img src="./assets/images/logo/ohmyfood.png" alt="">
+        <a href="./index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        
+        <figure class="logoContainer">
+            <img src="./assets/images/logo/ohmyfood@2x.svg" alt="">
         </figure>
-
+    </header>
+    
+    
+    
+    <main>
         <form class="location">
-            <label class="fa-solid fa-location-dot location__icon" for="searchBar"></label>
-            <input class="location__searchBar" id="searchBar" type="search" value="Paris, Belleville">
+            <label class="fa-solid fa-location-dot location__icon location__items" for="searchBar"></label>
+            <input class="location__searchBar location__items" id="searchBar" type="search" value="Paris, Belleville">
         </form>
+
+
 
         <section class="heading">
             <div class="heading__text">
-                <h1 class="heading__text--title">Réservez le menu qui
+                <h1 class="heading__text--title">Réservez le menu qui <!--heading__text-->
                     vous convient</h1>
-                <p class="heading__text--subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <p class="heading__text--subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p> <!--heading__text-->
             </div>
+
             <button onclick="window.location.href='#restaurant__cards';" class="heading__btn">Explorer nos restaurants</button>
         </section>
-    </header>
 
 
 
-    <main>
-        <section class="explanations">
-            <h2 class="explanations__title">Fonctionnement</h2>
+        <section class="explanation">
+            <h2 class="explanation__title">Fonctionnement</h2>
 
-            <div class="explanations__cardsGroup">
+            <div class="explanation__cardsGroup">
                 <article class="card">
                     <p class="card__number circle">1</p>
                     <div class="card__content">
@@ -68,14 +75,17 @@
                 </article>
             </div>
         </section>
+
+
+
         <section class="restaurants" id="restaurant__cards">
             <h2 class="restaurants__title">Restaurants</h2>
 
             <div class="restaurants__cardsGroup">
                 <article class="card">
                     <a href="./restaurants/la-palette-du-gout.html" class="card__link">
-                        <span class="popUp">Nouveau</span>
                         <figure class="cover">
+                            <span class="popUp">Nouveau</span>
                             <img src="./assets/images/restaurants/la-palette-du_gout.jpg"  alt="">
                         </figure>
                         <div class="card__content">
@@ -90,8 +100,8 @@
 
                 <article class="card">
                     <a href="./restaurants/la-note-enchantee.html" class="card__link">
-                        <span class="popUp">Nouveau</span>
                         <figure class="cover">
+                            <span class="popUp">Nouveau</span>
                             <img src="./assets/images/restaurants/la-note-enchantee.jpg"  alt="">
                         </figure>
                         <div class="card__content">
@@ -141,7 +151,7 @@
 
 
     <footer>
-        <figure class="logo">
+        <figure class="logoContainer">
             <img src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh My Food">
         </figure>
 

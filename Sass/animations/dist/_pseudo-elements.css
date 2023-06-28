@@ -1,10 +1,10 @@
-.fa-heart:active, .fa-heart:hover {
+.fa-heart:focus, .fa-heart:hover {
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(#ff79DA, #9356DC);
-  -webkit-text-stroke: transparent;
+  text-shadow: none;
 }
 
-.explanations .card__icon:active, .explanations .card__icon:hover {
+.explanations .card__icon:focus, .explanations .card__icon:hover {
   color: #9356DC;
 }

@@ -1,0 +1,41 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+@use '../components/buttons' as btn;
+
+
+
+.heading {
+    @include mix.basicBox(column, nowrap, start);
+    @include mix.lightGrayBackground;
+    align-items: center;
+    padding: 27px 30px;
+
+    &__text {
+        width: 100%;
+        margin-bottom: 27px;
+        
+        
+        &--title {
+            @include mix.centredBox;
+            @include mix.centredText;
+            @include mix.font(24px, 700);
+            padding: 5px 30px;
+            @media only screen and (min-width: 1025px) {
+                font-size: 40px;
+            }
+        }
+
+        &--subtitle {
+            @include mix.centredBox;
+            @include mix.centredText;
+            @include mix.font(18px, 300);
+            @include mix.darkGrayText;
+        }
+    }
+
+    &__btn {
+        @extend btn,.btn !optional;
+        @include mix.wideBtn;
+        margin-bottom: 30px;
+    }
+}

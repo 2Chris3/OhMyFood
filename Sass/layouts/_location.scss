@@ -1,0 +1,30 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+
+
+
+.location {
+    @include mix.basicBox(row, wrap, center);
+    @include mix.rectangle(100%, 50px);
+    @include mix.basicGrayBackground;
+    @include mix.locationSectionShadow;
+    
+    &__items {
+        position: relative;
+        top: 15.5px;
+    }
+    
+    &__icon {
+        @include mix.darkGrayText;
+        height: 25px;
+        padding: 4px 17px 0 0px;
+        
+    }
+
+    &__searchBar {
+        @include mix.rectangle(140px, 25px);
+        @include mix.basicGrayBackground;
+        @include mix.noPadding;
+        @include mix.font(16px, 500);
+    }
+}

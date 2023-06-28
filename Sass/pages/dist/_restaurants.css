@@ -6,7 +6,6 @@
   position: absolute;
   top: 17px;
   left: 17px;
-  visibility: hidden;
   font-size: 30px;
 }
 .banner .logoContainer {
@@ -32,4 +31,8 @@
   .banner .logoContainer img {
     padding: 0;
   }
+}
+
+.fa-arrow-left {
+  visibility: visible;
 }

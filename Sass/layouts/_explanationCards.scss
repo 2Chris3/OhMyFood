@@ -1,0 +1,62 @@
+@use '../tools/mixins' as mix;
+@use '../tools/variables' as var;
+
+
+.explanation {
+    @include mix.whiteBackground;
+    box-sizing: border-box;
+    padding: 48px 20px; 
+    //desktop --------------
+    @media only screen and (min-width: 1400px) {
+        max-width: 1400px;
+        box-sizing: border-box;
+        padding: 30px auto;
+    }
+    
+    &__title {
+        @include mix.font(24px, 700);
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(column, nowrap, space-between);
+        width: 100%;
+        gap: 25px;   
+        box-sizing: border-box;
+        //desktop --------------
+        @media only screen and (min-width: 1025px) {
+            flex-direction: row;
+            gap: 35px;
+        }
+        
+        .card {
+            @include mix.rectangle(97%, var.$explanationCardsHeight);
+            @include mix.rounded(var.$explanationCardsRadius);
+            @include mix.lightGrayBackground;
+            @include mix.explanationCardsShadow;
+            margin-left: calc(var.$circleSize / 2);
+
+            &__number {
+                @include mix.square(var.$circleSize);
+                @include mix.rounded(var.$circleRadius);
+                @include mix.purpleBackground;
+                @include mix.whiteText;
+                @include mix.circleLayout;
+                @include mix.font(18px, 500);
+                text-align: center;
+                padding-top: 2px;
+            }
+            
+            &__content {
+                @include mix.basicBox;
+
+                & > * {
+                    padding-left: 10%;
+                }
+            }
+            
+            &__icon {
+                @include mix.iconColor;
+            }
+        }
+    }
+}

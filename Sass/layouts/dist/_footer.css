@@ -7,7 +7,7 @@ footer {
   width: 100%;
   padding: 22px 25px;
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1025px) {
   footer {
     display: flex;
     flex-wrap: nowrap;
@@ -17,19 +17,19 @@ footer {
     align-items: end;
   }
 }
-footer .logo {
+footer .logoContainer {
   width: 100vw;
   height: 18px;
   margin-bottom: 16px;
 }
-@media only screen and (min-width: 960px) {
-  footer .logo {
+@media only screen and (min-width: 1025px) {
+  footer .logoContainer {
     width: 100px;
     margin-left: 70px;
     margin-bottom: 0;
   }
 }
-footer .logo img {
+footer .logoContainer img {
   width: 100px;
   filter: invert(100%);
 }
@@ -39,7 +39,7 @@ footer .list {
   justify-content: inherit;
   align-content: inherit;
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1025px) {
   footer .list {
     display: flex;
     flex-wrap: nowrap;

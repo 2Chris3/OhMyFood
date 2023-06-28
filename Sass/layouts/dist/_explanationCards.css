@@ -1,0 +1,67 @@
+.explanation {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 48px 20px;
+}
+@media only screen and (min-width: 1400px) {
+  .explanation {
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding: 30px auto;
+  }
+}
+.explanation__title {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Roboto;
+}
+.explanation__cardsGroup {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 1025px) {
+  .explanation__cardsGroup {
+    flex-direction: row;
+    gap: 35px;
+  }
+}
+.explanation__cardsGroup .card {
+  width: 97%;
+  height: 72px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin-left: calc(var.$circleSize / 2);
+}
+.explanation__cardsGroup .card__number {
+  width: 24px;
+  height: 24px;
+  border-radius: calc($circleSize / 2);
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  right: 13.5px;
+  top: calc(var.$explanationCardsHeight / 2 - var.$circleSize / 2);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto;
+  text-align: center;
+  padding-top: 2px;
+}
+.explanation__cardsGroup .card__content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+}
+.explanation__cardsGroup .card__content > * {
+  padding-left: 10%;
+}
+.explanation__cardsGroup .card__icon {
+  color: #7E7E7E;
+}

@@ -100,10 +100,21 @@ $menuCardsWidth: 399px;
 //img
 $imageHeight: 174px;
 
-//logo
+//desktop logo
+$logoContainerHeight-Desktop: 96px;
+
+//logo container
 $logoContainerHeight: 63px;
-$logoHeight: calc($logoContainerHeight / 2 - 5px);
-$logoWidth: 162px;
+$logoContainerWidth: 100%;
+
+//logo
+$logoHeight: 36px;
+$logoWidth: 196px;
+
+//logo half
+$logoHalfWidth: calc($logoWidth / 2);
+$logoHalfHeight: calc($logoHeight / 2);
+
 
 
 //   ::: CIRCLES :::   //

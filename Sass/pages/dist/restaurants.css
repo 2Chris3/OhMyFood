@@ -1,8 +1,0 @@
-.mainContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.mainContent__btn {
-  margin-bottom: 40;
-}

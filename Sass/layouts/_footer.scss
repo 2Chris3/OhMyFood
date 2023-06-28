@@ -1,3 +1,4 @@
+
 @use '../tools/mixins' as mix;
 @use '../tools/variables' as var;
 
@@ -9,18 +10,18 @@ footer {
     width: 100%;
     padding: 22px 25px;
     //desktop
-    @media only screen and (min-width: 960px) {
+    @media only screen and (min-width: 1025px) {
         @include mix.basicBox(row-reverse, nowrap, end);
         height: 114px;
         align-items: end;
     }
 
-    .logo {
+    .logoContainer {
         @include mix.fullWidth;
         height: 18px;
         margin-bottom: 16px;
         //desktop
-        @media only screen and (min-width: 960px) {
+        @media only screen and (min-width: 1025px) {
             width: 100px;
             margin-left: 70px;
             margin-bottom: 0;
@@ -35,7 +36,7 @@ footer {
     .list {
         @include mix.inheritBox;
         //desktop
-        @media only screen and (min-width: 960px) {
+        @media only screen and (min-width: 1025px) {
             @include mix.basicBox(row, nowrap, start);
             gap: 12px;
         }
