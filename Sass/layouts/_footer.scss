@@ -5,61 +5,60 @@
 
 
 footer {
-    @include mix.basicBox(column, nowrap, start);
     @include mix.darkGrayBackground;
-    width: 100%;
+    @include mix.basicBox(column, nowrap, space-between);
     padding: 22px 25px;
+    gap: 16px;
     //desktop
     @media only screen and (min-width: 1025px) {
         @include mix.basicBox(row-reverse, nowrap, end);
-        height: 114px;
         align-items: end;
+        height: 114px;
     }
 
+    * {
+        @include mix.whiteText;
+    }
+    
     .logoContainer {
-        @include mix.rectangle(100%, 18px);
-        margin-bottom: 16px;
-        //desktop
-        @media only screen and (min-width: 1025px) {
-            width: 100px;
-            margin-left: 70px;
-            margin-bottom: 0;
-        }
-
+        @include mix.rectangle(138px, 18px);
+        
         img {
-            width: 100px;
             filter: invert(100%);
+            padding-right: 38px;
         }
     }
 
     .list {
         @include mix.inheritBox;
+        gap: 7px;
         //desktop
         @media only screen and (min-width: 1025px) {
-            @include mix.basicBox(row, nowrap, start);
-            gap: 12px;
+            @include mix.basicBox;
         }
 
         &__item {
-            @include mix.whiteText;
-            @include mix.font(16px, 300);
+            display: flex;
+            gap: 7px;
+            @media only screen and (min-width: 1025px) {
+                display: flex;
+                gap: 11px;
+            }
 
-            .fa-handshake-angle {
+            .item1, .item2 {
+                width: 168px;
+            }
+
+            .item3, .item4 {
+                width: 130px;
+            }
+
+            &--icon {
                 font-size: 0.8em;
             }
 
             &--text {
                 @include mix.font(16px, 500);
-                padding-left: 0 7px 0 11px;
-            }
-
-            .space {
-                margin-right: 20px;
-            }
-            
-            &--link {
-                @include mix.whiteText;
-                @include mix.font(16px, 300);
             }
         }
     }

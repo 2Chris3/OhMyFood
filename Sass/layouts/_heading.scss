@@ -9,7 +9,7 @@
     @include mix.lightGrayBackground;
     padding: 40px 30px;   
     gap: 5px;
-        
+    
     &__title {
         @include mix.font(24px, 700);
         //desktop

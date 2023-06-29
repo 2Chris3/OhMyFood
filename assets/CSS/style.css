@@ -78,8 +78,9 @@ h3 {
 }
 
 .banner {
-  position: relative;
+  background-color: white;
   height: 63px;
+  position: relative;
 }
 @media screen and (min-width: 1025px) {
   .banner {
@@ -96,7 +97,7 @@ h3 {
   font-size: 30px;
 }
 .banner .logoContainer {
-  background-color: white;
+  background-color: transparent;
 }
 .banner .logoContainer img {
   width: 196px;
@@ -345,13 +346,13 @@ h3 {
 }
 
 footer {
+  background-color: #353535;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: start;
-  background-color: #353535;
-  width: 100%;
+  justify-content: space-between;
   padding: 22px 25px;
+  gap: 16px;
 }
 @media only screen and (min-width: 1025px) {
   footer {
@@ -359,31 +360,27 @@ footer {
     flex-wrap: nowrap;
     flex-direction: row-reverse;
     justify-content: end;
-    height: 114px;
     align-items: end;
+    height: 114px;
   }
+}
+footer * {
+  color: white;
 }
 footer .logoContainer {
-  width: 100%;
+  width: 138px;
   height: 18px;
-  margin-bottom: 16px;
-}
-@media only screen and (min-width: 1025px) {
-  footer .logoContainer {
-    width: 100px;
-    margin-left: 70px;
-    margin-bottom: 0;
-  }
 }
 footer .logoContainer img {
-  width: 100px;
   filter: invert(100%);
+  padding-right: 38px;
 }
 footer .list {
   display: inherit;
   flex-direction: inherit;
   justify-content: inherit;
   align-content: inherit;
+  gap: 7px;
 }
 @media only screen and (min-width: 1025px) {
   footer .list {
@@ -391,37 +388,37 @@ footer .list {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: start;
-    gap: 12px;
   }
 }
 footer .list__item {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  font-family: Roboto;
+  display: flex;
+  gap: 7px;
 }
-footer .list__item .fa-handshake-angle {
+@media only screen and (min-width: 1025px) {
+  footer .list__item {
+    display: flex;
+    gap: 11px;
+  }
+}
+footer .list__item .item1, footer .list__item .item2 {
+  width: 168px;
+}
+footer .list__item .item3, footer .list__item .item4 {
+  width: 130px;
+}
+footer .list__item--icon {
   font-size: 0.8em;
 }
 footer .list__item--text {
   font-size: 16px;
   font-weight: 500;
   font-family: Roboto;
-  padding-left: 0 7px 0 11px;
-}
-footer .list__item .space {
-  margin-right: 20px;
-}
-footer .list__item--link {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  font-family: Roboto;
 }
 
 .banner {
-  position: relative;
+  background-color: white;
   height: 63px;
+  position: relative;
 }
 
 @media screen and (min-width: 1025px) {
@@ -440,7 +437,7 @@ footer .list__item--link {
 }
 
 .banner .logoContainer {
-  background-color: white;
+  background-color: transparent;
 }
 
 .banner .logoContainer img {

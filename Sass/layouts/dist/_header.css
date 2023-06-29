@@ -1,6 +1,7 @@
 .banner {
-  position: relative;
+  background-color: white;
   height: 63px;
+  position: relative;
 }
 @media screen and (min-width: 1025px) {
   .banner {
@@ -11,12 +12,13 @@
   position: absolute;
   top: 17px;
   left: 17px;
+  position: absolute;
   top: 50%;
   translate: 0 -50%;
   font-size: 30px;
 }
 .banner .logoContainer {
-  background-color: white;
+  background-color: transparent;
 }
 .banner .logoContainer img {
   width: 196px;

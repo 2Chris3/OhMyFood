@@ -4,8 +4,9 @@
 
 
 .banner {
-    position: relative;
+    @include mix.whiteBackground;
     height: var.$logoContainerHeight;
+    position: relative;
     //desktop
     @media screen and (min-width: 1025px) {
         height: var.$logoContainerHeight-Desktop;
@@ -18,7 +19,7 @@
     }
 
     .logoContainer {
-        @include mix.whiteBackground;
+        background-color: transparent;
         
         img {
             @include mix.rectangle(var.$logoWidth, auto);
