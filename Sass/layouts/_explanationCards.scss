@@ -6,7 +6,7 @@
     @include mix.whiteBackground;
     padding: 48px 20px; 
     //desktop
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (min-width: 1024px) {
         max-width: 1400px;
         padding: 50px 13%;
     }

@@ -6,28 +6,25 @@
 
 .restaurants {
     @include mix.lightGrayBackground;
-    padding: 60px 18px;
-    //desktop --------------
-    @media only screen and (min-width: 1025px) {
-        margin: 0;
+    padding: 60px 20px;
+    max-width: 1400px;
+    //desktop
+    @media only screen and (min-width: 1024px) {
+        max-width: 1400px;
+        padding: 30px 13%;
     }
 
     &__title {
         @include mix.font(24px, 700);
-        //desktop --------------
-        @media only screen and (min-width: 1400px) {
-            padding-left: 11vw;
-        }
     }
 
     &__cardsGroup {
-        @include mix.basicBox(row, wrap, center);
+        @include mix.basicBox(row, wrap, space-between);
         row-gap: 18px;
-        column-gap: 50px;
         //desktop --------------
-        @media only screen and (min-width: 1025px) {
+        @media only screen and (min-width: 1024px) {
             row-gap: 50px;
-            column-gap: 5%;
+            column-gap: 7%;
         }
         
 
@@ -35,8 +32,11 @@
             @include mix.basicBox(column, nowrap, start);
             @include mix.rounded(15px);
             @include mix.cardsShadows;
-            flex: 1 1 47%;
             position: relative;
+            //desktop
+            @media only screen and (min-width: 1024px) {
+                flex: 1 1 46%;
+            }
 
             &__link {
                 @include mix.rounded(15px);

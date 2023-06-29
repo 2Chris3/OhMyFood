@@ -183,7 +183,7 @@ h3 {
   background-color: white;
   padding: 48px 20px;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1024px) {
   .explanation {
     max-width: 1400px;
     padding: 50px 13%;
@@ -246,11 +246,13 @@ h3 {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 60px 18px;
+  padding: 60px 20px;
+  max-width: 1400px;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   .restaurants {
-    margin: 0;
+    max-width: 1400px;
+    padding: 30px 13%;
   }
 }
 .restaurants__title {
@@ -258,23 +260,17 @@ h3 {
   font-weight: 700;
   font-family: Roboto;
 }
-@media only screen and (min-width: 1400px) {
-  .restaurants__title {
-    padding-left: 11vw;
-  }
-}
 .restaurants__cardsGroup {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   row-gap: 18px;
-  column-gap: 50px;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   .restaurants__cardsGroup {
     row-gap: 50px;
-    column-gap: 5%;
+    column-gap: 7%;
   }
 }
 .restaurants__cardsGroup .card {
@@ -284,8 +280,12 @@ h3 {
   justify-content: start;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  flex: 1 1 47%;
   position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants__cardsGroup .card {
+    flex: 1 1 46%;
+  }
 }
 .restaurants__cardsGroup .card__link {
   border-radius: 15px;
