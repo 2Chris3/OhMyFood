@@ -5,26 +5,18 @@
 
 .location {
     @include mix.centredBox;
-    @include mix.rectangle(100%, 50px);
     @include mix.basicGrayBackground;
     @include mix.locationSectionShadow;
-    
-    &__items {
-        position: relative;
-        top: 15.5px;
-    }
-    
+    height: 50px;
+    gap: 17px;
+
     &__icon {
         @include mix.darkGrayText;
-        height: 25px;
-        padding: 4px 17px 0 17px;
-        
     }
 
     &__searchBar {
-        @include mix.rectangle(140px, 25px);
+        @include mix.rectangle(120px, 25px);
         @include mix.basicGrayBackground;
-        @include mix.noPadding;
         @include mix.font(16px, 500);
     }
 }

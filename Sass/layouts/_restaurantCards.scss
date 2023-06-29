@@ -84,14 +84,9 @@
 
             &__icon {
                 @include mix.whiteText;
+                @include mix.stroke;
                 padding: 5px 12px;
                 font-size: 30px;
-                // car -webkit-text-stroke ne fonctionne pas avec IE 
-                text-shadow:
-                    -1px 0px black,  
-                    0px -1px 0 black,
-                    0px 1px 0 black,
-                    1px 0px 0 black;
             }
         }
     }

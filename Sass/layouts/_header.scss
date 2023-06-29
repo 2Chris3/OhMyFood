@@ -4,30 +4,29 @@
 
 
 .banner {
-    width: 100%;
     position: relative;
+    height: var.$logoContainerHeight;
+    //desktop
+    @media screen and (min-width: 1025px) {
+        height: var.$logoContainerHeight-Desktop;
+    }
 
     .fa-arrow-left {
         @include mix.returnIconLayout;
-        visibility: hidden;
+        @include mix.verticalAlign;
         font-size: 30px;
     }
 
     .logoContainer {
-        @include mix.rectangle(100%, var.$logoContainerHeight);
         @include mix.whiteBackground;
-        //desktop
-        @media screen and (min-width: 1025px) {
-            height: var.$logoContainerHeight-Desktop;
-        }
         
         img {
-            @include mix.logoLayout;
             @include mix.rectangle(var.$logoWidth, auto);
+            @include mix.centredItem;
             padding: 0 18px;
             //desktop
             @media screen and (min-width: 1025px) {
-                padding: 0;
+                @include mix.noPadding;
             }
         }
     }

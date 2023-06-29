@@ -3,15 +3,14 @@
 
 //mobile
 $mobileMinWidth: 320px;
-$mobileMaxWidth: 765px;
+//tablet
+$mobileMaxWidth: 767px;
+//desktop
+$desktopMinWidth:1025px;
+//large desktop
+$largeDesktopMinWidth: 1400px;
 
-$tabletMinWidth: 766px;
-$tabletMinWidth: 1200px;
 
-$desktopMinWidth:1201px;
-$desktopMinWidth: 1440px;
-
-$largeDesktopWidth: 1401px;
 
 //   ::: COLORS :::   //
 
@@ -51,7 +50,6 @@ $btnShadowBlur: 10px;
 $transparentGrey: rgba(0, 0, 0, 0.25);
 $veryTransparentGrey: rgba(0, 0, 0, 0.15);
 $extremelyTransparentGrey: rgba(0, 0, 0, 0.10);
-
 
 
 

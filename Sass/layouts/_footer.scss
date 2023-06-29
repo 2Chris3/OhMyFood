@@ -17,8 +17,7 @@ footer {
     }
 
     .logoContainer {
-        @include mix.fullWidth;
-        height: 18px;
+        @include mix.rectangle(100%, 18px);
         margin-bottom: 16px;
         //desktop
         @media only screen and (min-width: 1025px) {

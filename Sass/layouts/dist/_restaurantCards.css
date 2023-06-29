@@ -91,7 +91,7 @@
 }
 .restaurants__cardsGroup .card__icon {
   color: white;
+  text-shadow: -1px 0px black, 0px -1px 0 black, 0px 1px 0 black, 1px 0px 0 black;
   padding: 5px 12px;
   font-size: 30px;
-  text-shadow: -1px 0px black, 0px -1px 0 black, 0px 1px 0 black, 1px 0px 0 black;
 }

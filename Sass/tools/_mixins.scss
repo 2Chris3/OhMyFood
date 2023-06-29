@@ -38,9 +38,9 @@
     margin: 0;
 }
 
-@mixin frames($vertical-padding, $horizontal-padding, $vertical-margin, $horizontal-margin) {
-    padding: $vertical-padding $horizantal-padding;
-    margin: $horizantal-margin $horizantal-margin;
+@mixin frames($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
 }
 
 
@@ -69,11 +69,6 @@
 //icon colors
 @mixin iconColor {
     color: var.$grey;
-}
-
-//text alignment
-@mixin centredText {
-    text-align: center;
 }
 
 
@@ -135,20 +130,21 @@
     box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
 }
 
+//stroke
+@mixin stroke($color: black) {
+    text-shadow: 
+                -1px 0px black,
+                0px -1px 0 black,
+                0px 1px 0 black,
+                1px 0px 0 black;
+}
+
 
 
 //   ::: PROPORTIONAL DIMENSIONS :::   //
 
 @mixin fitItems($percentage) {
     flex: 1 1 $percentage;
-}
-
-@mixin fullWidth {
-    width: 100vw;
-}
-
-@mixin fullHeight {
-    height: 100%;
 }
 
 
@@ -194,6 +190,8 @@
     display: flex;
     flex-direction: $direction;
     justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
 @mixin inheritBox {
     display: inherit;
@@ -212,8 +210,8 @@
     width: var.$btnWidth; 
     color: white;
     border-radius: var.$btnRadius;
-//    background: linear-gradient(var.$lightPurple, var.$darkPurple);
 }
+
 @mixin wideBtn {
     width: 218px;
 } 
@@ -230,11 +228,25 @@
 }
 
 //logo layout
-@mixin logoLayout {
+@mixin centredItem {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    translate: -50% -50%;
+}
+
+//vertically centred
+@mixin verticalAlign {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+//horizontally centred
+@mixin horizontalAlign {
+    position: absolute;
+    top: 50%;
+    translate: -50% 0;
 }
 
 //pop-up layout 

@@ -1,4 +1,4 @@
-html, body, article, figure, img {
+html, body, header, main, footer, section, article, figure, img {
   width: 100%;
 }
 
@@ -12,8 +12,16 @@ img {
   box-sizing: border-box;
 }
 
-button, input {
+button, input, fieldset {
   border: none;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+fieldset {
+  display: flex;
 }
 
 ul, ol {
@@ -25,9 +33,8 @@ a {
   text-indent: 0;
   color: black;
 }
-
-address {
-  font-style: normal;
+a:visited {
+  color: black;
 }
 
 h2 {
@@ -36,11 +43,4 @@ h2 {
 
 h3 {
   margin-bottom: 5px;
-}
-
-@media only screen and (min-width: 1400px) {
-  body {
-    max-width: 1400px;
-    margin: 0 calc((100vw - 1400px) / 2);
-  }
 }
