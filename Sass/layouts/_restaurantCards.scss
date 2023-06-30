@@ -85,7 +85,7 @@
                 }
             }
 
-            &__icon {
+            &__icon::before {
                 @extend icon,.heartIcon !optional;
                 padding: 5px 12px;
             }

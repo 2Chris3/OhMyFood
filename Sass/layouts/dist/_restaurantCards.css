@@ -125,6 +125,6 @@
   font-weight: 300;
   font-family: Roboto;
 }
-.restaurants__cardsGroup .card__icon {
+.restaurants__cardsGroup .card__icon::before {
   padding: 5px 12px;
 }
