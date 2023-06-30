@@ -1,0 +1,117 @@
+.explanationCard {
+  width: 97%;
+  height: 72px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin-left: calc(var.$circleSize / 2);
+}
+
+.restaurantsCard {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurantsCard {
+    flex: 1 1 46%;
+  }
+}
+
+.menuCard, .entrees .card,
+.plats .card,
+.desserts .card {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.backgroundTop {
+  width: 100%;
+  height: 40px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  position: absolute;
+  top: 220px;
+  z-index: 3;
+}
+
+.entrees,
+.plats,
+.desserts {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.entrees__title,
+.plats__title,
+.desserts__title {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto;
+  width: 40px;
+  padding: 8px 0;
+  border-bottom: solid 2px #99E2D0;
+}
+.entrees__cardsGroup,
+.plats__cardsGroup,
+.desserts__cardsGroup {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+.entrees .card__link,
+.plats .card__link,
+.desserts .card__link {
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  padding: 15px;
+}
+.entrees .card__title,
+.plats .card__title,
+.desserts .card__title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto;
+}
+.entrees .card .informations,
+.plats .card .informations,
+.desserts .card .informations {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.entrees .card__subtitle,
+.plats .card__subtitle,
+.desserts .card__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Roboto;
+}
+.entrees .card .price,
+.plats .card .price,
+.desserts .card .price {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: Roboto;
+}

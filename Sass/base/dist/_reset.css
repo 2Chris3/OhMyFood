@@ -20,7 +20,7 @@ input::-webkit-search-cancel-button {
   display: none;
 }
 
-fieldset {
+fieldset, figure {
   display: flex;
 }
 

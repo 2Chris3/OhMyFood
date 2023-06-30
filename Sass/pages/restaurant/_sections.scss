@@ -1,0 +1,65 @@
+@use '../../tools/variables'as var;
+@use '../../tools/mixins'as mix;
+@use '../../components/cards'as cards;
+
+
+
+.backgroundTop {
+    @include mix.rectangle(100%, 40px);
+    @include mix.lightGrayBackground;
+    border-radius: 40px 40px 0 0;
+    position: absolute;
+    top: 220px;
+    z-index: 3;
+}
+
+.entrees, 
+.plats,
+.desserts {
+    @include mix.basicBox(column, nowrap, space-between);
+    gap: 12px;
+
+
+    &__title {
+        @include mix.font(16px, 300);
+        width: 40px;
+        padding: 8px 0;
+        border-bottom: solid 2px var.$lightGreen;
+    }
+
+    &__cardsGroup {
+        @include mix.basicBox(column, nowrap, space-between);
+        width: 100%;
+        gap: 12px;
+    }
+
+    .card {
+        @extend cards,
+        .menuCard !optional;
+
+
+        &__link {
+            @include mix.rounded(var.$cardsRadius);
+            @include mix.basicBox(column, nowrap, start);
+            padding: 15px;
+        }
+
+        &__title {
+            @include mix.font(18px, 500);
+        }
+
+        .informations {
+            @include mix.basicBox(row, nowrap, space-between);
+            width: 100%;
+        }
+
+        &__subtitle {
+            @include mix.font(15px, 300);
+        }
+
+        .price {
+            @include mix.font(15px, 700);
+        }
+    }
+
+}

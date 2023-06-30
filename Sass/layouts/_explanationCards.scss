@@ -26,11 +26,7 @@
         }
         
         .card {
-            @include mix.rectangle(97%, var.$explanationCardsHeight);
-            @include mix.rounded(var.$explanationCardsRadius);
-            @include mix.lightGrayBackground;
-            @include mix.explanationCardsShadow;
-            margin-left: calc(var.$circleSize / 2);
+            @extend card,.explanationCard !optional;
 
             &__number {
                 @include mix.square(var.$circleSize);

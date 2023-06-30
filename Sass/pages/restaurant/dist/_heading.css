@@ -1,0 +1,26 @@
+.heartIcon, .restaurantPage .heading__icon {
+  color: white;
+  text-shadow: -1px 0px black, 0px -1px 0 black, 0px 1px 0 black, 1px 0px 0 black;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+
+.restaurantPage .heading {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 17px;
+}
+.restaurantPage .heading__title {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: Roboto;
+  font-family: "Shrikhand", sans-serif;
+}
+.restaurantPage .heading__icon {
+  text-shadow: 2px 4px 10px black;
+  padding: 0 24px;
+}

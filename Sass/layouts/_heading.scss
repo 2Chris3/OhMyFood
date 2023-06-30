@@ -24,8 +24,7 @@
     }
 
     &__btn {
-        @extend btn,.btn !optional;
-        @include mix.wideBtn;
+        @extend btn,.wideBtn !optional;
         margin: 22px 0 17px 0;
     }
 }

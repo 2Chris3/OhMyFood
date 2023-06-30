@@ -1,0 +1,40 @@
+@use '../tools/variables'as var;
+@use '../tools/mixins'as mix;
+
+//   ::: EXPLANATION CARDS :::   //
+
+.explanationCard {
+    @include mix.rectangle(97%, var.$explanationCardsHeight);
+    @include mix.rounded(var.$explanationCardsRadius);
+    @include mix.lightGrayBackground;
+    @include mix.explanationCardsShadow;
+    margin-left: calc(var.$circleSize / 2);
+}
+
+
+
+//   ::: RESTAURANTS CARDS :::   //
+
+.restaurantsCard {
+    @include mix.basicBox(column, nowrap, start);
+    @include mix.rounded(var.$cardsRadius);
+    @include mix.cardsShadows;
+    position: relative;
+
+    //desktop
+    @media only screen and (min-width: 1024px) {
+        flex: 1 1 46%;
+    }
+}
+
+
+
+//   ::: MENU CARDS :::   //
+
+.menuCard {
+    @include mix.basicBox(column, nowrap, start);
+    @include mix.rectangle(100%, var.$menuCardsHeight);
+    @include mix.whiteBackground;
+    @include mix.rounded(var.$cardsRadius);
+    @include mix.cardsShadows;
+}

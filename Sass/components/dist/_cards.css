@@ -1,0 +1,35 @@
+.explanationCard {
+  width: 97%;
+  height: 72px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin-left: calc(var.$circleSize / 2);
+}
+
+.restaurantsCard {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurantsCard {
+    flex: 1 1 46%;
+  }
+}
+
+.menuCard {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}

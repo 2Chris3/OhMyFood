@@ -1,4 +1,4 @@
-.btn, .heading__btn {
+.btn, .wideBtn, .heading__btn {
   height: 50px;
   width: 186px;
   color: white;
@@ -7,6 +7,10 @@
   background: linear-gradient(0deg, #9356DC, #ff79DA);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   color: white;
+}
+
+.wideBtn, .heading__btn {
+  width: 218px;
 }
 
 .heading {
@@ -36,6 +40,5 @@
   font-family: Roboto;
 }
 .heading__btn {
-  width: 218px;
   margin: 22px 0 17px 0;
 }

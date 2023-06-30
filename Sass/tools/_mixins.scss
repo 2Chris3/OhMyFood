@@ -75,6 +75,11 @@
 
 //   ::: BACKGROUNDS :::   //
 
+//transparent background
+@mixin transparentBackground {
+    background-color: transparent;
+}
+
 //inherit background
 @mixin inheritBackground {
     background-color: inherit;
@@ -246,7 +251,7 @@
 //horizontally centred
 @mixin horizontalAlign {
     position: absolute;
-    top: 50%;
+    left: 50%;
     translate: -50% 0;
 }
 

@@ -10,3 +10,12 @@
     @include mix.btnShadow;
     @include mix.whiteText;
 }
+
+
+
+//   ::: WIDE BUTTON :::   //   
+
+.wideBtn {
+    @extend .btn;
+    @include mix.wideBtn;
+}

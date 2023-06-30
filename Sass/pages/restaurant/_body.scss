@@ -1,0 +1,51 @@
+@use '../../tools/variables'as var;
+@use '../../tools/mixins'as mix;
+@use '../../components/buttons'as btn;
+
+
+
+.restaurantPage {
+    @include mix.whiteBackground;
+
+    main {
+        @include mix.lightGrayBackground;
+        @include mix.basicBox(column, nowrap, start);
+        position: relative;
+        gap: 40px;
+    }
+
+    .mainContainer {
+        @include mix.lightGrayBackground;
+        @include mix.basicBox(column, nowrap, space-between);
+        width: 100%;
+        padding: 0 17px;
+    }
+
+    &__cover {
+        height: 252px;
+
+        img {
+            @include mix.square(100%);
+            z-index: -2;
+        }
+    }
+
+    &__background {
+        @include mix.lightGrayBackground;
+        @include mix.rectangle(100%, 1400px);
+        z-index: -1;
+        position: absolute;
+    }
+
+    .btn__container {
+        @include mix.rectangle(100%, 130px);
+        position: relative;
+
+    }
+
+    .orderBtn {
+        @extend btn,
+        .btn !optional;
+        @include mix.centredItem;
+    }
+}
