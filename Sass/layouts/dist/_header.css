@@ -8,17 +8,17 @@
     height: 96px;
   }
 }
-.banner .fa-arrow-left {
+.banner .iconLink {
   position: absolute;
-  top: 17px;
   left: 17px;
-  position: absolute;
   top: 50%;
-  translate: 0 -50%;
-  font-size: 30px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
 }
-.banner .logoContainer {
-  background-color: transparent;
+.banner .iconLink .icon {
+  font-size: 30px;
 }
 .banner .logoContainer img {
   width: 196px;

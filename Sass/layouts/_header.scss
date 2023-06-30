@@ -12,14 +12,17 @@
         height: var.$logoContainerHeight-Desktop;
     }
 
-    .fa-arrow-left {
+    .iconLink {
         @include mix.returnIconLayout;
-        @include mix.verticalAlign;
-        font-size: 30px;
+        @include mix.square(30px);
+        display: flex;
+        
+        .icon {
+            font-size: 30px;
+        }
     }
 
     .logoContainer {
-        background-color: transparent;
         
         img {
             @include mix.rectangle(var.$logoWidth, auto);

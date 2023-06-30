@@ -223,8 +223,9 @@
 //return icon layout
 @mixin returnIconLayout {
     position: absolute;
-    top: 17px;
-    left: 17px;
+        left: 17px;
+        top: 50%;
+        transform: translateY(-50%);
 }
 
 //logo layout
