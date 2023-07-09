@@ -80,8 +80,8 @@
 .plats .card__title,
 .desserts .card__title {
   font: 500 18px Roboto;
-  text-align: flex-start;
-  align-self: flex-start;
+  text-align: start;
+  align-self: start;
 }
 .entrees .card .informations,
 .plats .card .informations,

@@ -19,7 +19,6 @@
     &__icon {
         @include mix.darkGrayText;
         width: 12px;
-        filter:hue-rotate(3) ;
     }
 
     &__input {

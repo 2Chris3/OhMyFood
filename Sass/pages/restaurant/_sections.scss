@@ -42,8 +42,8 @@
 
         &__title {
             @include mix.font(18px, 500);
-            text-align: flex-start;
-            align-self: flex-start;
+            text-align: start;
+            align-self: start;
         }
 
         .informations {

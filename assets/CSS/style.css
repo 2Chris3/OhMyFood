@@ -281,7 +281,6 @@ footer .list__item--text {
 .homePage .searchBar__icon {
   color: #353535;
   width: 12px;
-  filter: hue-rotate(3);
 }
 .homePage .searchBar__input {
   width: 120px;
@@ -771,8 +770,8 @@ footer .list__item--text {
 .plats .card__title,
 .desserts .card__title {
   font: 500 18px Roboto;
-  text-align: flex-start;
-  align-self: flex-start;
+  text-align: start;
+  align-self: start;
 }
 .entrees .card .informations,
 .plats .card .informations,

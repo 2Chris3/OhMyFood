@@ -18,13 +18,10 @@
 .searchBar__icon {
   color: #353535;
   width: 12px;
-  filter: hue-rotate(3);
 }
 .searchBar__input {
   width: 120px;
   height: 25px;
   background-color: #EAEAEA;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: Roboto;
+  font: 500 16px Roboto;
 }
