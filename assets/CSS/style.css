@@ -127,12 +127,11 @@ a:visited {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 70px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   text-align: start;
-  padding: 15px;
 }
 
 body {
@@ -441,12 +440,11 @@ footer .list__item--text {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 70px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   text-align: start;
-  padding: 15px;
 }
 .homePage .restaurant {
   background-color: #F6F6F6;
@@ -616,6 +614,11 @@ footer .list__item--text {
 .restaurantMain .orderBtn {
   margin-bottom: 40px;
 }
+.restaurantMain .orderBtn:hover {
+  filter: brightness(110%);
+  box-shadow: 0 8px 30px 0px rgba(0, 0, 0, 0.1);
+  animation-duration: 300ms;
+}
 
 .homePage .restaurant__cardsGroup a .card__icon, .heading__icon {
   width: 30px;
@@ -696,12 +699,11 @@ footer .list__item--text {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 70px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   text-align: start;
-  padding: 15px;
 }
 
 .entrees,
@@ -740,29 +742,37 @@ footer .list__item--text {
 .entrees .card,
 .plats .card,
 .desserts .card {
-  display: inherit;
-  flex-wrap: inherit;
-  flex-direction: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  text-align: inherit;
-  align-items: start;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  align-items: flex-start;
   gap: 5px;
+  overflow: hidden;
+  position: relative;
 }
 .entrees .card__content,
 .plats .card__content,
 .desserts .card__content {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: start;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px 75px 15px 15px;
 }
 .entrees .card__title,
 .plats .card__title,
 .desserts .card__title {
   font: 500 18px Roboto;
+  text-align: flex-start;
+  align-self: flex-start;
 }
 .entrees .card .informations,
 .plats .card .informations,
@@ -779,6 +789,7 @@ footer .list__item--text {
 .plats .card__subtitle,
 .desserts .card__subtitle {
   font: 300 15px Roboto;
+  align-self: flex-start;
 }
 .entrees .card .price,
 .plats .card .price,
@@ -788,7 +799,20 @@ footer .list__item--text {
 .entrees .card__icon,
 .plats .card__icon,
 .desserts .card__icon {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #99E2D0;
+  color: white;
   font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

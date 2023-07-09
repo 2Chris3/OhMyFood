@@ -27,16 +27,23 @@
     }
 
     .card {
-        @include mix.inheritBox;
-        align-items: start;
+        @include mix.verticalBox(space-between);
+        height: 100%;
+        align-items: flex-start;
         gap: 5px;
+        overflow: hidden;
+        position: relative;
 
         &__content {
-            @include mix.horizontalBox;
+            @include mix.verticalBox(space-between);
+            @include mix.square(100%);
+            padding: 15px 75px 15px 15px;
         }
 
         &__title {
             @include mix.font(18px, 500);
+            text-align: flex-start;
+            align-self: flex-start;
         }
 
         .informations {
@@ -46,6 +53,7 @@
 
         &__subtitle {
             @include mix.font(15px, 300);
+            align-self: flex-start;
         }
 
         .price {
@@ -53,7 +61,14 @@
         }
 
         &__icon {
+            @include mix.rectangle(60px, 100%);
+            @include mix.centredBox;
+            @include mix.lightGreenBackground;
+            @include mix.whiteIcon;
             font-size: 20px;
+            border-radius: 0 15px 15px 0;
+            position: absolute;
+            right: 0;
         }
     }
 }

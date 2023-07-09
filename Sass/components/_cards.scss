@@ -35,10 +35,9 @@
 
 %menuCard {
     @include mix.verticalBox;
-    @include mix.rectangle(100%, auto);
+    @include mix.rectangle(100%, 70px);
     @include mix.rounded(var.$cardsRadius);
     @include mix.whiteBackground;
     @include mix.cardsShadows;
     text-align: start;
-    padding: 15px;
 }

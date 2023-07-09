@@ -59,5 +59,11 @@
     .orderBtn {
         @extend btn,%btn !optional;
         margin-bottom: 40px;
+
+        &:hover {
+            filter: brightness(110%);
+            box-shadow: 0 8px 30px 0px var.$extremelyTransparentGrey;
+            animation-duration: 300ms;
+        }
     }
 }
