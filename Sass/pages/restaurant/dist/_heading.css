@@ -1,26 +1,37 @@
-.heartIcon, .restaurantPage .heading__icon {
-  color: white;
-  text-shadow: -1px 0px black, 0px -1px 0 black, 0px 1px 0 black, 1px 0px 0 black;
+.heading__icon {
   width: 30px;
   height: 30px;
+  color: white;
+  text-shadow: -1px 0px black, 0px -1px 0 black, 0px 1px 0 black, 1px 0px 0 black;
   font-size: 30px;
+  padding: 0 25px;
+  box-sizing: content-box;
 }
 
-.restaurantPage .heading {
+.heading {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 17px;
+  align-items: center;
+  text-align: center;
 }
-.restaurantPage .heading__title {
-  font-size: 28px;
-  font-weight: 800;
-  font-family: Roboto;
-  font-family: "Shrikhand", sans-serif;
+@media screen and (min-width: 1025px) {
+  .heading {
+    justify-content: center;
+  }
 }
-.restaurantPage .heading__icon {
-  text-shadow: 2px 4px 10px black;
-  padding: 0 24px;
+.heading__title {
+  font: 800 28px Roboto;
+}
+.heading__icon {
+  color: #F6F6F6;
+  position: relative;
+}
+.heading__icon:hover {
+  text-shadow: none;
+  background-image: linear-gradient(#ff79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

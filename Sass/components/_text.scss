@@ -1,0 +1,13 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+
+
+
+%sectionTitle {
+    @include mix.font(24px, 700);
+    margin-bottom: 25px;
+}
+
+%cardTitle {
+    margin-bottom: 5px;
+}

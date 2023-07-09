@@ -1,0 +1,61 @@
+@use '../../tools/variables'as var;
+@use '../../tools/mixins'as mix;
+
+
+
+.explanation {
+    @include mix.whiteBackground;
+    padding: 48px 20px 68px 20px;
+
+    //desktop
+    @media only screen and (min-width: 1024px) {
+        padding: 50px 8%;
+    }
+
+    &__title {
+        @include mix.font(24px, 700);
+    }
+
+    &__cardsGroup {
+        @include mix.verticalBox;
+        gap: 25px;
+
+        //desktop
+        @media only screen and (min-width: 1025px) {
+            flex-direction: row;
+            gap: 35px;
+        }
+
+        .card {
+            @extend card,%explanationCard !optional;
+
+            //desktop
+            @media only screen and (min-width: 1025px) {
+                justify-content: start !important;
+            }
+
+            &__number {
+                @include mix.circle(24px);
+                @include mix.circleLayout;
+                @include mix.whiteText;
+                @include mix.purpleBackground;
+                @include mix.font(18px, 500);
+                padding-top: 2px;
+            }
+
+            &__content {
+                @include mix.inheritBox;
+                padding-left: 30px;
+                gap: 20px;
+            }
+
+            &__icon {
+                @include mix.grayIcon;
+
+                &--store {
+                    @include mix.purpleIcon;
+                }
+            }
+        }
+    }
+}

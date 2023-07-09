@@ -1,5 +1,6 @@
-.location {
+.searchBar {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -9,10 +10,17 @@
   height: 50px;
   gap: 17px;
 }
-.location__icon {
-  color: #353535;
+.searchBar__label {
+  display: flex;
+  width: min-content;
+  height: min-content;
 }
-.location__searchBar {
+.searchBar__icon {
+  color: #353535;
+  width: 12px;
+  filter: hue-rotate(3);
+}
+.searchBar__input {
   width: 120px;
   height: 25px;
   background-color: #EAEAEA;

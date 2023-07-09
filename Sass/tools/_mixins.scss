@@ -1,4 +1,4 @@
-@use './variables' as var;
+@use './variables'as var;
 
 
 
@@ -8,13 +8,14 @@
     border-radius: $radius;
 }
 
-@mixin topRounded($radius: 15px) {
-    border-radius: 15px 15px 0 0;
+@mixin topRounded($radius) {
+    border-radius: $radius $radius 0 0;
 }
 
 @mixin bottomRounded($radius: 15px) {
     border-radius: 0 0 15px 15px;
 }
+
 
 
 //   ::: FRAMES :::   //
@@ -23,14 +24,17 @@
 @mixin noBorders {
     border: 0;
 }
+
 //without paddings
 @mixin noPadding {
     padding: 0;
 }
+
 //without margins
 @mixin noMargin {
     margin: 0;
 }
+
 //without margin and padding
 @mixin noFrames {
     border: none;
@@ -44,32 +48,64 @@
 }
 
 
-//   ::: TEXT / ICONS :::   //
+
+//   ::: TEXT :::   //
 
 //font
-@mixin font ($size, $weight, $family: Roboto) {
-    font: {
-        size: $size;
-        weight: $weight;
-        family: $family;
-    }
+@mixin font($size, $weight, $family: Roboto) {
+    font: $weight $size $family;
 }
 
 //text colors
 @mixin whiteText {
     color: white;
 }
+
 @mixin greenText {
     color: var.$darkGreen;
 }
+
 @mixin darkGrayText {
     color: var.$darkGray;
 }
 
 //icon colors
-@mixin iconColor {
+@mixin grayText {
     color: var.$grey;
 }
+
+//purple icon (hover)
+@mixin purpleIcon {
+    color: var.$darkPurple;
+}
+
+
+
+//   ::: ICONS :::   //
+
+//white icon
+@mixin whiteIcon {
+    color: white;
+}
+//gray icon
+@mixin greenIcon {
+    color: var.$darkGreen;
+}
+//dark gray icon
+@mixin darkGrayIcon {
+    color: var.$darkGray;
+}
+//basic gray icon
+@mixin grayIcon {
+    color: var.$grey;
+}
+//purple icon (gradient)
+@mixin purpleIcon-gradient {
+    background-image: var.$purpleGradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+} 
 
 
 
@@ -99,9 +135,11 @@
 @mixin basicGrayBackground {
     background-color: var.$lightGray;
 }
+
 @mixin lightGrayBackground {
     background-color: var.$ultralightGray;
 }
+
 @mixin darkGrayBackground {
     background-color: var.$darkGray;
 }
@@ -110,39 +148,43 @@
 @mixin purpleBackground {
     background-color: var.$darkPurple;
 }
+
 @mixin purpleBackground-gradient($degrees) {
-    background: linear-gradient($degrees, var.$darkPurple, var.$lightPurple); 
+    background-image: linear-gradient($degrees, var.$darkPurple, var.$lightPurple);
 }
 
 
 
 //   ::: SHADOWS :::   //
 
-//button shadows
+//buttons shadows
 @mixin btnShadow {
     box-shadow: 0 4px var.$btnShadowBlur 0 var.$transparentGrey;
 }
 
-//card shadows
+//cards shadows
 @mixin explanationCardsShadow {
     box-shadow: 0 4px var.$cardShadowBlur 0 var.$veryTransparentGrey;
 }
 @mixin cardsShadows {
     box-shadow: 0 4px var.$cardShadowBlur 0 var.$extremelyTransparentGrey;
 }
-
 @mixin locationSectionShadow {
     box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
 }
 
-//stroke
-@mixin stroke($color: black) {
-    text-shadow: 
-                -1px 0px black,
-                0px -1px 0 black,
-                0px 1px 0 black,
-                1px 0px 0 black;
+//stroke effect (shadow)
+@mixin noStroke {
+    text-shadow: none;
 }
+@mixin stroke($color: black) {
+    text-shadow:
+        -1px 0px black,
+        0px -1px 0 black,
+        0px 1px 0 black,
+        1px 0px 0 black;
+}
+
 
 
 
@@ -156,53 +198,107 @@
 
 //   ::: CONTAINERS :::   //
 
-//containers shapes
-@mixin square ($size) {
+//circle container
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+}
+
+//square container
+@mixin square($size) {
     width: $size;
     height: $size;
 }
-@mixin rectangle ($width, $height) {
+
+//rectangle container
+@mixin rectangle($width, $height) {
     width: $width;
     height: $height;
 }
-//containers maximum sizes
-@mixin maxSquare ($size) {
-    max-width: $size;
-    max-height: $size;
-}
-@mixin maxRectangle ($width, $height) {
-    max-width: $width;
-    max-height: $height;
-}
-//containers maximum sizes
-@mixin minSquare ($size) {
-    min-width: $size;
-    min-height: $size;
-}
-@mixin minRectangle ($width, $height) {
-    min-width: $width;
-    min-height: $height;
+
+
+
+//   ::: CONTAINERS :::   //
+
+//horizontal box
+@mixin horizontalBox($justify-content:start) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: $justify-content;
+    align-items: center;
+    text-align: center;
 }
 
-//container types
-@mixin basicBox($direction: row, $wrap:nowrap, $justify-content:start) {
+//horizontal wrapped box
+@mixin horizontalBox-wrapped($justify-content:start) {
     display: flex;
-    flex-wrap: $wrap;
-    flex-direction: $direction;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: $justify-content;
+    align-items: center;
+    text-align: center;
 }
+
+//horizontal reversed box
+@mixin horizontalBox-reverse($justify-content: end) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: $justify-content;
+    align-items: end;
+    text-align: end;
+}
+
+//vertical box
+@mixin verticalBox($justify-content:start) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: center;
+    text-align: center;
+}
+
+//vertical wrapped box
+@mixin verticalBox-wrapped($justify-content:start) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: center;
+    text-align: center;
+}
+
+//t-shape box |=
+@mixin verticalBox-cross($justify-content: start) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: start;
+    text-align: start;
+}
+
+//centred box
 @mixin centredBox($direction: row) {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: $direction;
     justify-content: center;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
+
+//inherit box
 @mixin inheritBox {
     display: inherit;
+    flex-wrap: inherit;
     flex-direction: inherit;
     justify-content: inherit;
-    align-content: inherit;
+    align-items: inherit;
+    text-align: inherit;
 }
 
 
@@ -212,14 +308,14 @@
 //button types
 @mixin btn {
     height: var.$btnHeight;
-    width: var.$btnWidth; 
+    width: var.$btnWidth;
     color: white;
     border-radius: var.$btnRadius;
 }
 
 @mixin wideBtn {
     width: 218px;
-} 
+}
 
 
 
@@ -228,9 +324,9 @@
 //return icon layout
 @mixin returnIconLayout {
     position: absolute;
-        left: 17px;
-        top: 50%;
-        transform: translateY(-50%);
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 //logo layout
@@ -264,7 +360,42 @@
 
 //circle layout
 @mixin circleLayout {
-    position: relative;
-    right: 13.5px;
-    top: calc(var.$explanationCardsHeight / 2 - var.$circleSize / 2);
+    position: absolute;
+    left: -13.5px;
+    top: calc(50%);
+    translate: 0 -50%;
+    text-align: center;
+}
+
+//order button layout
+@mixin orderBtnLayout {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: 0 -50%;
+}
+
+//item positioned as its parent
+@mixin inheritLayout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+//item align
+@mixin alignment($alignment) {
+    text-align: $alignment;
+    align-items: $alignment;
+}
+
+
+
+//   ::: DECORATION :::   //
+
+//turquoise underline
+@mixin underline {
+    width: 40px;
+    line-height: 27px;
+    border-bottom: solid 2px var.$lightGreen;
 }

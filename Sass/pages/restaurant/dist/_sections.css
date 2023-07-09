@@ -1,49 +1,19 @@
-.explanationCard {
-  width: 97%;
-  height: 72px;
-  border-radius: 20px;
-  background-color: #F6F6F6;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  margin-left: calc(var.$circleSize / 2);
-}
-
-.restaurantsCard {
+.entrees a,
+.plats a,
+.desserts a {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: start;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-@media only screen and (min-width: 1024px) {
-  .restaurantsCard {
-    flex: 1 1 46%;
-  }
-}
-
-.menuCard, .entrees .card,
-.plats .card,
-.desserts .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: start;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  height: 69px;
+  height: auto;
+  border-radius: 15px;
   background-color: white;
-  border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-}
-
-.backgroundTop {
-  width: 100%;
-  height: 40px;
-  background-color: #F6F6F6;
-  border-radius: 40px 40px 0 0;
-  position: absolute;
-  top: 220px;
-  z-index: 3;
+  text-align: start;
+  padding: 15px;
 }
 
 .entrees,
@@ -53,16 +23,18 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-align: start;
+  align-items: start;
   gap: 12px;
 }
 .entrees__title,
 .plats__title,
 .desserts__title {
-  font-size: 16px;
-  font-weight: 300;
-  font-family: Roboto;
+  font: 300 16px Roboto;
   width: 40px;
-  padding: 8px 0;
+  line-height: 27px;
   border-bottom: solid 2px #99E2D0;
 }
 .entrees__cardsGroup,
@@ -72,25 +44,37 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   width: 100%;
   gap: 12px;
 }
-.entrees .card__link,
-.plats .card__link,
-.desserts .card__link {
-  border-radius: 15px;
+.entrees .card,
+.plats .card,
+.desserts .card {
+  display: inherit;
+  flex-wrap: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  text-align: inherit;
+  align-items: start;
+  gap: 5px;
+}
+.entrees .card__content,
+.plats .card__content,
+.desserts .card__content {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
-  padding: 15px;
+  align-items: center;
+  text-align: center;
 }
 .entrees .card__title,
 .plats .card__title,
 .desserts .card__title {
-  font-size: 18px;
-  font-weight: 500;
-  font-family: Roboto;
+  font: 500 18px Roboto;
 }
 .entrees .card .informations,
 .plats .card .informations,
@@ -99,19 +83,22 @@
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
   width: 100%;
 }
 .entrees .card__subtitle,
 .plats .card__subtitle,
 .desserts .card__subtitle {
-  font-size: 15px;
-  font-weight: 300;
-  font-family: Roboto;
+  font: 300 15px Roboto;
 }
 .entrees .card .price,
 .plats .card .price,
 .desserts .card .price {
-  font-size: 15px;
-  font-weight: 700;
-  font-family: Roboto;
+  font: 700 15px Roboto;
+}
+.entrees .card__icon,
+.plats .card__icon,
+.desserts .card__icon {
+  font-size: 20px;
 }

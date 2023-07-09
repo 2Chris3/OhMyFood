@@ -1,8 +1,3 @@
-//@use './tools/variables' as var;
-//@media screen and (max-width: var.$mobileMaxWidth) {
-
-
-
 //   ::: BASE ::: //
 @import "./base/typography";
 @import "./base/reset";
@@ -16,6 +11,7 @@
 
 
 //   ::: COMPONENTS ::: //
+@import "./components/text";
 @import "./components/images";
 @import "./components/icons";
 @import "./components/buttons";
@@ -26,19 +22,25 @@
 //   ::: LAYOUTS ::: //
 @import "./layouts/body";
 @import "./layouts/header";
-@import "./layouts/location";
-@import "./layouts/heading";
-@import "./layouts/explanationCards";
-@import "./layouts/restaurantCards";
 @import "./layouts/footer";
 
 
 
 //   ::: PAGES ::: //
-@import "./pages/home";
-@import "./pages/restaurant/body";
-@import "./pages/restaurant/heading";
-@import "./pages/restaurant/sections";
+
+//home
+.homePage {
+    @import "./pages/home/body";
+    @import "./pages/home/searchBar";
+    @import "./pages/home/heading";
+    @import "./pages/home/explanationCards";
+    @import "./pages/home/restaurantCards";
+}
+
+//restaurant
+    @import "./pages/restaurant/body";
+    @import "./pages/restaurant/heading";
+    @import "./pages/restaurant/sections";
 
 
 
@@ -51,7 +53,4 @@
 
 
 //   ::: ANIMATIONS ::: //
-@import "./animations/pseudo-elements";
 @import "./animations/key_frames";
-
-//}

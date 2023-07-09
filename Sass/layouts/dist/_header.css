@@ -8,20 +8,19 @@
     height: 96px;
   }
 }
-.banner .iconLink {
+.banner .returnIcon {
   position: absolute;
   left: 17px;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-}
-.banner .iconLink .icon {
   font-size: 30px;
 }
-.banner .logoContainer img {
-  width: 196px;
+.banner figure {
+  width: 100%;
+  height: 100%;
+}
+.banner .logo {
+  width: 200px !important;
   height: auto;
   position: absolute;
   top: 50%;
@@ -30,7 +29,7 @@
   padding: 0 18px;
 }
 @media screen and (min-width: 1025px) {
-  .banner .logoContainer img {
+  .banner .logo {
     padding: 0;
   }
 }

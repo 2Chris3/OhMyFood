@@ -5,9 +5,11 @@
 
 //   ::: HEART ICON :::   //
 
-.heartIcon {
+%heartIcon {
+    @include mix.square(30px);
     @include mix.whiteText;
     @include mix.stroke;
-    @include mix.square(30px);
     font-size: 30px;
+    padding: 0 25px;
+    box-sizing: content-box;
 }

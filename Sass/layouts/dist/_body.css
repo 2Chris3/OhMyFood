@@ -1,6 +1,9 @@
-@media only screen and (min-width: 1400px) {
-  body {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+body {
+  background-color: white;
+  max-width: 1400px;
+  margin: auto;
+}
+
+main {
+  background-color: white;
 }

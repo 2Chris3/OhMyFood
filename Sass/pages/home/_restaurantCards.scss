@@ -1,0 +1,96 @@
+@use '../../tools/variables' as var;
+@use '../../tools/mixins' as mix;
+@use '../../components/text' as txt;
+@use '../../components/cards' as card;
+
+
+
+.restaurant {
+    @include mix.lightGrayBackground;
+    padding: 60px 20px;
+
+    //desktop
+    @media only screen and (min-width: 1024px) {
+        padding: 30px 8%;
+    }
+
+    &__title {
+        @extend txt,%sectionTitle !optional;
+    }
+
+    &__cardsGroup {
+        @include mix.horizontalBox-wrapped(space-between);
+        row-gap: 18px;
+
+        //desktop 
+        @media only screen and (min-width: 1024px) {
+            row-gap: 50px;
+            column-gap: 7%;
+        }
+
+        a {
+            @include mix.rounded(15px);
+            @include mix.cardsShadows;
+            width: 100%;
+            
+            //desktop
+            @media only screen and (min-width: 1024px) {
+                flex: 1 1 46%;
+            }
+            
+            .card {
+                @extend card,%restaurantsCard !optional;
+                @include mix.verticalBox;
+                position: relative;
+                
+                .popUp {
+                    @include mix.popUpLayout;
+                    @include mix.rounded(var.$popUpRadius);
+                    @include mix.lightGreenBackground;
+                    @include mix.greenText;
+                    @include mix.font(14px, 500);
+                    padding: 6.5px 9.3px;
+                }
+                
+                img {
+                    @include mix.topRounded(15px);
+                    height: 174px;
+                }
+                
+                &__content {
+                    @include mix.rectangle(100%, 77px);
+                    @include mix.horizontalBox(space-between);
+                    @include mix.whiteBackground;
+                    @include mix.bottomRounded;
+                    padding: 16px 0 16px 16px;
+                }
+                
+                &__text {
+
+                    & > * {
+                        align-items: start !important;
+                        text-align: start !important
+                    }
+                }
+
+                &__title {
+                    @include mix.font(18px, 700);
+                    margin-bottom: 5px;
+                }
+                
+                &__subtitle {
+                    @include mix.font(17px, 300);
+                }
+                
+                &__icon {
+                    @extend icon,%heartIcon !optional;
+
+                    &:hover {
+                        @include mix.purpleIcon-gradient;
+                        @include mix.noStroke;
+                    }
+                }
+            }
+        }
+    }
+}

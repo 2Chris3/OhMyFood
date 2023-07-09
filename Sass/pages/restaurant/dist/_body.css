@@ -1,62 +1,75 @@
-.btn, .restaurantPage .orderBtn, .wideBtn {
+.restaurantMain .orderBtn {
   height: 50px;
   width: 186px;
   color: white;
   border-radius: 25px;
   border-radius: 25px;
-  background: linear-gradient(0deg, #9356DC, #ff79DA);
+  background-image: linear-gradient(0deg, #9356DC, #ff79DA);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   color: white;
 }
 
-.wideBtn {
-  width: 218px;
-}
-
-.restaurantPage {
-  background-color: white;
-}
-.restaurantPage main {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: start;
-  position: relative;
-  gap: 40px;
-}
-.restaurantPage .mainContainer {
-  background-color: #F6F6F6;
+.restaurantMain {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 17px;
-}
-.restaurantPage__cover {
-  height: 252px;
-}
-.restaurantPage__cover img {
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-}
-.restaurantPage__background {
+  align-items: center;
+  text-align: center;
   background-color: #F6F6F6;
-  width: 100%;
-  height: 1400px;
-  z-index: -1;
-  position: absolute;
-}
-.restaurantPage .btn__container {
-  width: 100%;
-  height: 130px;
   position: relative;
 }
-.restaurantPage .orderBtn {
+@media screen and (min-width: 1025px) {
+  .restaurantMain {
+    padding: 0 13%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurantMain {
+    background-color: white;
+  }
+}
+.restaurantMain__cover {
+  width: 100vw;
+  height: 252px;
+}
+@media screen and (min-width: 1025px) {
+  .restaurantMain__cover {
+    height: 383px;
+    max-width: 1400px;
+  }
+}
+.restaurantMain__topRounded {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  top: calc(252px - 40px + 1px);
+}
+@media screen and (min-width: 1025px) {
+  .restaurantMain__topRounded {
+    top: calc(383px - 40px + 1px);
+    width: 74%;
+  }
+}
+.restaurantMain__content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  width: 100%;
+  gap: 40px;
+  padding: 0 13px;
+}
+@media screen and (min-width: 1025px) {
+  .restaurantMain__content {
+    padding: 0 20%;
+  }
+}
+.restaurantMain .orderBtn {
+  margin-bottom: 40px;
 }

@@ -5,176 +5,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/CSS/style.css">
     <title>Oh My Food</title>
 </head>
 
 <body class="restaurantPage">
-    <header class="banner">
-        <a href="../index.html" target="_blank" class="iconLink">
-            <i class="fa-solid fa-arrow-left icon"></i>
-        </a>
 
-        <figure class="logoContainer">
-            <img src="../assets/images/logo/ohmyfood@2x.svg" title="logo" alt="">
+    <header class="banner">
+
+        <!-- button : "retour à la page principale" -->
+        <a href="../index.html" class="fa-solid fa-arrow-left returnIcon"></a>
+
+        <!-- logo -->
+        <figure>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" title="logo" class="logo" alt="">
         </figure>
     </header>
 
 
 
-    <main>
-        <figure class="restaurant__cover">
-            <img src="../assets/images/restaurants/a-la-francaise.jpg" alt="">
-        </figure>
-        <div class="backgroundTop"></div>
-        <div class="mainContainer">
-            <div class="heading">
-                <h1 class="heading__title">A la française</h1>
-                <i class="fa-solid fa-heart heading__icon"></i>
-            </div>
+    <main class="restaurantMain">
 
+        <!-- couverture -->
+        <figure class="restaurantMain__cover">
+            <img src="../assets/images/restaurants/la-note-enchantee.jpg" alt="">
+        </figure>
+
+        <!-- arrondi superieur du conteneur -->
+        <div class="restaurantMain__topRounded"></div>
+
+        <!-- conteneur principal -->
+        <div class="restaurantMain__content">
+
+            <!-- entête : titre + icône "j'aime"-->
+            <section class="heading">
+                <h1 class="heading__title">À la française</h1>
+                <i class="fa-solid fa-heart heading__icon"></i>
+            </section>
+
+            <!-- sections : entrées -->
             <section class="entrees">
                 <h2 class="entrees__title">ENTRÉES</h2>
 
+                <!-- groupe de cartes -->
                 <div class="entrees__cardsGroup">
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Fricassée d'escargots</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Au piment d'Espelette</p>
                                 <span class="price">25€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
-                            <h3 class="card__title">Foie gras de canard mi-cuit</h3>
-                            <div class="informations">
-                                <p class="card__subtitle">Et ses copeaux de truffe noire</p>
-                                <span class="price">35€</span>
+                    <a href="#">
+                        <article class="card">
+                            <div class="card__content">
+                                <h3 class="card__title">Foie gras de canard mi-cuit</h3>
+                                <div class="informations">
+                                    <p class="card__subtitle">Et ses copeaux de truffe noire</p>
+                                    <span class="price">35€</span>
+                                </div>
+                                <i class="fa-solid fa-circle-check card__icon"></i>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Œuf au plat</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Assaisonné à la truffe sur lit de caviar</p>
                                 <span class="price">20€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
                 </div>
             </section>
 
 
 
+            <!-- sections : plats -->
             <section class="plats">
                 <h2 class="plats__title">PLATS</h2>
+
+                <!-- groupe de cartes -->
                 <div class="plats__cardsGroup">
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Filet de bœuf aux herbes</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Accompagné de sa ribambelle de légumes</p>
                                 <span class="price">40€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Parmentier de queue de bœuf</h3>
                             <div class="informations">
                                 <p class="card__subtitle">À la truffe noire sur sa purée de panais</p>
                                 <span class="price">35€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Filet de turbot</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Aux agrumes</p>
                                 <span class="price">44€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
                 </div>
             </section>
 
 
 
+            <!-- sections : desserts -->
             <section class="desserts">
                 <h2 class="desserts__title">DESSERTS</h2>
+
+                <!-- groupe de groupe de cartes -->
                 <div class="desserts__cardsGroup">
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Paris-Brest</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Revisité</p>
                                 <span class="price">18€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Macaron au chocolat d'exception</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Et glace à la vanille de Madagascar</p>
                                 <span class="price">22€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="card">
-                        <a href="" class="card__link">
+                    <a href="#">
+                        <article class="card">
                             <h3 class="card__title">Mousse au chocolat</h3>
                             <div class="informations">
                                 <p class="card__subtitle">Au piment d'Espelette et à la truffe noire</p>
                                 <span class="price">23€</span>
                             </div>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
                 </div>
             </section>
 
-            <div class="btn__container">
-                <button class="orderBtn">Commander</button>
-            </div>
-            
-            <!-- décoration d'arrière plan -->
-            <div class="restaurantPage__background"></div>
+            <!-- button : "commander" -->
+            <button class="orderBtn">Commander</button>
         </div>
     </main>
 
 
 
     <footer>
-        <figure class="logoContainer">
-            <img src="../assets/images/logo/ohmyfood@2x.svg" title="logo" alt="logo de Oh My Food">
+
+        <!-- logo -->
+        <figure>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" class="logo" alt="">
         </figure>
 
+        <!-- liste -->
         <ul class="list">
             <li class="list__item">
+
+                <!-- icône -->
                 <i class="fa-solid fa-utensils list__item--icon"></i>
+                <!-- texte -->
                 <span class="list__item--text item1">Proposer un restaurant</span>
             </li>
 
             <li class="list__item">
+
+                <!-- icône -->
                 <i class="fa-solid fa-handshake-angle list__item--icon"></i>
+                <!-- text -->
                 <span class="list__item--text item2">Devenir partenaire</span>
             </li>
 
             <li class="list__item">
+                <!-- text -->
                 <span class="list__item--text item3">Mentions légales</span>
             </li>
 
             <li class="list__item">
+                <!-- text -->
                 <a class="list__item--text item4" href="mailto:">Contact</a>
             </li>
         </ul>

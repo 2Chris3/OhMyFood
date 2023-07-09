@@ -3,7 +3,7 @@
 
 //   ::: BASIC BUTTON :::   //   
 
-.btn {
+%btn {
     @include mix.btn;
     @include mix.rounded(var.$btnRadius);
     @include mix.purpleBackground-gradient(0deg);
@@ -13,9 +13,10 @@
 
 
 
-//   ::: WIDE BUTTON :::   //   
+//   ::: SPECIFIC BUTTONS :::   //   
 
-.wideBtn {
-    @extend .btn;
+//exploration button (homePage)
+%explorationBtn {
+    @extend %btn;
     @include mix.wideBtn;
 }

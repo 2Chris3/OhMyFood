@@ -4,44 +4,35 @@
 
 
 
-.backgroundTop {
-    @include mix.rectangle(100%, 40px);
-    @include mix.lightGrayBackground;
-    border-radius: 40px 40px 0 0;
-    position: absolute;
-    top: 220px;
-    z-index: 3;
-}
-
-.entrees, 
+.entrees,
 .plats,
 .desserts {
-    @include mix.basicBox(column, nowrap, space-between);
+    @include mix.verticalBox(space-between);
+    @include mix.alignment(start);
     gap: 12px;
-
 
     &__title {
         @include mix.font(16px, 300);
-        width: 40px;
-        padding: 8px 0;
-        border-bottom: solid 2px var.$lightGreen;
+        @include mix.underline;
     }
 
     &__cardsGroup {
-        @include mix.basicBox(column, nowrap, space-between);
+        @include mix.verticalBox(space-between);
         width: 100%;
         gap: 12px;
     }
 
+    a {
+        @extend cards,%menuCard !optional;
+    }
+
     .card {
-        @extend cards,
-        .menuCard !optional;
+        @include mix.inheritBox;
+        align-items: start;
+        gap: 5px;
 
-
-        &__link {
-            @include mix.rounded(var.$cardsRadius);
-            @include mix.basicBox(column, nowrap, start);
-            padding: 15px;
+        &__content {
+            @include mix.horizontalBox;
         }
 
         &__title {
@@ -49,7 +40,7 @@
         }
 
         .informations {
-            @include mix.basicBox(row, nowrap, space-between);
+            @include mix.horizontalBox(space-between);
             width: 100%;
         }
 
@@ -60,6 +51,9 @@
         .price {
             @include mix.font(15px, 700);
         }
-    }
 
+        &__icon {
+            font-size: 20px;
+        }
+    }
 }

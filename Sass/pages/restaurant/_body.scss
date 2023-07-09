@@ -4,48 +4,60 @@
 
 
 
-.restaurantPage {
-    @include mix.whiteBackground;
-
-    main {
-        @include mix.lightGrayBackground;
-        @include mix.basicBox(column, nowrap, start);
-        position: relative;
-        gap: 40px;
+.restaurantMain {
+    @include mix.verticalBox(space-between);
+    @include mix.lightGrayBackground;
+    position: relative;
+ 
+    //desktop
+    @media screen and (min-width: 1025px) {
+        padding: 0 13%;
     }
-
-    .mainContainer {
-        @include mix.lightGrayBackground;
-        @include mix.basicBox(column, nowrap, space-between);
-        width: 100%;
-        padding: 0 17px;
+    
+    //desktop
+    @media screen and (min-width: 1025px) {
+        @include mix.whiteBackground;
     }
 
     &__cover {
-        height: 252px;
+        @include mix.rectangle(100vw, 252px);
 
-        img {
-            @include mix.square(100%);
-            z-index: -2;
+        //desktop
+        @media screen and (min-width: 1025px) {
+            height: 383px;
+            max-width: 1400px;
         }
     }
 
-    &__background {
+    &__topRounded {
+        @include mix.rectangle(100%, 40px);
+        @include mix.topRounded(40px);
         @include mix.lightGrayBackground;
-        @include mix.rectangle(100%, 1400px);
-        z-index: -1;
         position: absolute;
+        top: calc(252px - 40px + 1px);
+
+        //desktop
+        @media screen and (min-width: 1025px) {
+            top: calc(383px - 40px + 1px);
+            width: 74%;
+        }
     }
 
-    .btn__container {
-        @include mix.rectangle(100%, 130px);
-        position: relative;
+    &__content {
+        @include mix.verticalBox(space-between);
+        @include mix.lightGrayBackground;
+        width: 100%;
+        gap: 40px;
+        padding: 0 13px;
 
+        //desktop
+        @media screen and (min-width: 1025px) {
+            padding: 0 20%;
+        }
     }
 
     .orderBtn {
-        @extend btn,
-        .btn !optional;
-        @include mix.centredItem;
+        @extend btn,%btn !optional;
+        margin-bottom: 40px;
     }
 }

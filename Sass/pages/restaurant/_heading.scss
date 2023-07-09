@@ -1,24 +1,29 @@
-@use '../../tools/variables' as var;
-@use '../../tools/mixins' as mix;
-@use '../../components/icons' as icon;
+@use '../../tools/variables'as var;
+@use '../../tools/mixins'as mix;
+@use '../../components/icons'as icon;
 
 
-.restaurantPage {
 
-    .heading {
-        @include mix.basicBox(row, nowrap, space-between);
-        width: 100%;
-        padding: 0 17px;
+.heading {
+    @include mix.horizontalBox(space-between);
 
-        &__title {
-            @include mix.font(28px, 800);
-            font-family: 'Shrikhand', sans-serif;
-        }
+    //desktop
+    @media screen and (min-width: 1025px) {
+        justify-content: center;
+    }
 
-        &__icon {
-            @extend icon,.heartIcon !optional;
-            text-shadow: 2px 4px 10px black;
-            padding: 0 24px;
+    &__title {
+        @include mix.font(28px, 800);
+    }
+
+    &__icon {
+        @extend icon,%heartIcon !optional;
+        color: var.$ultralightGray;
+        position: relative;
+
+        &:hover {
+            @include mix.noStroke;
+            @include mix.purpleIcon-gradient;
         }
     }
 }

@@ -1,0 +1,9 @@
+@use '../../tools/variables' as var;
+@use '../../tools/mixins' as mix;
+@use '../../components/text' as txt;
+
+
+
+h2 {
+    @extend txt,%sectionTitle !optional;
+}

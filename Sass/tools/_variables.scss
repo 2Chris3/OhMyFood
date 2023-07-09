@@ -32,6 +32,9 @@ $darkPurple: #9356DC;
 
 //   ::: GRADIENTS :::   //
 
+//purple gradient
+$purpleGradient: linear-gradient($lightPurple, $darkPurple);
+
 //turn parameters
 $dontRotate: 0deg;
 $rotateRight: 90deg;
@@ -106,11 +109,7 @@ $logoContainerWidth: 100%;
 
 //logo
 $logoHeight: 36px;
-$logoWidth: 196px;
-
-//logo half
-$logoHalfWidth: calc($logoWidth / 2);
-$logoHalfHeight: calc($logoHeight / 2);
+$logoWidth: 200px !important;
 
 
 

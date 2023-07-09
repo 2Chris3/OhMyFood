@@ -4,6 +4,8 @@ footer {
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
+  text-align: start;
   padding: 22px 25px;
   gap: 16px;
 }
@@ -14,25 +16,30 @@ footer {
     flex-direction: row-reverse;
     justify-content: end;
     align-items: end;
+    text-align: end;
+    padding: 30px 25px;
     height: 114px;
   }
 }
 footer * {
   color: white;
 }
-footer .logoContainer {
+footer figure {
   width: 138px;
   height: 18px;
 }
-footer .logoContainer img {
+footer figure .logo {
   filter: invert(100%);
-  padding-right: 38px;
+  height: 18px;
+  padding-right: 30px;
 }
 footer .list {
   display: inherit;
+  flex-wrap: inherit;
   flex-direction: inherit;
   justify-content: inherit;
-  align-content: inherit;
+  align-items: inherit;
+  text-align: inherit;
   gap: 7px;
 }
 @media only screen and (min-width: 1025px) {
@@ -41,6 +48,8 @@ footer .list {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: start;
+    align-items: center;
+    text-align: center;
   }
 }
 footer .list__item {
@@ -49,7 +58,6 @@ footer .list__item {
 }
 @media only screen and (min-width: 1025px) {
   footer .list__item {
-    display: flex;
     gap: 11px;
   }
 }
@@ -60,10 +68,9 @@ footer .list__item .item3, footer .list__item .item4 {
   width: 130px;
 }
 footer .list__item--icon {
-  font-size: 0.8em;
+  align-self: center;
 }
 footer .list__item--text {
-  font-size: 16px;
-  font-weight: 500;
-  font-family: Roboto;
+  font: 500 16px Roboto;
+  text-align: start;
 }

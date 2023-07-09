@@ -1,5 +1,6 @@
-@use '../tools/variables' as var;
-@use '../tools/mixins' as mix;
+@use '../tools/variables'as var;
+@use '../tools/mixins'as mix;
+
 
 
 
@@ -7,31 +8,29 @@
     @include mix.whiteBackground;
     height: var.$logoContainerHeight;
     position: relative;
+
     //desktop
     @media screen and (min-width: 1025px) {
         height: var.$logoContainerHeight-Desktop;
     }
 
-    .iconLink {
+    .returnIcon {
         @include mix.returnIconLayout;
-        @include mix.square(30px);
-        display: flex;
-        
-        .icon {
-            font-size: 30px;
-        }
+        font-size: 30px;
     }
 
-    .logoContainer {
-        
-        img {
-            @include mix.rectangle(var.$logoWidth, auto);
-            @include mix.centredItem;
-            padding: 0 18px;
-            //desktop
-            @media screen and (min-width: 1025px) {
-                @include mix.noPadding;
-            }
+    figure {
+        @include mix.square(100%);
+    }
+
+    .logo {
+        @include mix.rectangle(var.$logoWidth, auto);
+        @include mix.centredItem;
+        padding: 0 18px;
+
+        //desktop
+        @media screen and (min-width: 1025px) {
+            @include mix.noPadding;
         }
     }
 }

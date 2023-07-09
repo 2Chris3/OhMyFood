@@ -1,20 +1,28 @@
-@use '../tools/variables' as var;
-@use '../tools/mixins' as mix;
+@use '../../tools/variables' as var;
+@use '../../tools/mixins' as mix;
 
 
 
-.location {
+.searchBar {
     @include mix.centredBox;
     @include mix.basicGrayBackground;
     @include mix.locationSectionShadow;
     height: 50px;
     gap: 17px;
 
-    &__icon {
-        @include mix.darkGrayText;
+    &__label {
+        display: flex;
+        width: min-content;
+        height: min-content;
     }
 
-    &__searchBar {
+    &__icon {
+        @include mix.darkGrayText;
+        width: 12px;
+        filter:hue-rotate(3) ;
+    }
+
+    &__input {
         @include mix.rectangle(120px, 25px);
         @include mix.basicGrayBackground;
         @include mix.font(16px, 500);
