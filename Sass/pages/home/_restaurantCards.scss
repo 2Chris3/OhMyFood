@@ -29,7 +29,7 @@
         }
 
         a {
-            @include mix.rounded(15px);
+            @include mix.rounded(var.$cardsRadius);
             @include mix.cardsShadows;
             width: 100%;
             
@@ -61,7 +61,7 @@
                     @include mix.rectangle(100%, 77px);
                     @include mix.horizontalBox(space-between);
                     @include mix.whiteBackground;
-                    @include mix.bottomRounded;
+                    @include mix.bottomRounded(var.$cardsRadius);
                     padding: 16px 0 16px 16px;
                 }
                 

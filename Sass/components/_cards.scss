@@ -34,7 +34,7 @@
 //   ::: MENU CARDS :::   //
 
 %menuCard {
-    @include mix.verticalBox;
+    @include mix.verticalBox(stretch);
     @include mix.rectangle(100%, 70px);
     @include mix.rounded(var.$cardsRadius);
     @include mix.whiteBackground;

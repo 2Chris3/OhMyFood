@@ -24,51 +24,57 @@
 
     a {
         @extend cards,%menuCard !optional;
-    }
 
-    .card {
-        @include mix.verticalBox(space-between);
-        height: 100%;
-        align-items: flex-start;
-        gap: 5px;
-        overflow: hidden;
-        position: relative;
-
-        &__content {
-            @include mix.verticalBox(space-between);
-            @include mix.square(100%);
-            padding: 15px 75px 15px 15px;
-        }
-
-        &__title {
-            @include mix.font(18px, 500);
-            text-align: start;
-            align-self: start;
-        }
-
-        .informations {
-            @include mix.horizontalBox(space-between);
-            width: 100%;
-        }
-
-        &__subtitle {
-            @include mix.font(15px, 300);
-            align-self: flex-start;
-        }
-
-        .price {
-            @include mix.font(15px, 700);
-        }
-
-        &__icon {
+        &:hover .card__icon {
             @include mix.rectangle(60px, 100%);
-            @include mix.centredBox;
-            @include mix.lightGreenBackground;
-            @include mix.whiteIcon;
-            font-size: 20px;
-            border-radius: 0 15px 15px 0;
-            position: absolute;
-            right: 0;
+            @include mix.rightRounded(var.$cardsRadius);
+            opacity: 1;
+            transition: all 300ms;
+        }
+
+        .card {
+            @include mix.horizontalBox(space-between);
+            height: 100%;
+            align-items: start;
+            gap: 5px;
+            position: relative;
+
+            &__content {
+                @include mix.verticalBox(space-between);
+                @include mix.square(100%);
+                padding: 15px;
+            }
+
+            &__title {
+                @include mix.font(18px, 500);
+                text-align: start;
+                align-self: start;
+            }
+
+            .informations {
+                @include mix.horizontalBox(space-between);
+                width: 100%;
+            }
+
+            &__subtitle {
+                @include mix.font(15px, 300);
+                align-self: start;
+            }
+
+            .price {
+                @include mix.font(15px, 700);
+            }
+
+            &__icon {
+                @include mix.rectangle(0px, 100%);
+                @include mix.centredBox;
+                @include mix.lightGreenBackground;
+                @include mix.whiteIcon;
+                flex-direction: row;
+                font-size: 20px;
+                border-radius: 0 15px 15px 0;
+                opacity: 0;
+            }
         }
     }
 }

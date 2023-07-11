@@ -12,8 +12,16 @@
     border-radius: $radius $radius 0 0;
 }
 
-@mixin bottomRounded($radius: 15px) {
-    border-radius: 0 0 15px 15px;
+@mixin rightRounded($radius) {
+    border-radius: 0 $radius $radius 0;
+}
+
+@mixin bottomRounded($radius) {
+    border-radius: 0 0 $radius $radius;
+}
+
+@mixin leftRounded($radius) {
+    border-radius: $radius 0 0 $radius;
 }
 
 

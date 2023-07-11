@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: start;
+  justify-content: stretch;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -48,24 +48,32 @@
   width: 100%;
   gap: 12px;
 }
-.entrees .card,
-.plats .card,
-.desserts .card {
+.entrees a:hover .card__icon,
+.plats a:hover .card__icon,
+.desserts a:hover .card__icon {
+  width: 60px;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  opacity: 1;
+  transition: all 300ms;
+}
+.entrees a .card,
+.plats a .card,
+.desserts a .card {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 100%;
-  align-items: flex-start;
+  align-items: start;
   gap: 5px;
-  overflow: hidden;
   position: relative;
 }
-.entrees .card__content,
-.plats .card__content,
-.desserts .card__content {
+.entrees a .card__content,
+.plats a .card__content,
+.desserts a .card__content {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -74,18 +82,18 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  padding: 15px 75px 15px 15px;
+  padding: 15px;
 }
-.entrees .card__title,
-.plats .card__title,
-.desserts .card__title {
+.entrees a .card__title,
+.plats a .card__title,
+.desserts a .card__title {
   font: 500 18px Roboto;
   text-align: start;
   align-self: start;
 }
-.entrees .card .informations,
-.plats .card .informations,
-.desserts .card .informations {
+.entrees a .card .informations,
+.plats a .card .informations,
+.desserts a .card .informations {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -94,21 +102,21 @@
   text-align: center;
   width: 100%;
 }
-.entrees .card__subtitle,
-.plats .card__subtitle,
-.desserts .card__subtitle {
+.entrees a .card__subtitle,
+.plats a .card__subtitle,
+.desserts a .card__subtitle {
   font: 300 15px Roboto;
-  align-self: flex-start;
+  align-self: start;
 }
-.entrees .card .price,
-.plats .card .price,
-.desserts .card .price {
+.entrees a .card .price,
+.plats a .card .price,
+.desserts a .card .price {
   font: 700 15px Roboto;
 }
-.entrees .card__icon,
-.plats .card__icon,
-.desserts .card__icon {
-  width: 60px;
+.entrees a .card__icon,
+.plats a .card__icon,
+.desserts a .card__icon {
+  width: 0px;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -118,8 +126,8 @@
   text-align: center;
   background-color: #99E2D0;
   color: white;
+  flex-direction: row;
   font-size: 20px;
   border-radius: 0 15px 15px 0;
-  position: absolute;
-  right: 0;
+  opacity: 0;
 }
