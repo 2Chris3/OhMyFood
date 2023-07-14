@@ -1,9 +1,9 @@
-.entrees a,
-.plats a,
-.desserts a {
+.entrees .card,
+.plats .card,
+.desserts .card {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: stretch;
   align-items: center;
   text-align: center;
@@ -12,7 +12,38 @@
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-  text-align: start;
+}
+
+.entrees .card__icon,
+.plats .card__icon,
+.desserts .card__icon {
+  width: 0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: white;
+  color: white;
+  position: relative;
+}
+
+.entrees .card:hover .card__icon,
+.plats .card:hover .card__icon,
+.desserts .card:hover .card__icon {
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  transition: all 300ms;
+  opacity: 1;
+}
+.entrees .card:hover .check-icon,
+.plats .card:hover .check-icon,
+.desserts .card:hover .check-icon {
+  transition: all 600ms;
+  opacity: 1;
+}
+.entrees .card:not(:hover) .card__icon,
+.plats .card:not(:hover) .card__icon,
+.desserts .card:not(:hover) .card__icon {
+  transition: all 300ms;
 }
 
 .entrees,
@@ -48,32 +79,14 @@
   width: 100%;
   gap: 12px;
 }
-.entrees a:hover .card__icon,
-.plats a:hover .card__icon,
-.desserts a:hover .card__icon {
-  width: 60px;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
-  opacity: 1;
-  transition: all 300ms;
+.entrees .card,
+.plats .card,
+.desserts .card {
+  overflow: hidden;
 }
-.entrees a .card,
-.plats a .card,
-.desserts a .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  align-items: start;
-  gap: 5px;
-  position: relative;
-}
-.entrees a .card__content,
-.plats a .card__content,
-.desserts a .card__content {
+.entrees .card__content,
+.plats .card__content,
+.desserts .card__content {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -84,16 +97,16 @@
   height: 100%;
   padding: 15px;
 }
-.entrees a .card__title,
-.plats a .card__title,
-.desserts a .card__title {
+.entrees .card__title,
+.plats .card__title,
+.desserts .card__title {
   font: 500 18px Roboto;
   text-align: start;
   align-self: start;
 }
-.entrees a .card .informations,
-.plats a .card .informations,
-.desserts a .card .informations {
+.entrees .informations,
+.plats .informations,
+.desserts .informations {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -102,32 +115,24 @@
   text-align: center;
   width: 100%;
 }
-.entrees a .card__subtitle,
-.plats a .card__subtitle,
-.desserts a .card__subtitle {
+.entrees .card__subtitle,
+.plats .card__subtitle,
+.desserts .card__subtitle {
   font: 300 15px Roboto;
   align-self: start;
 }
-.entrees a .card .price,
-.plats a .card .price,
-.desserts a .card .price {
+.entrees .card .price,
+.plats .card .price,
+.desserts .card .price {
   font: 700 15px Roboto;
 }
-.entrees a .card__icon,
-.plats a .card__icon,
-.desserts a .card__icon {
-  width: 0px;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #99E2D0;
-  color: white;
-  flex-direction: row;
+.entrees .check-icon,
+.plats .check-icon,
+.desserts .check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   font-size: 20px;
-  border-radius: 0 15px 15px 0;
   opacity: 0;
 }

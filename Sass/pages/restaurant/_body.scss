@@ -1,19 +1,14 @@
 @use '../../tools/variables'as var;
 @use '../../tools/mixins'as mix;
 @use '../../components/buttons'as btn;
+@use '../../animations/pseudo-elements'as anim;
 
 
 
 .restaurantMain {
     @include mix.verticalBox(space-between);
-    @include mix.lightGrayBackground;
     position: relative;
- 
-    //desktop
-    @media screen and (min-width: 1025px) {
-        padding: 0 13%;
-    }
-    
+
     //desktop
     @media screen and (min-width: 1025px) {
         @include mix.whiteBackground;
@@ -49,21 +44,16 @@
         width: 100%;
         gap: 40px;
         padding: 0 13px;
-
+        
         //desktop
         @media screen and (min-width: 1025px) {
-            padding: 0 20%;
+            padding: 0 14%;
+            width: 74%;
         }
     }
 
     .orderBtn {
-        @extend btn,%btn !optional;
-        margin-bottom: 40px;
-
-        &:hover {
-            filter: brightness(110%);
-            box-shadow: 0 8px 30px 0px var.$extremelyTransparentGrey;
-            animation-duration: 300ms;
-        }
+        @extend btn,%orderBtn !optional;
+        @extend anim,%btnAnimation !optional;
     }
 }

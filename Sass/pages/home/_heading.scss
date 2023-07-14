@@ -27,12 +27,7 @@
 
     &__btn {
         @extend btn,%explorationBtn !optional;
+        @extend anim,%btnAnimation !optional;
         margin: 22px 0 17px 0;
-
-        &:hover {
-            filter: brightness(110%);
-            box-shadow: 0 8px 30px 0px var.$extremelyTransparentGrey;
-            animation-duration: 300ms;
-        }
     }
 }

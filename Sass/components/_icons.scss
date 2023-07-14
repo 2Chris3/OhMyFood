@@ -6,10 +6,22 @@
 //   ::: HEART ICON :::   //
 
 %heartIcon {
-    @include mix.square(30px);
-    @include mix.whiteText;
-    @include mix.stroke;
-    font-size: 30px;
+    -webkit-text-stroke: 0.8px black;
+    color: transparent;
+    font-size: 22px;
+    font-weight: 900;
     padding: 0 25px;
-    box-sizing: content-box;
+    transform: scaleX(0.87);
+}
+
+
+
+//   ::: CHECK ICON :::   //
+
+%checkIconContainer {
+    @include mix.rectangle(0, 100%);
+    @include mix.rightRounded(var.$cardsRadius);
+    @include mix.whiteBackground;
+    @include mix.whiteIcon;
+    position: relative;
 }

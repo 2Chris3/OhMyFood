@@ -1,6 +1,8 @@
 @use '../../tools/variables'as var;
 @use '../../tools/mixins'as mix;
 @use '../../components/cards'as cards;
+@use '../../components/cards'as icons;
+@use '../../animations/pseudo-elements'as anim;
 
 
 
@@ -22,59 +24,48 @@
         gap: 12px;
     }
 
-    a {
+    .card {
         @extend cards,%menuCard !optional;
+        @extend anim,%cardAnimation !optional;
+        overflow: hidden;
 
-        &:hover .card__icon {
-            @include mix.rectangle(60px, 100%);
-            @include mix.rightRounded(var.$cardsRadius);
-            opacity: 1;
-            transition: all 300ms;
+        &__content {
+            @include mix.verticalBox(space-between);
+            @include mix.square(100%);
+            padding: 15px;
         }
 
-        .card {
-            @include mix.horizontalBox(space-between);
-            height: 100%;
-            align-items: start;
-            gap: 5px;
-            position: relative;
-
-            &__content {
-                @include mix.verticalBox(space-between);
-                @include mix.square(100%);
-                padding: 15px;
-            }
-
-            &__title {
-                @include mix.font(18px, 500);
-                text-align: start;
-                align-self: start;
-            }
-
-            .informations {
-                @include mix.horizontalBox(space-between);
-                width: 100%;
-            }
-
-            &__subtitle {
-                @include mix.font(15px, 300);
-                align-self: start;
-            }
-
-            .price {
-                @include mix.font(15px, 700);
-            }
-
-            &__icon {
-                @include mix.rectangle(0px, 100%);
-                @include mix.centredBox;
-                @include mix.lightGreenBackground;
-                @include mix.whiteIcon;
-                flex-direction: row;
-                font-size: 20px;
-                border-radius: 0 15px 15px 0;
-                opacity: 0;
-            }
+        &__title {
+            @include mix.font(18px, 500);
+            text-align: start;
+            align-self: start;
         }
+    }
+    
+    .informations {
+        @include mix.horizontalBox(space-between);
+        width: 100%;
+    }
+    
+    .card {
+
+        &__subtitle {
+            @include mix.font(15px, 300);
+            align-self: start;
+        }
+
+        .price {
+            @include mix.font(15px, 700);
+        }
+
+        &__icon {
+            @extend icons,%checkIconContainer !optional;
+        }
+    }
+    
+    .check-icon {
+        @include mix.centredItem;
+        font-size: 20px;
+        opacity: 0;
     }
 }

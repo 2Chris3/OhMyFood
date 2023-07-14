@@ -1,6 +1,8 @@
 @use '../../tools/variables'as var;
 @use '../../tools/mixins'as mix;
-@use '../../components/icons'as icon;
+@use '../../components/text'as txt;
+@use '../../components/icons'as icons;
+@use'../../animations/pseudo-elements'as anim;
 
 
 
@@ -13,17 +15,11 @@
     }
 
     &__title {
-        @include mix.font(28px, 800);
+        @extend txt,%headingTitle !optional;
     }
 
     &__icon {
-        @extend icon,%heartIcon !optional;
-        color: var.$ultralightGray;
-        position: relative;
-
-        &:hover {
-            @include mix.noStroke;
-            @include mix.purpleIcon-gradient;
-        }
+        @extend icons,%heartIcon !optional;
+        @extend anim,%heartIconAnimation !optional;
     }
 }

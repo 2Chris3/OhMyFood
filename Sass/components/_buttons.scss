@@ -20,3 +20,10 @@
     @extend %btn;
     @include mix.wideBtn;
 }
+
+//order button (restaurantPage)
+
+%orderBtn {
+    @extend %btn;
+    margin-bottom: 40px;
+}

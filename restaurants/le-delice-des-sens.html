@@ -17,6 +17,9 @@
 
 <body class="restaurantPage">
 
+    <!-- animation de chargement de la page -->
+    <div id="loaderSpiner"></div>
+
     <header class="banner">
 
         <!-- button : "retour à la page principale" -->
@@ -46,7 +49,7 @@
             <!-- entête : titre + icône "j'aime"-->
             <section class="heading">
                 <h1 class="heading__title">À la française</h1>
-                <i class="fa-solid fa-heart heading__icon"></i>
+                <i class="fa-regular fa-sharp fa-heart heading__icon"></i>
             </section>
 
             <!-- sections : entrées -->
@@ -55,50 +58,44 @@
 
                 <!-- groupe de cartes -->
                 <div class="entrees__cardsGroup">
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Fricassée d'escargots</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Au piment d'Espelette</p>
-                                    <span class="price">25€</span>
-                                </div>
-                                </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Fricassée d'escargots</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Au piment d'Espelette</p>
+                                <span class="price">25€</span>
+                            </div>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Foie gras de canard mi-cuit</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Et ses copeaux de truffe noire</p>
-                                    <span class="price">35€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Foie gras de canard mi-cuit</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Et ses copeaux de truffe noire</p>
+                                <span class="price">35€</span>
                             </div>
-                            <div class="card__icon">
-                                <i class="fa-solid fa-circle-check"></i>
-                            </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Œuf au plat</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Assaisonné à la truffe sur lit de caviar</p>
-                                    <span class="price">20€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Œuf au plat</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                                <span class="price">20€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -110,50 +107,44 @@
 
                 <!-- groupe de cartes -->
                 <div class="plats__cardsGroup">
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Filet de bœuf aux herbes</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Accompagné de sa ribambelle de légumes</p>
-                                    <span class="price">40€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Filet de bœuf aux herbes</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Accompagné de sa ribambelle de légumes</p>
+                                <span class="price">40€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Parmentier de queue de bœuf</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">À la truffe noire sur sa purée de panais</p>
-                                    <span class="price">35€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Parmentier de queue de bœuf</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">À la truffe noire sur sa purée de panais</p>
+                                <span class="price">35€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Filet de turbot</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Aux agrumes</p>
-                                    <span class="price">44€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Filet de turbot</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Aux agrumes</p>
+                                <span class="price">44€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -165,50 +156,44 @@
 
                 <!-- groupe de groupe de cartes -->
                 <div class="desserts__cardsGroup">
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Paris-Brest</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Revisité</p>
-                                    <span class="price">18€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Paris-Brest</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Revisité</p>
+                                <span class="price">18€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Macaron au chocolat d'exception</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Et glace à la vanille de Madagascar</p>
-                                    <span class="price">22€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Macaron au chocolat d'exception</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Et glace à la vanille de Madagascar</p>
+                                <span class="price">22€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
 
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__content">
-                                <h3 class="card__title">Mousse au chocolat</h3>
-                                <div class="informations">
-                                    <p class="card__subtitle">Au piment d'Espelette et à la truffe noire</p>
-                                    <span class="price">23€</span>
-                                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Mousse au chocolat</h3>
+                            <div class="informations">
+                                <p class="card__subtitle">Au piment d'Espelette et à la truffe noire</p>
+                                <span class="price">23€</span>
                             </div>
-                                <div class="card__icon">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                        </article>
-                    </a>
+                        </div>
+                        <div class="card__icon">
+                            <i class="fa-solid fa-circle-check check-icon"></i>
+                        </div>
+                    </article>
                 </div>
             </section>
 

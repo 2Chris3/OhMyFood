@@ -95,6 +95,7 @@
 @mixin whiteIcon {
     color: white;
 }
+
 //gray icon
 @mixin greenIcon {
     color: var.$darkGreen;
@@ -107,13 +108,14 @@
 @mixin grayIcon {
     color: var.$grey;
 }
+
 //purple icon (gradient)
 @mixin purpleIcon-gradient {
     background-image: var.$purpleGradient;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-} 
+}
 
 
 
@@ -174,25 +176,14 @@
 @mixin explanationCardsShadow {
     box-shadow: 0 4px var.$cardShadowBlur 0 var.$veryTransparentGrey;
 }
+
 @mixin cardsShadows {
     box-shadow: 0 4px var.$cardShadowBlur 0 var.$extremelyTransparentGrey;
 }
+
 @mixin locationSectionShadow {
     box-shadow: inset 0px 2px 4px var.$veryTransparentGrey;
 }
-
-//stroke effect (shadow)
-@mixin noStroke {
-    text-shadow: none;
-}
-@mixin stroke($color: black) {
-    text-shadow:
-        -1px 0px black,
-        0px -1px 0 black,
-        0px 1px 0 black,
-        1px 0px 0 black;
-}
-
 
 
 
@@ -399,11 +390,20 @@
 
 
 
-//   ::: DECORATION :::   //
+//   ::: DECORATIONS :::   //
 
 //turquoise underline
 @mixin underline {
     width: 40px;
     line-height: 27px;
     border-bottom: solid 2px var.$lightGreen;
+}
+
+
+
+//   ::: ANIMATIONS :::   //
+
+//standard transition
+@mixin standardTransition {
+    transition: all 300ms;
 }

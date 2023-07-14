@@ -34,10 +34,9 @@
 //   ::: MENU CARDS :::   //
 
 %menuCard {
-    @include mix.verticalBox(stretch);
+    @include mix.horizontalBox(stretch);
     @include mix.rectangle(100%, 70px);
     @include mix.rounded(var.$cardsRadius);
     @include mix.whiteBackground;
     @include mix.cardsShadows;
-    text-align: start;
 }

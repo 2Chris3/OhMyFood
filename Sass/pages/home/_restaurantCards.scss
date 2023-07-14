@@ -27,70 +27,66 @@
             row-gap: 50px;
             column-gap: 7%;
         }
+    }
 
-        a {
-            @include mix.rounded(var.$cardsRadius);
-            @include mix.cardsShadows;
-            width: 100%;
-            
-            //desktop
-            @media only screen and (min-width: 1024px) {
-                flex: 1 1 46%;
+    a {
+        @include mix.rounded(var.$cardsRadius);
+        @include mix.cardsShadows;
+        width: 100%;
+        
+        //desktop
+        @media only screen and (min-width: 1024px) {
+            flex: 1 1 46%;
+        }
+    }
+
+    .popUp {
+        @include mix.popUpLayout;
+        @include mix.rounded(var.$popUpRadius);
+        @include mix.lightGreenBackground;
+        @include mix.greenText;
+        @include mix.font(14px, 500);
+        padding: 6.5px 9.3px;
+    }
+    
+    img {
+        @include mix.topRounded(15px);
+        height: 174px;
+    }
+
+    .card {
+        @extend card,%restaurantsCard !optional;
+        @include mix.verticalBox;
+        position: relative;
+        
+        &__content {
+            @include mix.rectangle(100%, 77px);
+            @include mix.horizontalBox(space-between);
+            @include mix.whiteBackground;
+            @include mix.bottomRounded(var.$cardsRadius);
+            padding: 16px 0 16px 16px;
+        }
+        
+        &__text {
+
+            & > * {
+                align-items: start !important;
+                text-align: start !important
             }
-            
-            .card {
-                @extend card,%restaurantsCard !optional;
-                @include mix.verticalBox;
-                position: relative;
-                
-                .popUp {
-                    @include mix.popUpLayout;
-                    @include mix.rounded(var.$popUpRadius);
-                    @include mix.lightGreenBackground;
-                    @include mix.greenText;
-                    @include mix.font(14px, 500);
-                    padding: 6.5px 9.3px;
-                }
-                
-                img {
-                    @include mix.topRounded(15px);
-                    height: 174px;
-                }
-                
-                &__content {
-                    @include mix.rectangle(100%, 77px);
-                    @include mix.horizontalBox(space-between);
-                    @include mix.whiteBackground;
-                    @include mix.bottomRounded(var.$cardsRadius);
-                    padding: 16px 0 16px 16px;
-                }
-                
-                &__text {
+        }
 
-                    & > * {
-                        align-items: start !important;
-                        text-align: start !important
-                    }
-                }
-
-                &__title {
-                    @include mix.font(18px, 700);
-                    margin-bottom: 5px;
-                }
-                
-                &__subtitle {
-                    @include mix.font(17px, 300);
-                }
-                
-                &__icon {
-                    @extend icon,%heartIcon !optional;
-
-                    &:hover {
-                        @include mix.purpleIcon-gradient;
-                        @include mix.noStroke;
-                    }
-                }
-            }
+        &__title {
+            @include mix.font(18px, 700);
+            margin-bottom: 5px;
+        }
+        
+        &__subtitle {
+            @include mix.font(17px, 300);
+        }
+        
+        &__icon {
+            @extend icons,%heartIcon !optional;
+            @extend anim,%heartIconAnimation !optional;
         }
     }
 }

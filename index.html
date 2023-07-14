@@ -36,10 +36,10 @@
         <!-- entête : Slogan + button "explorer"  -->
         <section class="heading">
             <h1 class="heading__title heading__text">Réservez le menu qui vous convient</h1>
-            <p class="heading__subtitle heading__text">Découvrez des restaurants d’exception, sélectionnés par nos
-                soins.</p>
-            <button onclick="window.location.href='#restaurant__section';" class="heading__btn">Explorer nos
-                restaurants</button>
+            <p class="heading__subtitle heading__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <a href="#restaurant">
+                <button class="heading__btn">Explorer nos restaurants</button>
+            </a>
         </section>
 
 
@@ -79,7 +79,7 @@
 
 
         <!-- section : restaurants -->
-        <section class="restaurant">
+        <section class="restaurant" id="restaurant">
             <h2 class="restaurant__title">Restaurants</h2>
 
             <!-- groupe de cartes -->
@@ -95,7 +95,7 @@
                                 <h3 class="card__title">La palette du goût</h3>
                                 <address class="card__subtitle">Ménilmontant</address>
                             </div>
-                            <i class="fa-solid fa-heart card__icon" onclick="return false"></i>
+                                <i class="fa-regular fa-sharp fa-heart card__icon" onclick="return false"></i>
                         </div>
                     </article>
                 </a>
@@ -111,7 +111,7 @@
                                 <h3 class="card__title">La note enchantée</h3>
                                 <address class="card__subtitle">Charonne</address>
                             </div>
-                            <i class="fa-solid fa-heart card__icon" onclick="return false"></i>
+                            <i class="fa-regular fa-sharp fa-heart card__icon" onclick="return false"></i>
                         </div>
                     </article>
                 </a>
@@ -126,7 +126,7 @@
                                 <h3 class="card__title">À la française</h3>
                                 <address class="card__subtitle">Cité Rouge</address>
                             </div>
-                            <i class="fa-solid fa-heart card__icon" onclick="return false"></i>
+                            <i class="fa-regular fa-sharp fa-heart card__icon" onclick="return false"></i>
                         </div>
                     </article>
                 </a>
@@ -141,7 +141,7 @@
                                 <h3 class="card__title">Le délice des sens</h3>
                                 <address class="card__subtitle">Folie-Méricourt</address>
                             </div>
-                            <i class="fa-solid fa-heart card__icon" onclick="return false"></i>
+                            <i class="fa-regular fa-sharp fa-heart card__icon" onclick="return false"></i>
                         </div>
                     </article>
                 </a>
@@ -177,5 +177,4 @@
         </ul>
     </footer>
 </body>
-
 </html>

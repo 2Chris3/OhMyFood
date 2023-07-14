@@ -3,7 +3,7 @@
   margin-bottom: 25px;
 }
 
-.restaurant__cardsGroup a .card {
+.restaurant .card {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -14,7 +14,7 @@
   position: relative;
 }
 @media only screen and (min-width: 1024px) {
-  .restaurant__cardsGroup a .card {
+  .restaurant .card {
     flex: 1 1 46%;
   }
 }
@@ -43,26 +43,17 @@
     column-gap: 7%;
   }
 }
-.restaurant__cardsGroup a {
+.restaurant a {
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  .restaurant__cardsGroup a {
+  .restaurant a {
     flex: 1 1 46%;
   }
 }
-.restaurant__cardsGroup a .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-.restaurant__cardsGroup a .card .popUp {
+.restaurant .popUp {
   position: absolute;
   top: 5%;
   right: 3.7%;
@@ -72,11 +63,20 @@
   font: 500 14px Roboto;
   padding: 6.5px 9.3px;
 }
-.restaurant__cardsGroup a .card img {
+.restaurant img {
   border-radius: 15px 15px 0 0;
   height: 174px;
 }
-.restaurant__cardsGroup a .card__content {
+.restaurant .card {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.restaurant .card__content {
   width: 100%;
   height: 77px;
   display: flex;
@@ -89,21 +89,14 @@
   border-radius: 0 0 15px 15px;
   padding: 16px 0 16px 16px;
 }
-.restaurant__cardsGroup a .card__text > * {
+.restaurant .card__text > * {
   align-items: start !important;
   text-align: start !important;
 }
-.restaurant__cardsGroup a .card__title {
+.restaurant .card__title {
   font: 700 18px Roboto;
   margin-bottom: 5px;
 }
-.restaurant__cardsGroup a .card__subtitle {
+.restaurant .card__subtitle {
   font: 300 17px Roboto;
-}
-.restaurant__cardsGroup a .card__icon:hover {
-  background-image: linear-gradient(#ff79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: none;
 }
