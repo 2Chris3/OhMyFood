@@ -50,14 +50,14 @@
     
     .card {
         @extend cards,%menuCard !optional;
-        animation: appear 300ms ease-in-out forwards;
+        animation: appear 1.5s ease-in-out forwards;
         opacity: 0;
         overflow: hidden;
 
         //animation
         @for $i from 1 through 3 {
             &:nth-child(#{$i}){
-              animation-delay: $i * 50ms;
+              animation-delay: $i * 100ms;
             }
         }
 
@@ -68,7 +68,7 @@
         }
 
         &__title {
-            @include mix.font(18px, 500);
+            @include mix.font(18px, 800);
             text-align: start;
             align-self: start;
         }

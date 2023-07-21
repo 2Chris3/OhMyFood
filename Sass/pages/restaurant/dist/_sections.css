@@ -13,6 +13,29 @@
   background-color: white;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
+.entrees .card:hover .card__icon,
+.plats .card:hover .card__icon,
+.desserts .card:hover .card__icon, .entrees .card:focus .card__icon,
+.plats .card:focus .card__icon,
+.desserts .card:focus .card__icon {
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  opacity: 1;
+}
+.entrees .card:hover .check-icon,
+.plats .card:hover .check-icon,
+.desserts .card:hover .check-icon {
+  transition: all 300ms;
+  opacity: 1;
+}
+.entrees .card:not(:hover) .card__icon,
+.plats .card:not(:hover) .card__icon,
+.desserts .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
+.plats .card:not(:hover) .check-icon,
+.desserts .card:not(:hover) .check-icon {
+  transition: all 300ms;
+}
 
 @keyframes appear {
   from {
@@ -81,24 +104,24 @@
 .entrees .card,
 .plats .card,
 .desserts .card {
-  animation: appear 300ms ease-in-out forwards;
+  animation: appear 1.5s ease-in-out forwards;
   opacity: 0;
   overflow: hidden;
 }
 .entrees .card:nth-child(1),
 .plats .card:nth-child(1),
 .desserts .card:nth-child(1) {
-  animation-delay: 50ms;
+  animation-delay: 100ms;
 }
 .entrees .card:nth-child(2),
 .plats .card:nth-child(2),
 .desserts .card:nth-child(2) {
-  animation-delay: 100ms;
+  animation-delay: 200ms;
 }
 .entrees .card:nth-child(3),
 .plats .card:nth-child(3),
 .desserts .card:nth-child(3) {
-  animation-delay: 150ms;
+  animation-delay: 300ms;
 }
 .entrees .card__content,
 .plats .card__content,
@@ -116,7 +139,7 @@
 .entrees .card__title,
 .plats .card__title,
 .desserts .card__title {
-  font: 500 18px Roboto;
+  font: 800 18px Roboto;
   text-align: start;
   align-self: start;
 }
