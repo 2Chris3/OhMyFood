@@ -11,6 +11,7 @@
   font-weight: 600;
   margin: 0 25px;
   transform: scaleX(0.87);
+  transition: all 300ms;
 }
 .heading__icon:hover {
   background: linear-gradient(0deg, #9356DC, #ff79DA);
@@ -32,7 +33,4 @@
   .heading {
     justify-content: center;
   }
-}
-.heading__icon {
-  transition: all 300ms;
 }

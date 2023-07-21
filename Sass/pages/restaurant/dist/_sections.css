@@ -48,6 +48,19 @@
     translate: 0 0;
   }
 }
+main section {
+  animation: appear 1s ease-in-out;
+}
+main section:nth-child(1) {
+  animation-delay: 3s;
+}
+main section:nth-child(2) {
+  animation-delay: 6s;
+}
+main section:nth-child(3) {
+  animation-delay: 9s;
+}
+
 .entrees,
 .plats,
 .desserts {
@@ -71,22 +84,22 @@
   line-height: 27px;
   border-bottom: solid 2px #99E2D0;
   opacity: 1;
-  animation: appear 300ms ease-in-out;
+  animation: appear 1s ease-in-out;
 }
 .entrees__title:nth-child(1),
 .plats__title:nth-child(1),
 .desserts__title:nth-child(1) {
-  animation-delay: 50ms;
+  animation-delay: 1s;
 }
 .entrees__title:nth-child(2),
 .plats__title:nth-child(2),
 .desserts__title:nth-child(2) {
-  animation-delay: 100ms;
+  animation-delay: 2s;
 }
 .entrees__title:nth-child(3),
 .plats__title:nth-child(3),
 .desserts__title:nth-child(3) {
-  animation-delay: 150ms;
+  animation-delay: 3s;
 }
 .entrees__cardsGroup,
 .plats__cardsGroup,
@@ -111,17 +124,17 @@
 .entrees .card:nth-child(1),
 .plats .card:nth-child(1),
 .desserts .card:nth-child(1) {
-  animation-delay: 100ms;
+  animation-delay: 500ms;
 }
 .entrees .card:nth-child(2),
 .plats .card:nth-child(2),
 .desserts .card:nth-child(2) {
-  animation-delay: 200ms;
+  animation-delay: 1000ms;
 }
 .entrees .card:nth-child(3),
 .plats .card:nth-child(3),
 .desserts .card:nth-child(3) {
-  animation-delay: 300ms;
+  animation-delay: 1500ms;
 }
 .entrees .card__content,
 .plats .card__content,

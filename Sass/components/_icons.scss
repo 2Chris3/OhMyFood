@@ -34,5 +34,6 @@
     @include mix.whiteBackground;
     @include mix.whiteIcon;
     position: relative;
-    @include mix.standardTransition;
+    // @include mix.standardTransition;
+    transition: all 3s;
 }

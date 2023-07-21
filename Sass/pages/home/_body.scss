@@ -20,12 +20,14 @@ h2 {
         rotate: 0deg;
         translate: 0 0;
         opacity: 1;
+        display: flex;
     }
 
     100% {
         translate: 130vw 0;
         rotate: 360deg;
         opacity: 0;
+        display: none;
     }
 }
 
@@ -51,9 +53,10 @@ h2 {
 #animation__background {
     background: linear-gradient(-90deg, white 100%, red);
     height: 100vh;
-    width: 150vw;
+    width: 100%;
+    display: none;
     z-index: 9;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     animation: slide 1s ease-in-out 2s forwards;
@@ -65,7 +68,7 @@ h2 {
 #animation__ball {
     position: absolute;
     top: 50vh;
-    left: -20vw;
+    left: -10%;
     height: 100px;
     width: 100px;
     border-radius: 100px;
