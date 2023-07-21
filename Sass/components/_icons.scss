@@ -6,12 +6,22 @@
 //   ::: HEART ICON :::   //
 
 %heartIcon {
-    -webkit-text-stroke: 0.8px black;
-    color: transparent;
-    font-size: 22px;
-    font-weight: 900;
-    padding: 0 25px;
+    @include mix.iconImage;
+    @include mix.stroke;
+    font: {
+        size: 22px;
+        weight: 600;
+    }
+    margin: 0 25px;
     transform: scaleX(0.87);
+    @include mix.standardTransition;
+
+    //animation
+    &:hover {
+        @include mix.purpleBackground-gradient;
+        @include mix.iconImage;
+        @include mix.noStroke;
+    }
 }
 
 
@@ -24,4 +34,5 @@
     @include mix.whiteBackground;
     @include mix.whiteIcon;
     position: relative;
+    @include mix.standardTransition;
 }

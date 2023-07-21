@@ -110,8 +110,7 @@
 }
 
 //purple icon (gradient)
-@mixin purpleIcon-gradient {
-    background-image: var.$purpleGradient;
+@mixin iconImage {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -159,8 +158,8 @@
     background-color: var.$darkPurple;
 }
 
-@mixin purpleBackground-gradient($degrees) {
-    background-image: linear-gradient($degrees, var.$darkPurple, var.$lightPurple);
+@mixin purpleBackground-gradient($degrees: 0deg) {
+    background: linear-gradient($degrees, var.$darkPurple, var.$lightPurple);
 }
 
 
@@ -169,7 +168,7 @@
 
 //buttons shadows
 @mixin btnShadow {
-    box-shadow: 0 4px var.$btnShadowBlur 0 var.$transparentGrey;
+    box-shadow: 0 4px var.$btnShadowBlur 0 var.$extremelyTransparentGrey;
 }
 
 //cards shadows
@@ -325,7 +324,7 @@
     position: absolute;
     left: 17px;
     top: 50%;
-    transform: translateY(-50%);
+    translate: 0 -50%;
 }
 
 //logo layout
@@ -399,7 +398,13 @@
     border-bottom: solid 2px var.$lightGreen;
 }
 
-
+//strokes
+@mixin stroke {
+    -webkit-text-stroke: 0.8px black;
+}
+@mixin noStroke {
+    -webkit-text-stroke: 0px transparent;
+}
 
 //   ::: ANIMATIONS :::   //
 

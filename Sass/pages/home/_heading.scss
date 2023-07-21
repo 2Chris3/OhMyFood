@@ -27,7 +27,6 @@
 
     &__btn {
         @extend btn,%explorationBtn !optional;
-        @extend anim,%btnAnimation !optional;
         margin: 22px 0 17px 0;
     }
 }

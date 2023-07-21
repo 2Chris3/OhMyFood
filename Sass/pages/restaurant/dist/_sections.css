@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: stretch;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -14,38 +14,17 @@
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-.entrees .card__icon,
-.plats .card__icon,
-.desserts .card__icon {
-  width: 0;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
-  background-color: white;
-  color: white;
-  position: relative;
+@keyframes appear {
+  from {
+    translate: 0 -20px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+    translate: 0 0;
+  }
 }
-
-.entrees .card:hover .card__icon,
-.plats .card:hover .card__icon,
-.desserts .card:hover .card__icon {
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  transition: all 300ms;
-  opacity: 1;
-}
-.entrees .card:hover .check-icon,
-.plats .card:hover .check-icon,
-.desserts .card:hover .check-icon {
-  transition: all 600ms;
-  opacity: 1;
-}
-.entrees .card:not(:hover) .card__icon,
-.plats .card:not(:hover) .card__icon,
-.desserts .card:not(:hover) .card__icon {
-  transition: all 300ms;
-}
-
 .entrees,
 .plats,
 .desserts {
@@ -57,6 +36,8 @@
   text-align: center;
   text-align: start;
   align-items: start;
+  width: 100%;
+  height: 300px;
   gap: 12px;
 }
 .entrees__title,
@@ -66,23 +47,58 @@
   width: 40px;
   line-height: 27px;
   border-bottom: solid 2px #99E2D0;
+  opacity: 1;
+  animation: appear 300ms ease-in-out;
+}
+.entrees__title:nth-child(1),
+.plats__title:nth-child(1),
+.desserts__title:nth-child(1) {
+  animation-delay: 50ms;
+}
+.entrees__title:nth-child(2),
+.plats__title:nth-child(2),
+.desserts__title:nth-child(2) {
+  animation-delay: 100ms;
+}
+.entrees__title:nth-child(3),
+.plats__title:nth-child(3),
+.desserts__title:nth-child(3) {
+  animation-delay: 150ms;
 }
 .entrees__cardsGroup,
 .plats__cardsGroup,
 .desserts__cardsGroup {
+  width: 100%;
+  height: 255px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 100%;
   gap: 12px;
 }
 .entrees .card,
 .plats .card,
 .desserts .card {
+  animation: appear 300ms ease-in-out forwards;
+  opacity: 0;
   overflow: hidden;
+}
+.entrees .card:nth-child(1),
+.plats .card:nth-child(1),
+.desserts .card:nth-child(1) {
+  animation-delay: 50ms;
+}
+.entrees .card:nth-child(2),
+.plats .card:nth-child(2),
+.desserts .card:nth-child(2) {
+  animation-delay: 100ms;
+}
+.entrees .card:nth-child(3),
+.plats .card:nth-child(3),
+.desserts .card:nth-child(3) {
+  animation-delay: 150ms;
 }
 .entrees .card__content,
 .plats .card__content,

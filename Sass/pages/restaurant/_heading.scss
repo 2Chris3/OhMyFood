@@ -2,7 +2,6 @@
 @use '../../tools/mixins'as mix;
 @use '../../components/text'as txt;
 @use '../../components/icons'as icons;
-@use'../../animations/pseudo-elements'as anim;
 
 
 
@@ -20,6 +19,6 @@
 
     &__icon {
         @extend icons,%heartIcon !optional;
-        @extend anim,%heartIconAnimation !optional;
+        @include mix.standardTransition;
     }
 }

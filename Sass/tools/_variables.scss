@@ -33,7 +33,7 @@ $darkPurple: #9356DC;
 //   ::: GRADIENTS :::   //
 
 //purple gradient
-$purpleGradient: linear-gradient($lightPurple, $darkPurple);
+$purpleGradient: $lightPurple, $darkPurple;
 
 //turn parameters
 $dontRotate: 0deg;

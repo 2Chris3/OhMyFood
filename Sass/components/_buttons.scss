@@ -9,6 +9,13 @@
     @include mix.purpleBackground-gradient(0deg);
     @include mix.btnShadow;
     @include mix.whiteText;
+    @include mix.standardTransition;
+
+    //animation
+    &:hover {
+        filter: brightness(115%);
+        box-shadow: 0 0 30px 0px var.$veryTransparentGrey;
+    }
 }
 
 

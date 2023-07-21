@@ -79,14 +79,13 @@
             @include mix.font(18px, 700);
             margin-bottom: 5px;
         }
-        
+
         &__subtitle {
             @include mix.font(17px, 300);
         }
-        
+
         &__icon {
             @extend icons,%heartIcon !optional;
-            @extend anim,%heartIconAnimation !optional;
         }
     }
 }

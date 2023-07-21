@@ -1,7 +1,6 @@
 @use '../../tools/variables'as var;
 @use '../../tools/mixins'as mix;
 @use '../../components/buttons'as btn;
-@use '../../animations/pseudo-elements'as anim;
 
 
 
@@ -54,6 +53,5 @@
 
     .orderBtn {
         @extend btn,%orderBtn !optional;
-        @extend anim,%btnAnimation !optional;
     }
 }

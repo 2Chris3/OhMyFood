@@ -2,32 +2,64 @@
 @use '../../tools/mixins'as mix;
 @use '../../components/cards'as cards;
 @use '../../components/cards'as icons;
-@use '../../animations/pseudo-elements'as anim;
 
 
+
+//menu animation
+@keyframes appear {
+
+    from {
+        translate: 0 -20px;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        margin-bottom: 0;
+        translate: 0 0;
+    }
+}
 
 .entrees,
 .plats,
 .desserts {
     @include mix.verticalBox(space-between);
     @include mix.alignment(start);
+    @include mix.rectangle(100%, 300px);
     gap: 12px;
-
+    
     &__title {
         @include mix.font(16px, 300);
         @include mix.underline;
-    }
+        opacity: 1;
 
+        //animation
+        animation: appear 300ms ease-in-out;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}){
+              animation-delay: $i * 50ms;
+            }
+        }
+    }
+    
     &__cardsGroup {
+        @include mix.rectangle(100%, 255px);
         @include mix.verticalBox(space-between);
-        width: 100%;
         gap: 12px;
     }
-
+    
     .card {
         @extend cards,%menuCard !optional;
-        @extend anim,%cardAnimation !optional;
+        animation: appear 300ms ease-in-out forwards;
+        opacity: 0;
         overflow: hidden;
+
+        //animation
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}){
+              animation-delay: $i * 50ms;
+            }
+        }
 
         &__content {
             @include mix.verticalBox(space-between);
@@ -41,12 +73,12 @@
             align-self: start;
         }
     }
-    
+
     .informations {
         @include mix.horizontalBox(space-between);
         width: 100%;
     }
-    
+
     .card {
 
         &__subtitle {
@@ -62,7 +94,7 @@
             @extend icons,%checkIconContainer !optional;
         }
     }
-    
+
     .check-icon {
         @include mix.centredItem;
         font-size: 20px;
