@@ -76,7 +76,10 @@
         }
 
         &__title {
-            @include mix.font(18px, 700);
+            font: {
+                size: 18px;
+                weight: 800 !important;
+            }
             margin-bottom: 5px;
         }
 

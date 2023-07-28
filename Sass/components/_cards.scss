@@ -33,30 +33,3 @@
 
 //   ::: MENU CARDS :::   //
 
-%menuCard {
-    @include mix.horizontalBox(space-between);
-    @include mix.rectangle(100%, 70px);
-    @include mix.rounded(var.$cardsRadius);
-    @include mix.whiteBackground;
-    @include mix.cardsShadows;
-
-    //animation
-    &:hover .card__icon,
-    &:focus .card__icon {
-        @include mix.rectangle(60px, 100%);
-        @include mix.lightGreenBackground;
-        opacity: 1;
-    }
-
-    &:hover .check-icon {
-        @include mix.standardTransition;
-        opacity: 1;
-    }
-
-    //reversed
-    &:not(:hover) {
-        .card__icon, .check-icon {
-            @include mix.standardTransition;
-        }
-    }
-}

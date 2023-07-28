@@ -1,46 +1,7 @@
-.entrees .card,
-.plats .card,
-.desserts .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-}
-.entrees .card:hover .card__icon,
-.plats .card:hover .card__icon,
-.desserts .card:hover .card__icon, .entrees .card:focus .card__icon,
-.plats .card:focus .card__icon,
-.desserts .card:focus .card__icon {
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  opacity: 1;
-}
-.entrees .card:hover .check-icon,
-.plats .card:hover .check-icon,
-.desserts .card:hover .check-icon {
-  transition: all 300ms;
-  opacity: 1;
-}
-.entrees .card:not(:hover) .card__icon,
-.plats .card:not(:hover) .card__icon,
-.desserts .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
-.plats .card:not(:hover) .check-icon,
-.desserts .card:not(:hover) .check-icon {
-  transition: all 300ms;
-}
-
 @keyframes appear {
   from {
-    translate: 0 -20px;
     opacity: 0;
+    translate: -100% 0;
   }
   to {
     opacity: 1;
@@ -48,17 +9,37 @@
     translate: 0 0;
   }
 }
-main section {
-  animation: appear 1s ease-in-out;
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    margin-bottom: 100px;
+    translate: -100% 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+    translate: 0 0;
+  }
 }
-main section:nth-child(1) {
-  animation-delay: 3s;
+@-moz-keyframes appear {
+  from {
+    opacity: 0;
+    margin-bottom: 100px;
+    translate: -100% 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+    translate: 0 0;
+  }
 }
-main section:nth-child(2) {
-  animation-delay: 6s;
+/*do it again*/
+.plats {
+  animation: appear 1.9s ease-in-out 2s;
 }
-main section:nth-child(3) {
-  animation-delay: 9s;
+
+.desserts {
+  animation: appear 1.9s ease-in-out 2s;
 }
 
 .entrees,
@@ -83,23 +64,7 @@ main section:nth-child(3) {
   width: 40px;
   line-height: 27px;
   border-bottom: solid 2px #99E2D0;
-  opacity: 1;
-  animation: appear 1s ease-in-out;
-}
-.entrees__title:nth-child(1),
-.plats__title:nth-child(1),
-.desserts__title:nth-child(1) {
-  animation-delay: 1s;
-}
-.entrees__title:nth-child(2),
-.plats__title:nth-child(2),
-.desserts__title:nth-child(2) {
-  animation-delay: 2s;
-}
-.entrees__title:nth-child(3),
-.plats__title:nth-child(3),
-.desserts__title:nth-child(3) {
-  animation-delay: 3s;
+  animation: appear 1.9s ease-in-out;
 }
 .entrees__cardsGroup,
 .plats__cardsGroup,
@@ -117,24 +82,59 @@ main section:nth-child(3) {
 .entrees .card,
 .plats .card,
 .desserts .card {
-  animation: appear 1.5s ease-in-out forwards;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  animation: appear 1s ease-in-out forwards;
   opacity: 0;
   overflow: hidden;
+  transition: all 0.5s;
+}
+.entrees .card:hover .card__icon,
+.plats .card:hover .card__icon,
+.desserts .card:hover .card__icon {
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  opacity: 1;
+}
+.entrees .card:hover .check-icon,
+.plats .card:hover .check-icon,
+.desserts .card:hover .check-icon {
+  opacity: 1;
+}
+.entrees .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
+.plats .card:not(:hover) .card__icon,
+.plats .card:not(:hover) .check-icon,
+.desserts .card:not(:hover) .card__icon,
+.desserts .card:not(:hover) .check-icon {
+  opacity: 0;
 }
 .entrees .card:nth-child(1),
 .plats .card:nth-child(1),
 .desserts .card:nth-child(1) {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
+  translate: 0 200%;
 }
 .entrees .card:nth-child(2),
 .plats .card:nth-child(2),
 .desserts .card:nth-child(2) {
-  animation-delay: 1000ms;
+  animation-delay: 600ms;
+  translate: 0 400%;
 }
 .entrees .card:nth-child(3),
 .plats .card:nth-child(3),
 .desserts .card:nth-child(3) {
-  animation-delay: 1500ms;
+  animation-delay: 900ms;
+  translate: 0 600%;
 }
 .entrees .card__content,
 .plats .card__content,
@@ -153,7 +153,6 @@ main section:nth-child(3) {
 .plats .card__title,
 .desserts .card__title {
   font: 800 18px Roboto;
-  text-align: start;
   align-self: start;
 }
 .entrees .informations,
@@ -171,12 +170,26 @@ main section:nth-child(3) {
 .plats .card__subtitle,
 .desserts .card__subtitle {
   font: 300 15px Roboto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   align-self: start;
 }
 .entrees .card .price,
 .plats .card .price,
 .desserts .card .price {
   font: 700 15px Roboto;
+}
+.entrees .card__icon,
+.plats .card__icon,
+.desserts .card__icon {
+  width: 0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: white;
+  color: white;
+  position: relative;
+  transition: all 500ms;
 }
 .entrees .check-icon,
 .plats .check-icon,

@@ -1,0 +1,219 @@
+@use './variables'as var;
+@use './mixins'as mix;
+
+
+
+//   ::: HOME PAGE ANIMATIONS :::   //
+
+// diseapper
+@keyframes disappear {
+    0% {
+        z-index: 10;
+        opacity: 1;
+        display: flex;
+        position: fixed;
+    }
+
+    100% {
+        opacity: 0;
+        display: none !important;
+        z-index: 0 !important;
+        position: static;
+    }
+}
+@-webkit-keyframes disappear {
+    0% {
+        z-index: 10;
+        opacity: 1;
+        display: flex;
+        position: fixed;
+    }
+
+    100% {
+        opacity: 0;
+        display: none !important;
+        z-index: 0 !important;
+        position: static;
+    }
+}
+@-moz-keyframes disappear {
+    0% {
+        z-index: 10;
+        opacity: 1;
+        display: flex;
+        position: fixed;
+    }
+
+    100% {
+        opacity: 0;
+        display: none !important;
+        z-index: 0 !important;
+        position: static;
+    }
+}
+// slide + rotate = roll 
+@keyframes roll {
+    0% {
+        left: 0%;
+        rotate: 0deg;
+    }
+
+    24.99% {
+        rotate: 360deg;
+    }
+
+    25% {
+        rotate: 0deg;
+    }
+
+    49.99% {
+        rotate: 360deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    74.99% {
+        rotate: 360deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    100% {
+        left: 130%;
+        rotate: 360deg;
+    }
+}
+
+@-webkit-keyframes roll {
+    0% {
+        left: 0%;
+        rotate: 0deg;
+    }
+
+    24.99% {
+        rotate: 360deg;
+    }
+
+    25% {
+        rotate: 0deg;
+    }
+
+    49.99% {
+        rotate: 360deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    74.99% {
+        rotate: 360deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    100% {
+        left: 130%;
+        rotate: 360deg;
+    }
+}
+@-moz-keyframes roll {
+    0% {
+        left: 0%;
+        rotate: 0deg;
+    }
+
+    24.99% {
+        rotate: 360deg;
+    }
+
+    25% {
+        rotate: 0deg;
+    }
+
+    49.99% {
+        rotate: 360deg;
+    }
+
+    50% {
+        rotate: 0deg;
+    }
+
+    74.99% {
+        rotate: 360deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    100% {
+        left: 130%;
+        rotate: 360deg;
+    }
+}
+
+//   ::: RESTAURANTS PAGE ANIMATIONS :::   //
+
+// appear animation
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+// fall animation
+@keyframes slideIn {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+@-webkit-keyframes slideIn {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+@-moz-keyframes slideIn {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

@@ -4,6 +4,8 @@ html, body, header, main, footer, section, article, figure, img {
 
 html {
     background-color: #ececec;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 img {

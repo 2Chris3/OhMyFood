@@ -100,39 +100,85 @@
 @mixin greenIcon {
     color: var.$darkGreen;
 }
+
 //dark gray icon
 @mixin darkGrayIcon {
     color: var.$darkGray;
 }
+
 //basic gray icon
 @mixin grayIcon {
     color: var.$grey;
 }
 
-//purple icon (gradient)
-@mixin iconImage {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+//heart icon
+@mixin heartIcon($content) {
+    position: relative;
+    z-index: 1;
+    padding: 0 25px;
+    margin: 0;
+
+    &:after {
+        content: $content;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        background: linear-gradient(var.$darkPurple, var.$lightPurple);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        transition: opacity 500ms;
+        -webkit-text-stroke: 0 transparent;
+    }
+
+    &::before {
+        position: absolute;
+        top: -8px;
+        left: 0;
+        opacity: 1;
+        -webkit-text-stroke: 0.2px black;
+        transition: opacity 500ms;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+
+        &:before {
+            opacity: 0;
+        }
+    }
 }
 
 
-
 //   ::: BACKGROUNDS :::   //
+
+//ball background
+@mixin ballColor {
+    background: radial-gradient(ellipse farthest-corner at 70% 30%, #fff, #ff79da 10% 22%, #9356dc 80% 100%);
+}
 
 //transparent background
 @mixin transparentBackground {
     background-color: transparent;
 }
 
-//inherit background
+//parent's background
 @mixin inheritBackground {
     background-color: inherit;
 }
 
-//white background
+//white backgrounds
 @mixin whiteBackground {
     background-color: white;
+}
+
+@mixin whiteBackground-gradient($degrees: 0deg) {
+    background: linear-gradient($degrees, white 65%, transparent);
 }
 
 //green backgrounds
@@ -387,6 +433,17 @@
     align-items: $alignment;
 }
 
+@mixin ballPosition {
+    position: fixed;
+    top: 50vh;
+    translate: -200% -50%;
+}
+
+@mixin animationPosition {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 
 //   ::: DECORATIONS :::   //
@@ -402,13 +459,23 @@
 @mixin stroke {
     -webkit-text-stroke: 0.8px black;
 }
+
 @mixin noStroke {
     -webkit-text-stroke: 0px transparent;
 }
 
-//   ::: ANIMATIONS :::   //
+//triple dot
+@mixin tripleDot {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
-//standard transition
+
+
+//   ::: TRANSITIONS :::   //
+
+// standard transition
 @mixin standardTransition {
-    transition: all 300ms;
+    transition: all 0.5s;
 }

@@ -6,22 +6,7 @@
 //   ::: HEART ICON :::   //
 
 %heartIcon {
-    @include mix.iconImage;
-    @include mix.stroke;
-    font: {
-        size: 22px;
-        weight: 600;
-    }
-    margin: 0 25px;
-    transform: scaleX(0.87);
-    @include mix.standardTransition;
-
-    //animation
-    &:hover {
-        @include mix.purpleBackground-gradient;
-        @include mix.iconImage;
-        @include mix.noStroke;
-    }
+    @include mix.heartIcon("\f004");
 }
 
 
@@ -34,6 +19,5 @@
     @include mix.whiteBackground;
     @include mix.whiteIcon;
     position: relative;
-    // @include mix.standardTransition;
-    transition: all 3s;
+    transition: all 500ms;
 }

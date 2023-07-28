@@ -94,7 +94,8 @@
   text-align: start !important;
 }
 .restaurant .card__title {
-  font: 700 18px Roboto;
+  font-size: 18px;
+  font-weight: 800 !important;
   margin-bottom: 5px;
 }
 .restaurant .card__subtitle {

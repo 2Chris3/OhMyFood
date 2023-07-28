@@ -16,6 +16,8 @@ html, body, header, main, footer, section, article, figure, img {
 
 html {
   background-color: #ececec;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 img {
@@ -66,34 +68,39 @@ a:visited {
 }
 
 .heading__icon, .homePage .restaurant .card__icon {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0.8px black;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0 25px;
-  transform: scaleX(0.87);
-  transition: all 300ms;
-}
-.heading__icon:hover, .homePage .restaurant .card__icon:hover {
-  background: linear-gradient(0deg, #9356DC, #ff79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0px transparent;
-}
-
-.entrees .card__icon,
-.plats .card__icon,
-.desserts .card__icon {
-  width: 0;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
-  background-color: white;
-  color: white;
   position: relative;
-  transition: all 3s;
+  z-index: 1;
+  padding: 0 25px;
+  margin: 0;
+}
+.heading__icon:after, .homePage .restaurant .card__icon:after {
+  content: "\f004";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(#9356DC, #ff79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transition: opacity 500ms;
+  -webkit-text-stroke: 0 transparent;
+}
+.heading__icon::before, .homePage .restaurant .card__icon::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  opacity: 1;
+  -webkit-text-stroke: 0.2px black;
+  transition: opacity 500ms;
+}
+.heading__icon:hover:after, .homePage .restaurant .card__icon:hover:after {
+  opacity: 1;
+}
+.heading__icon:hover:before, .homePage .restaurant .card__icon:hover:before {
+  opacity: 0;
 }
 
 .restaurantMain .orderBtn, .homePage .heading__btn {
@@ -105,7 +112,7 @@ a:visited {
   background: linear-gradient(0deg, #9356DC, #ff79DA);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   color: white;
-  transition: all 300ms;
+  transition: all 0.5s;
 }
 .restaurantMain .orderBtn:hover, .homePage .heading__btn:hover {
   filter: brightness(115%);
@@ -151,53 +158,15 @@ a:visited {
   }
 }
 
-.entrees .card,
-.plats .card,
-.desserts .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-}
-.entrees .card:hover .card__icon,
-.plats .card:hover .card__icon,
-.desserts .card:hover .card__icon, .entrees .card:focus .card__icon,
-.plats .card:focus .card__icon,
-.desserts .card:focus .card__icon {
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  opacity: 1;
-}
-.entrees .card:hover .check-icon,
-.plats .card:hover .check-icon,
-.desserts .card:hover .check-icon {
-  transition: all 300ms;
-  opacity: 1;
-}
-.entrees .card:not(:hover) .card__icon,
-.plats .card:not(:hover) .card__icon,
-.desserts .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
-.plats .card:not(:hover) .check-icon,
-.desserts .card:not(:hover) .check-icon {
-  transition: all 300ms;
-}
-
 body {
   background-color: white;
-  max-width: 1400px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 main {
   background-color: white !important;
+  overflow-x: hidden;
 }
 
 .banner {
@@ -314,8 +283,181 @@ footer .list__item--text {
 }
 
 .homePage {
-  /* STEPS */
-  /* ELEMENTS */
+  /* ANIMATION */
+}
+@keyframes disappear {
+  0% {
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none !important;
+    z-index: 0 !important;
+    position: static;
+  }
+}
+@-webkit-keyframes disappear {
+  0% {
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none !important;
+    z-index: 0 !important;
+    position: static;
+  }
+}
+@-moz-keyframes disappear {
+  0% {
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none !important;
+    z-index: 0 !important;
+    position: static;
+  }
+}
+@keyframes roll {
+  0% {
+    left: 0%;
+    rotate: 0deg;
+  }
+  24.99% {
+    rotate: 360deg;
+  }
+  25% {
+    rotate: 0deg;
+  }
+  49.99% {
+    rotate: 360deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  74.99% {
+    rotate: 360deg;
+  }
+  75% {
+    rotate: 0deg;
+  }
+  100% {
+    left: 130%;
+    rotate: 360deg;
+  }
+}
+@-webkit-keyframes roll {
+  0% {
+    left: 0%;
+    rotate: 0deg;
+  }
+  24.99% {
+    rotate: 360deg;
+  }
+  25% {
+    rotate: 0deg;
+  }
+  49.99% {
+    rotate: 360deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  74.99% {
+    rotate: 360deg;
+  }
+  75% {
+    rotate: 0deg;
+  }
+  100% {
+    left: 130%;
+    rotate: 360deg;
+  }
+}
+@-moz-keyframes roll {
+  0% {
+    left: 0%;
+    rotate: 0deg;
+  }
+  24.99% {
+    rotate: 360deg;
+  }
+  25% {
+    rotate: 0deg;
+  }
+  49.99% {
+    rotate: 360deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  74.99% {
+    rotate: 360deg;
+  }
+  75% {
+    rotate: 0deg;
+  }
+  100% {
+    left: 130%;
+    rotate: 360deg;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes slideIn {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .homePage .restaurant__title, .homePage h2 {
   font: 700 24px Roboto;
@@ -324,51 +466,30 @@ footer .list__item--text {
 .homePage .heading__title {
   font: 400 28px Roboto;
 }
-@keyframes rollAndRotate {
-  0% {
-    rotate: 0deg;
-    translate: 0 0;
-    opacity: 1;
-    display: flex;
-  }
-  100% {
-    translate: 130vw 0;
-    rotate: 360deg;
-    opacity: 0;
-    display: none;
-  }
-}
-@keyframes slide {
-  0% {
-    display: flex;
-    opacity: 1;
-  }
-  100% {
-    display: none;
-    opacity: 0;
-  }
-}
 .homePage #animation__background {
-  background: linear-gradient(-90deg, white 100%, red);
-  height: 100vh;
   width: 100%;
-  display: none;
-  z-index: 9;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  animation: slide 1s ease-in-out 2s forwards;
+  background-color: white;
+  overflow-x: hidden;
+  position: fixed;
+  display: block;
+  z-index: 10;
+  animation: disappear 1.5s ease-in-out 1.5s forwards;
+  -webkit-animation: disappear 1.5s ease-in-out 1.5s forwards !important;
 }
 .homePage #animation__ball {
-  position: absolute;
-  top: 50vh;
-  left: -10%;
-  height: 100px;
   width: 100px;
+  height: 100px;
   border-radius: 100px;
+  position: fixed;
+  top: 50vh;
+  translate: -200% -50%;
   background: radial-gradient(ellipse farthest-corner at 70% 30%, #fff, #ff79da 10% 22%, #9356dc 80% 100%);
-  animation: rollAndRotate 3s ease-in-out forwards;
-  z-index: 10;
+  animation: roll 3s ease-in-out forwards;
+  -webkit-animation: roll 3s ease-in-out forwards;
 }
 .homePage .searchBar {
   display: flex;
@@ -406,7 +527,7 @@ footer .list__item--text {
   background: linear-gradient(0deg, #9356DC, #ff79DA);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   color: white;
-  transition: all 300ms;
+  transition: all 0.5s;
 }
 .homePage .restaurantMain .orderBtn:hover, .restaurantMain .homePage .orderBtn:hover, .homePage .heading__btn:hover {
   filter: brightness(115%);
@@ -542,56 +663,6 @@ footer .list__item--text {
     flex: 1 1 46%;
   }
 }
-.homePage .entrees .card, .entrees .homePage .card,
-.homePage .plats .card,
-.plats .homePage .card,
-.homePage .desserts .card,
-.desserts .homePage .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-}
-.homePage .entrees .card:hover .card__icon, .entrees .homePage .card:hover .card__icon,
-.homePage .plats .card:hover .card__icon,
-.plats .homePage .card:hover .card__icon,
-.homePage .desserts .card:hover .card__icon,
-.desserts .homePage .card:hover .card__icon, .homePage .entrees .card:focus .card__icon, .entrees .homePage .card:focus .card__icon,
-.homePage .plats .card:focus .card__icon,
-.plats .homePage .card:focus .card__icon,
-.homePage .desserts .card:focus .card__icon,
-.desserts .homePage .card:focus .card__icon {
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  opacity: 1;
-}
-.homePage .entrees .card:hover .check-icon, .entrees .homePage .card:hover .check-icon,
-.homePage .plats .card:hover .check-icon,
-.plats .homePage .card:hover .check-icon,
-.homePage .desserts .card:hover .check-icon,
-.desserts .homePage .card:hover .check-icon {
-  transition: all 300ms;
-  opacity: 1;
-}
-.homePage .entrees .card:not(:hover) .card__icon, .entrees .homePage .card:not(:hover) .card__icon,
-.homePage .plats .card:not(:hover) .card__icon,
-.plats .homePage .card:not(:hover) .card__icon,
-.homePage .desserts .card:not(:hover) .card__icon,
-.desserts .homePage .card:not(:hover) .card__icon, .homePage .entrees .card:not(:hover) .check-icon, .entrees .homePage .card:not(:hover) .check-icon,
-.homePage .plats .card:not(:hover) .check-icon,
-.plats .homePage .card:not(:hover) .check-icon,
-.homePage .desserts .card:not(:hover) .check-icon,
-.desserts .homePage .card:not(:hover) .check-icon {
-  transition: all 300ms;
-}
 .homePage .restaurant {
   background-color: #F6F6F6;
   padding: 60px 20px;
@@ -667,7 +738,8 @@ footer .list__item--text {
   text-align: start !important;
 }
 .homePage .restaurant .card__title {
-  font: 700 18px Roboto;
+  font-size: 18px;
+  font-weight: 800 !important;
   margin-bottom: 5px;
 }
 .homePage .restaurant .card__subtitle {
@@ -682,7 +754,7 @@ footer .list__item--text {
   background: linear-gradient(0deg, #9356DC, #ff79DA);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   color: white;
-  transition: all 300ms;
+  transition: all 0.5s;
 }
 
 .homePage .heading__btn:hover, .restaurantMain .orderBtn:hover {
@@ -764,35 +836,43 @@ footer .list__item--text {
 }
 
 .homePage .restaurant .card__icon, .heading__icon {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0.8px black;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0 25px;
-  transform: scaleX(0.87);
-  transition: all 300ms;
-}
-
-.homePage .restaurant .card__icon:hover, .heading__icon:hover {
-  background: linear-gradient(0deg, #9356DC, #ff79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0px transparent;
-}
-
-.entrees .card__icon,
-.plats .card__icon,
-.desserts .card__icon {
-  width: 0;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
-  background-color: white;
-  color: white;
   position: relative;
-  transition: all 3s;
+  z-index: 1;
+  padding: 0 25px;
+  margin: 0;
+}
+
+.homePage .restaurant .card__icon:after, .heading__icon:after {
+  content: "\f004";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(#9356DC, #ff79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transition: opacity 500ms;
+  -webkit-text-stroke: 0 transparent;
+}
+
+.homePage .restaurant .card__icon::before, .heading__icon::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  opacity: 1;
+  -webkit-text-stroke: 0.2px black;
+  transition: opacity 500ms;
+}
+
+.homePage .restaurant .card__icon:hover:after, .heading__icon:hover:after {
+  opacity: 1;
+}
+
+.homePage .restaurant .card__icon:hover:before, .heading__icon:hover:before {
+  opacity: 0;
 }
 
 .heading {
@@ -839,52 +919,10 @@ footer .list__item--text {
     flex: 1 1 46%;
   }
 }
-.entrees .card,
-.plats .card,
-.desserts .card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-}
-
-.entrees .card:hover .card__icon,
-.plats .card:hover .card__icon,
-.desserts .card:hover .card__icon, .entrees .card:focus .card__icon,
-.plats .card:focus .card__icon,
-.desserts .card:focus .card__icon {
-  width: 60px;
-  height: 100%;
-  background-color: #99E2D0;
-  opacity: 1;
-}
-
-.entrees .card:hover .check-icon,
-.plats .card:hover .check-icon,
-.desserts .card:hover .check-icon {
-  transition: all 300ms;
-  opacity: 1;
-}
-
-.entrees .card:not(:hover) .card__icon,
-.plats .card:not(:hover) .card__icon,
-.desserts .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
-.plats .card:not(:hover) .check-icon,
-.desserts .card:not(:hover) .check-icon {
-  transition: all 300ms;
-}
-
 @keyframes appear {
   from {
-    translate: 0 -20px;
     opacity: 0;
+    translate: -100% 0;
   }
   to {
     opacity: 1;
@@ -892,17 +930,37 @@ footer .list__item--text {
     translate: 0 0;
   }
 }
-main section {
-  animation: appear 1s ease-in-out;
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    margin-bottom: 100px;
+    translate: -100% 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+    translate: 0 0;
+  }
 }
-main section:nth-child(1) {
-  animation-delay: 3s;
+@-moz-keyframes appear {
+  from {
+    opacity: 0;
+    margin-bottom: 100px;
+    translate: -100% 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+    translate: 0 0;
+  }
 }
-main section:nth-child(2) {
-  animation-delay: 6s;
+/*do it again*/
+.plats {
+  animation: appear 1.9s ease-in-out 2s;
 }
-main section:nth-child(3) {
-  animation-delay: 9s;
+
+.desserts {
+  animation: appear 1.9s ease-in-out 2s;
 }
 
 .entrees,
@@ -927,23 +985,7 @@ main section:nth-child(3) {
   width: 40px;
   line-height: 27px;
   border-bottom: solid 2px #99E2D0;
-  opacity: 1;
-  animation: appear 1s ease-in-out;
-}
-.entrees__title:nth-child(1),
-.plats__title:nth-child(1),
-.desserts__title:nth-child(1) {
-  animation-delay: 1s;
-}
-.entrees__title:nth-child(2),
-.plats__title:nth-child(2),
-.desserts__title:nth-child(2) {
-  animation-delay: 2s;
-}
-.entrees__title:nth-child(3),
-.plats__title:nth-child(3),
-.desserts__title:nth-child(3) {
-  animation-delay: 3s;
+  animation: appear 1.9s ease-in-out;
 }
 .entrees__cardsGroup,
 .plats__cardsGroup,
@@ -961,24 +1003,59 @@ main section:nth-child(3) {
 .entrees .card,
 .plats .card,
 .desserts .card {
-  animation: appear 1.5s ease-in-out forwards;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  animation: appear 1s ease-in-out forwards;
   opacity: 0;
   overflow: hidden;
+  transition: all 0.5s;
+}
+.entrees .card:hover .card__icon,
+.plats .card:hover .card__icon,
+.desserts .card:hover .card__icon {
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  opacity: 1;
+}
+.entrees .card:hover .check-icon,
+.plats .card:hover .check-icon,
+.desserts .card:hover .check-icon {
+  opacity: 1;
+}
+.entrees .card:not(:hover) .card__icon, .entrees .card:not(:hover) .check-icon,
+.plats .card:not(:hover) .card__icon,
+.plats .card:not(:hover) .check-icon,
+.desserts .card:not(:hover) .card__icon,
+.desserts .card:not(:hover) .check-icon {
+  opacity: 0;
 }
 .entrees .card:nth-child(1),
 .plats .card:nth-child(1),
 .desserts .card:nth-child(1) {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
+  translate: 0 200%;
 }
 .entrees .card:nth-child(2),
 .plats .card:nth-child(2),
 .desserts .card:nth-child(2) {
-  animation-delay: 1000ms;
+  animation-delay: 600ms;
+  translate: 0 400%;
 }
 .entrees .card:nth-child(3),
 .plats .card:nth-child(3),
 .desserts .card:nth-child(3) {
-  animation-delay: 1500ms;
+  animation-delay: 900ms;
+  translate: 0 600%;
 }
 .entrees .card__content,
 .plats .card__content,
@@ -997,7 +1074,6 @@ main section:nth-child(3) {
 .plats .card__title,
 .desserts .card__title {
   font: 800 18px Roboto;
-  text-align: start;
   align-self: start;
 }
 .entrees .informations,
@@ -1015,12 +1091,26 @@ main section:nth-child(3) {
 .plats .card__subtitle,
 .desserts .card__subtitle {
   font: 300 15px Roboto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   align-self: start;
 }
 .entrees .card .price,
 .plats .card .price,
 .desserts .card .price {
   font: 700 15px Roboto;
+}
+.entrees .card__icon,
+.plats .card__icon,
+.desserts .card__icon {
+  width: 0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: white;
+  color: white;
+  position: relative;
+  transition: all 500ms;
 }
 .entrees .check-icon,
 .plats .check-icon,
