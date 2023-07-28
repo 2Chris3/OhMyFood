@@ -117,6 +117,7 @@
     z-index: 1;
     padding: 0 25px;
     margin: 0;
+    font-size: 1.4em;
 
     &:after {
         content: $content;
@@ -132,6 +133,8 @@
         color: transparent;
         transition: opacity 500ms;
         -webkit-text-stroke: 0 transparent;
+        box-sizing: border-box;
+        padding: 0 25px;
     }
 
     &::before {
@@ -141,6 +144,8 @@
         opacity: 1;
         -webkit-text-stroke: 0.2px black;
         transition: opacity 500ms;
+        box-sizing: border-box;
+        padding: 0 25px;
     }
 
     &:hover {

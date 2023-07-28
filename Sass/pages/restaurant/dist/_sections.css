@@ -33,15 +33,6 @@
     translate: 0 0;
   }
 }
-/*do it again*/
-.plats {
-  animation: appear 1.9s ease-in-out 2s;
-}
-
-.desserts {
-  animation: appear 1.9s ease-in-out 2s;
-}
-
 .entrees,
 .plats,
 .desserts {

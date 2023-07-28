@@ -72,6 +72,7 @@ a:visited {
   z-index: 1;
   padding: 0 25px;
   margin: 0;
+  font-size: 1.4em;
 }
 .heading__icon:after, .homePage .restaurant .card__icon:after {
   content: "\f004";
@@ -87,6 +88,8 @@ a:visited {
   color: transparent;
   transition: opacity 500ms;
   -webkit-text-stroke: 0 transparent;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 .heading__icon::before, .homePage .restaurant .card__icon::before {
   position: absolute;
@@ -95,6 +98,8 @@ a:visited {
   opacity: 1;
   -webkit-text-stroke: 0.2px black;
   transition: opacity 500ms;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 .heading__icon:hover:after, .homePage .restaurant .card__icon:hover:after {
   opacity: 1;
@@ -162,6 +167,7 @@ body {
   background-color: white;
   margin: auto;
   overflow-x: hidden;
+  max-width: 1400px;
 }
 
 main {
@@ -778,6 +784,7 @@ footer .list__item--text {
   align-items: center;
   text-align: center;
   position: relative;
+  max-width: 1400px;
 }
 @media screen and (min-width: 1025px) {
   .restaurantMain {
@@ -826,6 +833,9 @@ footer .list__item--text {
     width: 74%;
   }
 }
+.restaurantMain__cover {
+  max-width: none;
+}
 .homePage h2, .homePage .restaurant__title {
   font: 700 24px Roboto;
   margin-bottom: 25px;
@@ -840,6 +850,7 @@ footer .list__item--text {
   z-index: 1;
   padding: 0 25px;
   margin: 0;
+  font-size: 1.4em;
 }
 
 .homePage .restaurant .card__icon:after, .heading__icon:after {
@@ -856,6 +867,8 @@ footer .list__item--text {
   color: transparent;
   transition: opacity 500ms;
   -webkit-text-stroke: 0 transparent;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 
 .homePage .restaurant .card__icon::before, .heading__icon::before {
@@ -865,6 +878,8 @@ footer .list__item--text {
   opacity: 1;
   -webkit-text-stroke: 0.2px black;
   transition: opacity 500ms;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 
 .homePage .restaurant .card__icon:hover:after, .heading__icon:hover:after {
@@ -954,15 +969,6 @@ footer .list__item--text {
     translate: 0 0;
   }
 }
-/*do it again*/
-.plats {
-  animation: appear 1.9s ease-in-out 2s;
-}
-
-.desserts {
-  animation: appear 1.9s ease-in-out 2s;
-}
-
 .entrees,
 .plats,
 .desserts {

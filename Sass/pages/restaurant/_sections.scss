@@ -48,24 +48,13 @@
     }
 }
 
-// .restaurantPage .heading + section {
-//     //animation
-//     animation: appear 3s ease-in-out;
-//         @for $i from 1 through 3 {
-//             &:nth-child(#{$i}){
-//               animation-delay: $i * 3s;
-//             }
-//         }
-//}
-/*do it again*/
+// .plats {
+//     animation: appear 1.9s ease-in-out 1.5s;
+// }
 
-.plats {
-    animation: appear 1.9s ease-in-out 2s;
-}
-
-.desserts {
-    animation: appear 1.9s ease-in-out 2s;
-}
+// .desserts {
+//     animation: appear 1.9s ease-in-out 3s;
+// }
 
 .entrees,
 .plats,

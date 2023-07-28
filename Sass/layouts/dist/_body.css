@@ -2,6 +2,7 @@ body {
   background-color: white;
   margin: auto;
   overflow-x: hidden;
+  max-width: 1400px;
 }
 
 main {
